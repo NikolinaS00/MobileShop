@@ -1,0 +1,61 @@
+﻿<ResourceDictionary  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:local="clr-namespace:WpfApp1">
+
+    <Style TargetType="Border" x:Key="BorderLeft">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                    <GradientStop Color="#3B6381" Offset="0.0"/>
+                    <GradientStop Color="#87A5BC" Offset="0.5"/>
+                    <GradientStop Color="#3B6381" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Grid" x:Key="MainWindow">
+        <Setter Property="Background" Value="#3B6381"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="ButtonsInTheMenu">
+
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+       
+
+    </Style>
+
+    <Style TargetType="Border" x:Key="CirclePanel" >
+     
+
+        <Setter Property="Background" >
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                    <GradientStop Color="AliceBlue" Offset="0.0"/>
+                    <GradientStop Color="AntiqueWhite" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+                
+            
+        </Setter>
+
+
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="mainTitle">
+        <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            
+  
+    </Style>
+
+    <Style TargetType="Label" x:Key="WindowName">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+</ResourceDictionary>
