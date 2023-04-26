@@ -56,8 +56,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\ArticlesViewModel.cs" />
+    <Compile Include="Model\EmployeesViewModel.cs" />
     <Compile Include="Model\HomeViewModel.cs" />
     <Compile Include="Model\MainViewModel.cs" />
+    <Compile Include="Model\ProcurementViewModel.cs" />
+    <Compile Include="Model\SaleViewModel.cs" />
+    <Compile Include="Model\SuppliersViewModel.cs" />
     <Compile Include="objects\ObservableObject.cs" />
     <Compile Include="objects\RelayCommand.cs" />
     <Compile Include="View\ArticlesView.xaml.cs">

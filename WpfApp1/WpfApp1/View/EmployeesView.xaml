@@ -6,7 +6,36 @@
              xmlns:local="clr-namespace:WpfApp1.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Background="Transparent" Visibility="Visible">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="1" x:Name="BorderTop" Style="{StaticResource BorderLeft}" CornerRadius="0 200 0 180">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Label Grid.Column="1" x:Name="NameOfWindow"  Style="{StaticResource WindowName}" Content="{StaticResource WindowNameLabelEmployees}" >
+
+                </Label>
+            </Grid>
+        </Border>
+
+
     </Grid>
 </UserControl>

@@ -10,6 +10,10 @@
     <AccessText x:Key="SaleButton" Text="Sale"/>
     <AccessText x:Key="WindowNameLabel" Text="Home"/>
     <AccessText x:Key="WindowNameLabelArticles" Text="Articles"/>
+    <AccessText x:Key="WindowNameLabelEmployees" Text="Employees"/>
+    <AccessText x:Key="WindowNameLabelSuppliers" Text="Suppliers"/>
+    <AccessText x:Key="WindowNameLabelProcurement" Text="Procurement"/>
+    <AccessText x:Key="WindowNameLabelSale" Text="Sale"/>
 
 
 </ResourceDictionary>

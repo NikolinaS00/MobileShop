@@ -21,28 +21,10 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainViewModel viewModel;
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click_Sale(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
-        private void Button_Click_Procurement(object sender, RoutedEventArgs e)
-        {
-
-        }private void Button_Click_Supliers(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_Articles(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }

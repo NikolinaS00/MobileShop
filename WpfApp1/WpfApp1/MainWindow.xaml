@@ -45,12 +45,12 @@
 
                     <StackPanel Grid.ColumnSpan="2" Margin="0,186,0,0" Grid.RowSpan="2">
 
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource HomeButton}"  Height="50"/>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource ArticlesButton}" Height="50" Click="Button_Click_Articles"/>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource EmployeesButton}" Height="50"/>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource SuppliersButton}" Height="50" Click="Button_Click_Supliers"/>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource ProcurementButton}" Height="50" Click="Button_Click_Procurement"/>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource SaleButton}" Height="50" Click="Button_Click_Sale"/>
+                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource HomeButton}"  Height="50" Command="{Binding HomeRelayCommand}"/>
+                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource ArticlesButton}" Height="50" Command="{Binding ArticlesRelayCommand}"/>
+                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource EmployeesButton}" Height="50" Command="{Binding EmployeesRelayCommand}"/>
+                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource SuppliersButton}" Height="50" Command="{Binding SuppliersRelayCommand}"/>
+                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource ProcurementButton}" Height="50" Command="{Binding ProcurementRelayCommand}"/>
+                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource SaleButton}" Height="50" Command="{Binding SaleRelayCommand}"/>
 
                     </StackPanel>
 
@@ -80,7 +80,6 @@
                 
             </Grid>
         <Grid Grid.Column="1" >
-
             <ContentControl Content="{Binding CurrentView}"/>
         </Grid>
 
