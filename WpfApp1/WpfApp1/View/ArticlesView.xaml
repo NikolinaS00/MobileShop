@@ -35,7 +35,32 @@
                 </Label>
             </Grid>
         </Border>
+        <Border Grid.Row="3" Margin="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
 
+                <Button  Grid.Row="0" Grid.Column="0" Style="{StaticResource ButtonsArticles}">
+                    
+                </Button>
+
+                <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource ButtonsArticles}">
+
+                    </Button>
+                <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource ButtonsArticles}">
+
+                </Button>
+                <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource ButtonsArticles}">
+
+                </Button>
+            </Grid>
+        </Border>
 
     </Grid>
 </UserControl>

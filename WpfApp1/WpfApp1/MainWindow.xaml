@@ -45,8 +45,8 @@
 
                     <StackPanel Grid.ColumnSpan="2" Margin="0,186,0,0" Grid.RowSpan="2">
 
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource HomeButton}"  Height="50" Command="{Binding HomeRelayCommand}"/>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource ArticlesButton}" Height="50" Command="{Binding ArticlesRelayCommand}"/>
+                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource HomeButton}"  Height="50" Command="{Binding HomeRelayCommand}"></Button>
+                            <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource ArticlesButton}" Height="50" Command="{Binding ArticlesRelayCommand}"/>
                         <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource EmployeesButton}" Height="50" Command="{Binding EmployeesRelayCommand}"/>
                         <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource SuppliersButton}" Height="50" Command="{Binding SuppliersRelayCommand}"/>
                         <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource ProcurementButton}" Height="50" Command="{Binding ProcurementRelayCommand}"/>

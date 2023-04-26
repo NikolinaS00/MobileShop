@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\stojc\OneDrive\Desktop\HCI\WpfApp1\WpfApp1\obj\Debug\
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-C:\Users\stojc\OneDrive\Desktop\HCI\WpfApp1\WpfApp1\App.xaml
-12-1159686410
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\App.xaml
+11-1020397784
 
 22-1274237707
 13-1310406943
-MainWindow.xaml;ResourceDictionaryEN.xaml;ResourceDictionaryTHEME.xaml;Resources\ResourceDictionaryEN.xaml;Resources\ResourceDictionaryTHEME.xaml;View\ArticlesView.xaml;View\EmployeesView.xaml;View\HomeView.xaml;View\mainViewModel.xaml;View\ProcurementView.xaml;View\SaleView.xaml;View\SuppliersView.xaml;
+MainWindow.xaml;ResourceDictionaryEN.xaml;ResourceDictionaryTHEME.xaml;Resources\ResourceDictionaryEN.xaml;View\ArticlesView.xaml;View\EmployeesView.xaml;View\HomeView.xaml;View\mainViewModel.xaml;View\ProcurementView.xaml;View\SaleView.xaml;View\SuppliersView.xaml;
 
-False
+True
 
