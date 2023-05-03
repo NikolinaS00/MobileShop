@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("google_mobile_480px.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("phoneadapter.png")]
 
 

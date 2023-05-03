@@ -30,6 +30,9 @@
             <DataTemplate DataType="{x:Type viewModel:SaleViewModel}">
                 <view:SaleView/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+                <view:SettingsView/>
+            </DataTemplate>
         </ResourceDictionary>  
     </Application.Resources>
 </Application>

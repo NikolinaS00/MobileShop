@@ -46,18 +46,41 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <Button  Grid.Row="0" Grid.Column="0" Style="{StaticResource ButtonsArticles}">
-                    
+                <Button  Grid.Row="0" Grid.Column="0" Style="{StaticResource ButtonsArticles}" Name="ArticlePhone" >
+                    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,10,1">
+                        <StackPanel>
+                            <Label  FontSize="25" Style="{StaticResource LabelDesign}" Content="Mobile Phones" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        </StackPanel>
+                        <Image Source="/phone.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                    </Grid>
                 </Button>
 
-                <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource ButtonsArticles}">
-
-                    </Button>
-                <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource ButtonsArticles}">
-
+                <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource ButtonsArticles}" Name="ArticlePhoneCases">
+                    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,10,1">
+                        <StackPanel>
+                            <Label  FontSize="25" Style="{StaticResource LabelDesign}" Content="Phone cases" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        </StackPanel>
+                        <Image Source="/cases.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                    </Grid>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource ButtonsArticles}" Name="PhoneEquipment">
+                    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,4,10,1">
+                        <StackPanel>
+                            <Label  FontSize="25" Style="{StaticResource LabelDesign}" Content="Other phone" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label  FontSize="25" Style="{StaticResource LabelDesign}" Content="equipment" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        </StackPanel>
+                        <Image Source="/earphonesq.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                    </Grid>
                 </Button>
                 <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource ButtonsArticles}">
-
+                    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,4,10,1">
+                        <StackPanel>
+                            <Label   Style="{StaticResource LabelDesign}" Content="Phoneadapters" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label   Style="{StaticResource LabelDesign}" Content="and " HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label   Style="{StaticResource LabelDesign}" Content="powerbanks " HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        </StackPanel>
+                        <Image Source="/phoneadapter.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                    </Grid>
                 </Button>
             </Grid>
         </Border>

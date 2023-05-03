@@ -85,7 +85,15 @@
 
 
         </Setter>
-        <Setter Property="Background" Value="#517590"/>
+        <Setter Property="Background" >
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#517590" Offset="1.0"/>
+                    <GradientStop Color="White" Offset="0.0"/>
+                    <GradientStop Color="#81B9E4" Offset="0.0"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
         <Setter Property="Margin" Value="10"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
@@ -96,4 +104,11 @@
        
       
     </Style>
+
+    <Style TargetType="Label" x:Key="LabelDesign">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+  
+
 </ResourceDictionary>
