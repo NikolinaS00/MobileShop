@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.DataBase;
 
 namespace WpfApp1.View
 {
@@ -20,9 +21,14 @@ namespace WpfApp1.View
     /// </summary>
     public partial class EmployeesView : UserControl
     {
+     
         public EmployeesView()
         {
+
             InitializeComponent();
+           
         }
+
+    
     }
 }

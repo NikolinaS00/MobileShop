@@ -10,7 +10,7 @@
             <ResourceDictionary.MergedDictionaries >
                   
                   <ResourceDictionary x:Name="LanguageEN" Source="Resources/ResourceDictionaryEN.xaml"/> 
-        <ResourceDictionary Source="/ResourceDictionaryTHEME.xaml"/>
+        <ResourceDictionary Source="Resources/ResourceDictionaryTHEME.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
