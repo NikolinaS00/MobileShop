@@ -16,5 +16,16 @@ namespace WpfApp1.DataBase
         
         public string UID { get; set; }
         public string dateOfBirth { get; set; }
+
+        public string yearOfEmployment { get; set; }
+
+        public string email { get; set; }
+
+        public string expirationOfContract { get; set; }
+
+        public int salary { get; set; }
+
+        public string address { get; set; }
+         
     }
 }

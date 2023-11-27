@@ -8,9 +8,11 @@
         
        <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries >
-                  
-                  <ResourceDictionary x:Name="LanguageEN" Source="Resources/ResourceDictionaryEN.xaml"/> 
-        <ResourceDictionary Source="Resources/ResourceDictionaryTHEME.xaml"/>
+                <ResourceDictionary x:Name="LanguageEN" Source="Resources/ResourceDictionaryEN.xaml"/>
+                <ResourceDictionary x:Name="LanguageSR" Source="Resources/ResourceDictionarySR.xaml"/>
+                <ResourceDictionary x:Name="ThemeGREEN" Source="Resources/ResourceDictionaryTHEME.xaml"/>
+                <ResourceDictionary x:Name="ThemeBLUE" Source="Resources/ResourceDictionaryThemeGREEN.xaml"/>
+               
             </ResourceDictionary.MergedDictionaries>
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>

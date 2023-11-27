@@ -39,7 +39,7 @@
                 >
 
 
-            <DataGrid Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding Employees}" >
+            <DataGrid RowHeaderWidth="0" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding Employees}" Width="603" CanUserResizeRows="False" CanUserResizeColumns="False">
                         <DataGrid.Columns>
                     <DataGridTextColumn Header="UID" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding UID}" CellStyle="{DynamicResource gridCell}" />
                     <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding FirstName}" CellStyle="{DynamicResource gridCell}"/>
