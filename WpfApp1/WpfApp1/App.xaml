@@ -3,16 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:viewModel="clr-namespace:WpfApp1.Model"
              xmlns:view ="clr-namespace:WpfApp1.View"
-             StartupUri="MainWindow.xaml">
+             StartupUri="LogInWindow.xaml">
+    
     <Application.Resources>
         
        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries >
-                <ResourceDictionary x:Name="LanguageEN" Source="Resources/ResourceDictionaryEN.xaml"/>
-                <ResourceDictionary x:Name="LanguageSR" Source="Resources/ResourceDictionarySR.xaml"/>
-                <ResourceDictionary x:Name="ThemeGREEN" Source="Resources/ResourceDictionaryTHEME.xaml"/>
-                <ResourceDictionary x:Name="ThemeBLUE" Source="Resources/ResourceDictionaryThemeGREEN.xaml"/>
-               
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/ResourceDictionaryTHEME.xaml"/>
+                <ResourceDictionary Source="Resources/ResourceDictionaryEN.xaml"/>
+                <ResourceDictionary Source="Resources/ResourceDictionaryFontSize24.xaml"/>
+                <ResourceDictionary Source="Resources/ResourceDictionaryFontStyle1.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>

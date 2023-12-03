@@ -128,3 +128,10 @@ C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\bin\Debug\System.
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionarySR.baml
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionaryThemeGREEN.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\LogInWindow.g.cs
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\LogInWindow.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionaryFontSize16.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionaryFontStyle1.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionaryFontStyle2.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionaryFontSize20.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionaryFontSize24.baml

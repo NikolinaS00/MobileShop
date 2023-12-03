@@ -15,7 +15,11 @@
     <AccessText x:Key="WindowNameLabelProcurement" Text="Procurement"/>
     <AccessText x:Key="WindowNameLabelSale" Text="Sale"/>
     <AccessText x:Key="WindowNameLabelSettings" Text="Settings"/>
-    <AccessText x:Key="SettingsButton" Text="Settings"/>
+    <AccessText x:Key="MobilePhonesButton" Text="Mobile phones"/>
+    <AccessText x:Key="PhoneCasesButton" Text="Phone cases"/>
+    <AccessText x:Key="OtherPhoneButtonLabel" Text="Other phone "/>
+    <AccessText x:Key="EquipmentButtonLabel" Text="equipment"/>
+    <AccessText x:Key="PhoneadaptersButton" Text="Phoneadapters and powerbanks"/>
 
 
 </ResourceDictionary>

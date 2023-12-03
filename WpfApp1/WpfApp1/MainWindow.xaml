@@ -11,7 +11,7 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
-    <Grid Style="{StaticResource MainWindow}">
+    <Grid Style="{DynamicResource MainWindow}"> 
 
 
         <Grid.ColumnDefinitions>
@@ -30,7 +30,7 @@
 
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="1" x:Name="BorderL" Style="{StaticResource BorderLeft}" CornerRadius="0 200 0 180">
+            <Border Grid.Row="1" x:Name="BorderL" Style="{DynamicResource BorderLeft}" CornerRadius="0 200 0 180">
 
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -45,31 +45,31 @@
 
                     <StackPanel Grid.ColumnSpan="2" Margin="0,186,0,0" Grid.RowSpan="2">
 
-                        <Button Style="{StaticResource ButtonsInTheMenu}"   Height="50" Command="{Binding HomeRelayCommand}">
+                        <Button Style="{DynamicResource ButtonsInTheMenu}"   Height="50" Command="{Binding HomeRelayCommand}">
                             <StackPanel Orientation="Horizontal">
-                              
-                                <Label Style="{StaticResource LabelDesign}" Content="{StaticResource HomeButton}"/>
+
+                                <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource HomeButton}"/>
                             </StackPanel>
                         </Button>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Height="50" Command="{Binding ArticlesRelayCommand}">
+                        <Button Style="{DynamicResource ButtonsInTheMenu}" Height="50" Command="{Binding ArticlesRelayCommand}">
                             <StackPanel Orientation="Horizontal">
-                               
-                                <Label Style="{StaticResource LabelDesign}" Content="{StaticResource ArticlesButton}"/>
+
+                                <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource ArticlesButton}"/>
                             </StackPanel>
                         </Button>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Height="50" Command="{Binding EmployeesRelayCommand}">
+                        <Button Style="{DynamicResource ButtonsInTheMenu}" Height="50" Command="{Binding EmployeesRelayCommand}">
                             <StackPanel Orientation="Horizontal">
-                                
-                                <Label Style="{StaticResource LabelDesign}" Content="{StaticResource EmployeesButton}"/>
+
+                                <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource EmployeesButton}"/>
                             </StackPanel>
                         </Button>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource SuppliersButton}" Height="50" Command="{Binding SuppliersRelayCommand}"/>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource ProcurementButton}" Height="50" Command="{Binding ProcurementRelayCommand}"/>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Content="{StaticResource SaleButton}" Height="50" Command="{Binding SaleRelayCommand}"/>
-                        <Button Style="{StaticResource ButtonsInTheMenu}" Height="50" >
+                        <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource SuppliersButton}" Height="50" Command="{Binding SuppliersRelayCommand}"/>
+                        <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource ProcurementButton}" Height="50" Command="{Binding ProcurementRelayCommand}"/>
+                        <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource SaleButton}" Height="50" Command="{Binding SaleRelayCommand}"/>
+                        <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Height="50" x:Name="settingsButton"  Command="{Binding SettingsRelayCommand}">
                             <StackPanel Orientation="Horizontal" >
                                 <Image Source="/settings.png" Width="30" Height="30"/>
-                                <Label Style="{StaticResource LabelDesign}" Content="{StaticResource SettingsButton}"/>
+                                <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}"/>
                             </StackPanel>
                         </Button>
                     </StackPanel>
@@ -77,7 +77,7 @@
 
 
                     <DockPanel Grid.Column="0" Margin="70 -150 0 0 " Grid.ColumnSpan="2">
-                        <Border Width="100" Height="100" Padding="3"  Style="{StaticResource  CirclePanel}" CornerRadius="100" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20 -30 0 0" RenderTransformOrigin="0.5,0.5">
+                        <Border Width="100" Height="100" Padding="3"  Style="{DynamicResource  CirclePanel}" CornerRadius="100" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20 -30 0 0" RenderTransformOrigin="0.5,0.5">
                             <Border.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -93,7 +93,7 @@
                             </Ellipse>
                         </Border>
                     </DockPanel>
-                    <TextBlock Text="Mobile Shop" Grid.Column="0" Margin="70 70 0 0 " Style="{StaticResource mainTitle}" Grid.ColumnSpan="2"/>
+                    <TextBlock Text="Mobile Shop" Grid.Column="0" Margin="70 70 0 0 " Style="{DynamicResource mainTitle}" Grid.ColumnSpan="2"/>
                 </Grid>
             </Border>
             

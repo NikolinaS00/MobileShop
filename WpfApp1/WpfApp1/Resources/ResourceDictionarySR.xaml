@@ -1,18 +1,23 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <AccessText x:Key="HomeButton" Text="Home"/>
+    <AccessText x:Key="HomeButton" Text="Početna"/>
     <AccessText x:Key="ArticlesButton" Text="Artikli"/>
     <AccessText x:Key="EmployeesButton" Text="Zaposleni"/>
     <AccessText x:Key="SuppliersButton" Text="Dobavljači"/>
     <AccessText x:Key="ProcurementButton" Text="Nabavke"/>
     <AccessText x:Key="SaleButton" Text="Prodaja"/>
-    <AccessText x:Key="WindowNameLabel" Text="Home"/>
-    <AccessText x:Key="WindowNameLabelArticles" Text="Articles"/>
-    <AccessText x:Key="WindowNameLabelEmployees" Text="Employees"/>
-    <AccessText x:Key="WindowNameLabelSuppliers" Text="Suppliers"/>
-    <AccessText x:Key="WindowNameLabelProcurement" Text="Procurement"/>
-    <AccessText x:Key="WindowNameLabelSale" Text="Sale"/>
-    <AccessText x:Key="WindowNameLabelSettings" Text="Settings"/>
+    <AccessText x:Key="WindowNameLabel" Text="Početna"/>
+    <AccessText x:Key="WindowNameLabelArticles" Text="Artikli"/>
+    <AccessText x:Key="WindowNameLabelEmployees" Text="Zaposleni"/>
+    <AccessText x:Key="WindowNameLabelSuppliers" Text="Dobavljači"/>
+    <AccessText x:Key="WindowNameLabelProcurement" Text="Nabavke"/>
+    <AccessText x:Key="WindowNameLabelSale" Text="Prodaja"/>
+    <AccessText x:Key="WindowNameLabelSettings" Text="Podešavanja"/>
     <AccessText x:Key="SettingsButton" Text="Podešavanja"/>
+    <AccessText x:Key="MobilePhonesButton" Text="Mobilni telefoni"/>
+    <AccessText x:Key="PhoneCasesButton" Text="Maske za telefone"/>
+    <AccessText x:Key="OtherPhoneButtonLabel" Text="Ostala oprema za "/>
+    <AccessText x:Key="EquipmentButtonLabel" Text="telefone"/>
+    <AccessText x:Key="PhoneadaptersButton" Text="Punjači i powerbank-ovi"/>
 </ResourceDictionary>

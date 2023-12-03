@@ -21,7 +21,7 @@
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Row="1" x:Name="BorderTop" Style="{StaticResource BorderLeft}" CornerRadius="0 200 0 180">
+        <Border Grid.Row="1" x:Name="BorderTop" Style="{DynamicResource BorderLeft}" CornerRadius="0 200 0 180">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -30,7 +30,7 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Label Grid.Column="1" x:Name="NameOfWindow"  Style="{StaticResource WindowName}" Content="{StaticResource WindowNameLabelArticles}" >
+                <Label Grid.Column="1" x:Name="NameOfWindow"  Style="{DynamicResource WindowName}" Content="{DynamicResource WindowNameLabelArticles}" >
 
                 </Label>
             </Grid>
@@ -46,38 +46,38 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <Button  Grid.Row="0" Grid.Column="0" Style="{StaticResource ButtonsArticles}" Name="ArticlePhone" >
+                <Button  Grid.Row="0" Grid.Column="0" Style="{DynamicResource ButtonsArticles}" Name="ArticlePhone" >
                     <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,10,1">
                         <StackPanel>
-                            <Label  FontSize="25" Style="{StaticResource LabelDesign}" Content="Mobile Phones" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label  FontSize="25" Style="{DynamicResource LabelDesign}" Content="Mobile Phones" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         </StackPanel>
                         <Image Source="/phone.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
                     </Grid>
                 </Button>
 
-                <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource ButtonsArticles}" Name="ArticlePhoneCases">
+                <Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource ButtonsArticles}" Name="ArticlePhoneCases">
                     <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,10,1">
                         <StackPanel>
-                            <Label  FontSize="25" Style="{StaticResource LabelDesign}" Content="Phone cases" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label  FontSize="25" Style="{DynamicResource LabelDesign}" Content="{DynamicResource PhoneCasesButton}" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         </StackPanel>
                         <Image Source="/cases.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
                     </Grid>
                 </Button>
-                <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource ButtonsArticles}" Name="PhoneEquipment">
+                <Button Grid.Row="1" Grid.Column="0" Style="{DynamicResource ButtonsArticles}" Name="PhoneEquipment">
                     <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,4,10,1">
                         <StackPanel>
-                            <Label  FontSize="25" Style="{StaticResource LabelDesign}" Content="Other phone" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                            <Label  FontSize="25" Style="{StaticResource LabelDesign}" Content="equipment" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label  FontSize="25" Style="{DynamicResource LabelDesign}" Content="{DynamicResource OtherPhoneButtonLabel}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label  FontSize="25" Style="{DynamicResource LabelDesign}" Content="{DynamicResource EquipmentButtonLabel}" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         </StackPanel>
                         <Image Source="/earphonesq.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
                     </Grid>
                 </Button>
-                <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource ButtonsArticles}">
+                <Button Grid.Row="1" Grid.Column="1" Style="{DynamicResource ButtonsArticles}">
                     <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,4,10,1">
                         <StackPanel>
-                            <Label   Style="{StaticResource LabelDesign}" Content="Phoneadapters" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                            <Label   Style="{StaticResource LabelDesign}" Content="and " HorizontalAlignment="Left" VerticalAlignment="Top" />
-                            <Label   Style="{StaticResource LabelDesign}" Content="powerbanks " HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label   Style="{DynamicResource LabelDesign}" Content="Phoneadapters" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label   Style="{DynamicResource LabelDesign}" Content="and " HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <Label   Style="{DynamicResource LabelDesign}" Content="powerbanks " HorizontalAlignment="Left" VerticalAlignment="Top" />
                         </StackPanel>
                         <Image Source="/phoneadapter.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
                     </Grid>

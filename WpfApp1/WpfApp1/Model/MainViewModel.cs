@@ -14,12 +14,14 @@ namespace WpfApp1.Model
         public RelayCommand SuppliersRelayCommand { get; set; }
         public RelayCommand ProcurementRelayCommand { get; set; }
         public RelayCommand SaleRelayCommand { get; set; }
+        public RelayCommand SettingsRelayCommand { get; set; }
         public HomeViewModel HomeVM { get; set; }
         public ArticlesViewModel ArticleVM { get; set; }
         public EmployeesViewModel EmployeesVM { get; set; }
         public SuppliersViewModel SuppliersVM { get; set; }
         public ProcurementViewModel ProcurementVM { get; set; }
         public SaleViewModel SaleVM { get; set; }
+        public SettingsViewModel SettingsVM { get; set; }
 
 
         private object _currentView;
@@ -40,6 +42,7 @@ namespace WpfApp1.Model
             SuppliersVM = new SuppliersViewModel();
             ProcurementVM = new ProcurementViewModel();
             SaleVM = new SaleViewModel();
+            SettingsVM = new SettingsViewModel();
             CurrentView = HomeVM;
 
             HomeRelayCommand = new RelayCommand((o) =>
@@ -73,6 +76,13 @@ namespace WpfApp1.Model
             {
                 CurrentView = SaleVM;
             });
+            
+            SettingsRelayCommand = new RelayCommand((o) =>
+            {
+                CurrentView = SettingsVM;
+            });
+
+
         }
     }
 }
