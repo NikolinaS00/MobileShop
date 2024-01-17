@@ -14,6 +14,21 @@
         </Setter>
     </Style>
 
+    <Style TargetType="Button" x:Key="BackButton">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                    <GradientStop Color="#3B6381" Offset="0.0"/>
+                    <GradientStop Color="#87A5BC" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+           
+        </Setter>
+        <Setter Property="BorderThickness" Value="0px"></Setter>
+        <Setter Property="Foreground" Value="White"/>
+
+    </Style>
+
     <Style TargetType="Grid" x:Key="MainWindow">
         <Setter Property="Background" Value="#3B6381"/>
     </Style>
@@ -134,5 +149,42 @@
     <Style TargetType="FlowDocumentScrollViewer" x:Key="scroll">
         <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
     </Style>
-        
+
+    <Style TargetType="ComboBox" x:Key="comboBox">
+        <Setter Property="Background" Value="#81A9C8"/>
+        <Setter Property="Foreground" Value="black"/>
+        <Setter Property="Height" Value="35"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#196480"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="ComboBoxItem" x:Key="comboboxitm">
+        <Setter Property="Background" Value="#196480"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="applyButton">
+        <Setter Property="Background" Value="#81A9C8"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="#81A9C8" BorderThickness="1" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+
+
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#b9cfdf"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <SolidColorBrush x:Key="comboBoxColor">#FF0F4E7A</SolidColorBrush>
 </ResourceDictionary>

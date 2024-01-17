@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.DataBase;
 
 namespace WpfApp1.View
 {
@@ -29,7 +30,7 @@ namespace WpfApp1.View
           
             var app = (App)Application.Current;
             MainWindow win = new MainWindow();
-          
+            DbMobileShop.GetAccounts();
            
             win.Show();
         }

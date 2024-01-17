@@ -17,9 +17,22 @@
     <AccessText x:Key="WindowNameLabelSettings" Text="Settings"/>
     <AccessText x:Key="MobilePhonesButton" Text="Mobile phones"/>
     <AccessText x:Key="PhoneCasesButton" Text="Phone cases"/>
-    <AccessText x:Key="OtherPhoneButtonLabel" Text="Other phone "/>
+    <AccessText x:Key="OtherPhoneButtonLabel" TextWrapping="WrapWithOverflow" Text="Other phone "/>
     <AccessText x:Key="EquipmentButtonLabel" Text="equipment"/>
-    <AccessText x:Key="PhoneadaptersButton" Text="Phoneadapters and powerbanks"/>
-
+    <AccessText x:Key="PhoneadaptersButtonLabel" Text="Phoneadapters "/>
+    <AccessText x:Key="PowerbanksButtonLabel" Text="and powerbanks"/>
+    <AccessText x:Key="LabelTheme" Text="Theme:"/>
+    <AccessText x:Key="LabelFontStyle" Text="Font style:"/>
+    <AccessText x:Key="LabelFontSize" Text="Font size:"/>
+    <AccessText x:Key="LabelLanguage" Text="Language:"/>
+    <AccessText x:Key="ButtonApply" Text="Apply"/>
+    <AccessText x:Key="WindowNameLabelMobilePhones" Text="Mobile phones"/>
+    <AccessText x:Key="WindowNameLabelPhoneCases" Text="Phone cases"/>
+    <AccessText x:Key="WindowNameLabelOtherEquipment" Text="Other equipment"/>
+    <AccessText x:Key="WindowNameLabelPowerBanks" Text="Phoneadapters and powerbanks"/>
+    <AccessText x:Key="BackButtonContent" Text="&lt;Back"/>
+    <AccessText x:Key="AddButtonContent" Text="+Add"/>
+    <AccessText x:Key="EditButtonContent" Text="Edit"/>
+    <AccessText x:Key="DeleteButtonContent" Text="Delete"/>
 
 </ResourceDictionary>

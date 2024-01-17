@@ -13,8 +13,8 @@ namespace WpfApp1.objects
         private Action<object> _execute;
         private Func<object, bool> _canExecute;
         public RelayCommand(Action<object> execute,Func<object,bool> canExecute = null)
-        {   
-            _execute = execute;
+        {
+            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
             _canExecute = canExecute;
         }
         public event EventHandler CanExecuteChanged

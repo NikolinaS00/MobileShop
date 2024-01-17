@@ -21,7 +21,7 @@
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Row="1" x:Name="BorderTop" Style="{StaticResource BorderLeft}" CornerRadius="0 200 0 180">
+        <Border Grid.Row="1" x:Name="BorderTop" Style="{DynamicResource BorderLeft}" CornerRadius="0 200 0 180">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -30,12 +30,74 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Label Grid.Column="1" x:Name="NameOfWindow"  Style="{StaticResource WindowName}" Content="{StaticResource WindowNameLabelSettings}" >
+                <Label Grid.Column="1" x:Name="NameOfWindow"  Style="{DynamicResource WindowName}" Content="{DynamicResource WindowNameLabelSettings}"  FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" >
 
                 </Label>
+             
             </Grid>
         </Border>
+        <Grid Grid.Row="3" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="10*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="9*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
 
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="1" Style="{DynamicResource LabelDesign}" Content="{DynamicResource LabelTheme}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}"></Label>
+                <ComboBox Name="themeComboBox" Grid.Row="0" Grid.Column="3" Style="{DynamicResource comboBox}" SelectionChanged="ThemeComboBox_SelectionChanged" >
+                    <ComboBoxItem Content="Plava" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                    <ComboBoxItem Content="Zelena" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                </ComboBox>     
+                <Label Grid.Row="2" Grid.Column="1" Style="{DynamicResource LabelDesign}" Content="{DynamicResource LabelFontStyle}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}"></Label>
+                <ComboBox Name="FontStyleComboBox" Grid.Row="2" Grid.Column="3"  Style="{DynamicResource comboBox}" SelectionChanged="FontStyleComboBox_SelectionChanged">
+                    <ComboBox.Background >Yellow </ComboBox.Background>
+                   
+                    <ComboBoxItem Content="Century Gothic" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                    <ComboBoxItem Content="Times New Roman" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                </ComboBox>  
+                <Label Grid.Row="4" Grid.Column="1" Style="{DynamicResource LabelDesign}" Content="{DynamicResource LabelFontSize}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}"></Label>
+                <ComboBox Name="FontSizeComboBox" Grid.Row="4" Grid.Column="3" Style="{DynamicResource comboBox}" SelectionChanged="FontSizeComboBox_SelectionChanged">
+                    <ComboBoxItem Content="16" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                    <ComboBoxItem Content="20" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                    <ComboBoxItem Content="24" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                </ComboBox> 
+                <Label Grid.Row="6" Grid.Column="1" Style="{DynamicResource LabelDesign}" Content="{DynamicResource LabelLanguage}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}"></Label>
+                <ComboBox Name="LanguageComboBox" Grid.Row="6" Grid.Column="3" Style="{DynamicResource comboBox}" SelectionChanged="LanguageComboBox_SelectionChanged">
+                    
+                    <ComboBoxItem Content="Srpski-SR" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                    <ComboBoxItem Content="Engleski-EN" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                </ComboBox>
+                
+                <Button Name="applyButton" Grid.Column="4" Grid.Row="8" Style="{DynamicResource applyButton}" Content="{DynamicResource ButtonApply}" Click="applyButton_Click"></Button>
+            </Grid>
+        </Grid>
 
     </Grid>
 </UserControl>

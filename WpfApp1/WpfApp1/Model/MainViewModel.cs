@@ -1,5 +1,8 @@
 ﻿
+using System;
+using System.Windows.Input;
 using WpfApp1.objects;
+using WpfApp1.View;
 
 namespace WpfApp1.Model
 {
@@ -8,13 +11,19 @@ namespace WpfApp1.Model
 
 	internal class MainViewModel : ObservableObject {
 
+      
+     
         public RelayCommand HomeRelayCommand { get; set; }
-        public RelayCommand ArticlesRelayCommand { get; set; }
         public RelayCommand EmployeesRelayCommand { get; set; }
         public RelayCommand SuppliersRelayCommand { get; set; }
         public RelayCommand ProcurementRelayCommand { get; set; }
         public RelayCommand SaleRelayCommand { get; set; }
         public RelayCommand SettingsRelayCommand { get; set; }
+        public RelayCommand MobilePhonesRelayCommand { get; set; }
+        public RelayCommand PhoneCasesRelayCommand { get; set; }
+        public RelayCommand OtherEquipmentRelayCommand { get; set; }
+        public RelayCommand PowerBanksRelayCommand { get; set; }
+        public MobilePhonesViewModel MobilePhonesVM { get; set; }
         public HomeViewModel HomeVM { get; set; }
         public ArticlesViewModel ArticleVM { get; set; }
         public EmployeesViewModel EmployeesVM { get; set; }
@@ -22,7 +31,26 @@ namespace WpfApp1.Model
         public ProcurementViewModel ProcurementVM { get; set; }
         public SaleViewModel SaleVM { get; set; }
         public SettingsViewModel SettingsVM { get; set; }
+        private ICommand _articlesRelayCommand;
 
+        public ICommand ArticlesRelayCommand
+        {
+            get
+            {
+                if (_articlesRelayCommand == null)
+                {
+                    _articlesRelayCommand = new RelayCommand(ExecuteButtonClick);
+                }
+                return _articlesRelayCommand;
+            }
+        }
+
+        private void ExecuteButtonClick(object parameter)
+        {
+            Console.WriteLine("executeeeeee");
+            ArticleVM = new ArticlesViewModel();
+            CurrentView = ArticleVM;
+        }
 
         private object _currentView;
         public object CurrentView
@@ -51,10 +79,7 @@ namespace WpfApp1.Model
             });
 
 
-            ArticlesRelayCommand = new RelayCommand((o) =>
-            {
-                CurrentView = ArticleVM;
-            });
+           
 
 
             EmployeesRelayCommand = new RelayCommand((o) =>
@@ -82,7 +107,15 @@ namespace WpfApp1.Model
                 CurrentView = SettingsVM;
             });
 
+        
 
+        }
+
+        public void MobilePhonesCurrentView()
+        {
+            Console.WriteLine("phoneeeeeeeeeeeeeee");
+            CurrentView = MobilePhonesVM;
+            onPropertyChanged();
         }
     }
 }

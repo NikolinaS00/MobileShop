@@ -11,7 +11,7 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
-    <Grid Style="{DynamicResource MainWindow}"> 
+    <Grid Style="{DynamicResource MainWindow}">
 
 
         <Grid.ColumnDefinitions>
@@ -51,7 +51,7 @@
                                 <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource HomeButton}"/>
                             </StackPanel>
                         </Button>
-                        <Button Style="{DynamicResource ButtonsInTheMenu}" Height="50" Command="{Binding ArticlesRelayCommand}">
+                        <Button Name="ArticleButton" Style="{DynamicResource ButtonsInTheMenu}" Height="50" Command="{Binding ArticlesRelayCommand}" Click="ArticleButton_Click">
                             <StackPanel Orientation="Horizontal">
 
                                 <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource ArticlesButton}"/>
@@ -93,18 +93,18 @@
                             </Ellipse>
                         </Border>
                     </DockPanel>
-                    <TextBlock Text="Mobile Shop" Grid.Column="0" Margin="70 70 0 0 " Style="{DynamicResource mainTitle}" Grid.ColumnSpan="2"/>
+                    <TextBlock Text="Mobile Shop" Grid.Column="0" Margin="70 70 0 0 " Style="{DynamicResource mainTitle}"   FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Grid.ColumnSpan="2"/>
                 </Grid>
             </Border>
-            
-                
-            </Grid>
+
+
+        </Grid>
         <Grid Grid.Column="1" >
             <ContentControl Content="{Binding CurrentView}"/>
         </Grid>
 
-       
-        
+
+
 
 
 

@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel x:Name="panel">
-            <Label  Grid.Row="0" Grid.Column="0" FontSize="35" Style="{StaticResource LabelDesign}" Content="Mobile Phones" HorizontalAlignment="Left" VerticalAlignment="Center" Margin=" 20,30"/>
+            <Label  Grid.Row="0" Grid.Column="0" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Style="{DynamicResource LabelDesign}" Content="Mobile Phones" HorizontalAlignment="Left" VerticalAlignment="Center" Margin=" 20,30"/>
         </StackPanel>
         <Image Source="//..//phone.png" HorizontalAlignment="Right"/>
     </Grid>

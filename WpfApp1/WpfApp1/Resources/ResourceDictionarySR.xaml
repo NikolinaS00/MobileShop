@@ -17,7 +17,22 @@
     <AccessText x:Key="SettingsButton" Text="Podešavanja"/>
     <AccessText x:Key="MobilePhonesButton" Text="Mobilni telefoni"/>
     <AccessText x:Key="PhoneCasesButton" Text="Maske za telefone"/>
-    <AccessText x:Key="OtherPhoneButtonLabel" Text="Ostala oprema za "/>
+    <AccessText x:Key="OtherPhoneButtonLabel" TextWrapping="WrapWithOverflow" Text="Ostala oprema za "/>
     <AccessText x:Key="EquipmentButtonLabel" Text="telefone"/>
-    <AccessText x:Key="PhoneadaptersButton" Text="Punjači i powerbank-ovi"/>
+    <AccessText x:Key="PhoneadaptersButtonLabel" Text="Punjači i "/>
+    <AccessText x:Key="PowerbanksButtonLabel" Text="powerbank-ovi"/>
+    <AccessText x:Key="LabelTheme" Text="Tema:"/>
+    <AccessText x:Key="LabelFontStyle" Text="Stil fonta:"/>
+    <AccessText x:Key="LabelFontSize" Text="Veličina fonta:"/>
+    <AccessText x:Key="LabelLanguage" Text="Jezik:"/>
+    <AccessText x:Key="ButtonApply" Text="Primijeni"/>
+    <AccessText x:Key="WindowNameLabelMobilePhones" Text="Mobilni telefoni"/>
+    <AccessText x:Key="WindowNameLabelPhoneCases" Text="Maske za telefone"/>
+    <AccessText x:Key="WindowNameLabelOtherEquipment" Text="Ostala oprema"/>
+    <AccessText x:Key="WindowNameLabelPowerBanks" Text="Punjači i powerbank-ovi"/>
+    <AccessText x:Key="BackButtonContent" Text="&lt;Nazad"/>
+    <AccessText x:Key="AddButtonContent" Text="+Dodaj"/>
+    <AccessText x:Key="EditButtonContent" Text="Uredi"/>
+    <AccessText x:Key="DeleteButtonContent" Text="Obriši"/>
+
 </ResourceDictionary>

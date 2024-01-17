@@ -135,3 +135,11 @@ C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resourc
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionaryFontStyle2.baml
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionaryFontSize20.baml
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionaryFontSize24.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\MobilePhonesView.g.cs
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\OtherEquipmentView.g.cs
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\PhoneAdaptersView.g.cs
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\PhoneCasesView.g.cs
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\MobilePhonesView.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\OtherEquipmentView.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\PhoneAdaptersView.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\PhoneCasesView.baml

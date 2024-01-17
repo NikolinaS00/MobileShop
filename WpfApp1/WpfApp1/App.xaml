@@ -10,7 +10,7 @@
        <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/ResourceDictionaryTHEME.xaml"/>
-                <ResourceDictionary Source="Resources/ResourceDictionaryEN.xaml"/>
+                <ResourceDictionary Source="Resources/ResourceDictionarySR.xaml"/>
                 <ResourceDictionary Source="Resources/ResourceDictionaryFontSize24.xaml"/>
                 <ResourceDictionary Source="Resources/ResourceDictionaryFontStyle1.xaml"/>
             </ResourceDictionary.MergedDictionaries>
@@ -34,6 +34,9 @@
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
                 <view:SettingsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:MobilePhonesViewModel}">
+                <view:MobilePhonesView/>
             </DataTemplate>
         </ResourceDictionary>  
     </Application.Resources>

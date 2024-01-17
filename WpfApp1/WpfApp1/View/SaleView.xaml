@@ -30,7 +30,7 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Label Grid.Column="1" x:Name="NameOfWindow"  Style="{StaticResource WindowName}" Content="{StaticResource WindowNameLabelSale}" >
+                <Label Grid.Column="1" x:Name="NameOfWindow" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Style="{DynamicResource WindowName}" Content="{DynamicResource WindowNameLabelSale}" >
 
                 </Label>
             </Grid>

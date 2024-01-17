@@ -26,12 +26,34 @@ namespace WpfApp1.DataBase
                     UID = reader.GetString(0),
                     FirstName = reader.GetString(1),
                     LastName = reader.GetString(2),
-                    dateOfBirth = reader.GetString(3)
+                    DateOfBirth = reader.GetString(3)
 
                 }); ;
             }
             reader.Close();
             conn.Close();
+            return result;
+        }
+
+        public static List<Account> GetAccounts()
+        {
+            List <Account> result = new List<Account>();
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM `nalog`";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                if(reader.GetString(3)!=null)
+                result.Add(new Account()
+                {
+                    ThemeColor = reader.GetString(3)
+                });
+
+                Console.WriteLine(reader.GetString(3));
+            }
+
             return result;
         }
     }

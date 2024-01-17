@@ -124,12 +124,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataBase\Account.cs" />
     <Compile Include="DataBase\DbMobileShop.cs" />
     <Compile Include="DataBase\Employee.cs" />
     <Compile Include="Model\ArticlesViewModel.cs" />
     <Compile Include="Model\EmployeesViewModel.cs" />
     <Compile Include="Model\HomeViewModel.cs" />
     <Compile Include="Model\MainViewModel.cs" />
+    <Compile Include="Model\MobilePhonesViewModel.cs" />
     <Compile Include="Model\ProcurementViewModel.cs" />
     <Compile Include="Model\SaleViewModel.cs" />
     <Compile Include="Model\SettingsViewModel.cs" />
@@ -153,6 +155,18 @@
     </Compile>
     <Compile Include="View\mainViewModel.xaml.cs">
       <DependentUpon>mainViewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MobilePhonesView.xaml.cs">
+      <DependentUpon>MobilePhonesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\OtherEquipmentView.xaml.cs">
+      <DependentUpon>OtherEquipmentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PhoneAdaptersView.xaml.cs">
+      <DependentUpon>PhoneAdaptersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PhoneCasesView.xaml.cs">
+      <DependentUpon>PhoneCasesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ProcurementView.xaml.cs">
       <DependentUpon>ProcurementView.xaml</DependentUpon>
@@ -239,6 +253,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\mainViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MobilePhonesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\OtherEquipmentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PhoneAdaptersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PhoneCasesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

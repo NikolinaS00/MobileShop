@@ -3,87 +3,326 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:WpfApp1.View"
+             xmlns:local="clr-namespace:WpfApp1.View" xmlns:model="clr-namespace:WpfApp1.Model" d:DataContext="{d:DesignInstance Type=model:ArticlesViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Transparent" Visibility="Visible">
-        <Grid.RowDefinitions >
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="9*"></RowDefinition>
+    <UserControl.DataContext>
+        <model:ArticlesViewModel></model:ArticlesViewModel>
+    </UserControl.DataContext>
+    <Grid>
+        <!--Glavni prozor sa karticama artikala-->
+        <Grid Name="DefaultWin" Background="Transparent" Visibility="Visible">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="9*"></RowDefinition>
 
 
-        </Grid.RowDefinitions>
+            </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15*"></ColumnDefinition>
-            <ColumnDefinition Width="1*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-        <Border Grid.Row="1" x:Name="BorderTop" Style="{DynamicResource BorderLeft}" CornerRadius="0 200 0 180">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
+            <Border Grid.Row="1" x:Name="BorderTop" Style="{DynamicResource BorderLeft}" CornerRadius="0 200 0 180">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
 
 
-                <Label Grid.Column="1" x:Name="NameOfWindow"  Style="{DynamicResource WindowName}" Content="{DynamicResource WindowNameLabelArticles}" >
+                    <Label Grid.Column="1" x:Name="NameOfWindow" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Style="{DynamicResource WindowName}" Content="{DynamicResource WindowNameLabelArticles}" >
 
-                </Label>
+                    </Label>
+                </Grid>
+            </Border>
+            <Border Grid.Row="3" Margin="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button  Grid.Row="0" Grid.Column="0" Style="{DynamicResource ButtonsArticles}" Name="ArticlePhone" Click="ArticlePhone_Click">
+                        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,10,1">
+                            <StackPanel>
+                                <Label Style="{DynamicResource LabelDesign}" Content="{DynamicResource MobilePhonesButton}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            </StackPanel>
+                            <Image Source="/phone.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                        </Grid>
+                    </Button>
+
+                    <Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource ButtonsArticles}" Name="ArticlePhoneCases" Click="ArticlePhoneCases_Click">
+                        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,10,1">
+                            <StackPanel>
+                                <Label   Style="{DynamicResource LabelDesign}" Content="{DynamicResource PhoneCasesButton}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            </StackPanel>
+                            <Image Source="/cases.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                        </Grid>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="0" Style="{DynamicResource ButtonsArticles}" Name="PhoneEquipment" Click="PhoneEquipment_Click">
+                        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,4,10,1">
+                            <StackPanel>
+                                <Label  Style="{DynamicResource LabelDesign}" Content="{DynamicResource OtherPhoneButtonLabel}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Label  Style="{DynamicResource LabelDesign}" Content="{DynamicResource EquipmentButtonLabel}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            </StackPanel>
+                            <Image Source="/earphonesq.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                        </Grid>
+                    </Button>
+                    <Button Grid.Row="1" Grid.Column="1" Style="{DynamicResource ButtonsArticles}" Name="PowerBanks" Click="PowerBanks_Click">
+                        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,4,10,1">
+                            <StackPanel>
+                                <Label   Style="{DynamicResource LabelDesign}" Content="{DynamicResource PhoneadaptersButtonLabel}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                <Label   Style="{DynamicResource LabelDesign}" Content="{DynamicResource PowerbanksButtonLabel}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            </StackPanel>
+                            <Image Source="/phoneadapter.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                        </Grid>
+                    </Button>
+                </Grid>
+            </Border>
+        </Grid>
+        <!--Prozor za prikaz mobilnih telefona-->
+        <Grid Name="MobilePhonesWin" Background="Transparent" Visibility="Hidden">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="9*"></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="1" x:Name="BorderTop1" Style="{DynamicResource BorderLeft}" CornerRadius="0 200 0 180">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Grid.Column="1" x:Name="NameOfWindow1" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Style="{DynamicResource WindowName}" Content="{DynamicResource WindowNameLabelMobilePhones}" >
+
+                    </Label>
+                </Grid>
+            </Border>
+            <!--Grid za buttone-->
+            <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="4*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton" Content="{DynamicResource BackButtonContent}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 50 0 50"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd" Content="{DynamicResource AddButtonContent}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd_Click"></Button>
+                    <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit" Content="{DynamicResource EditButtonContent}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit_Click"></Button>
+                    <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete" Content="{DynamicResource DeleteButtonContent}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete_Click"></Button>
+                </Grid>
+                
             </Grid>
-        </Border>
-        <Border Grid.Row="3" Margin="20">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height="1*"/>
-                </Grid.RowDefinitions>
 
-                <Button  Grid.Row="0" Grid.Column="0" Style="{DynamicResource ButtonsArticles}" Name="ArticlePhone" >
-                    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,10,1">
-                        <StackPanel>
-                            <Label  FontSize="25" Style="{DynamicResource LabelDesign}" Content="Mobile Phones" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                        </StackPanel>
-                        <Image Source="/phone.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
-                    </Grid>
-                </Button>
 
-                <Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource ButtonsArticles}" Name="ArticlePhoneCases">
-                    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,10,1">
-                        <StackPanel>
-                            <Label  FontSize="25" Style="{DynamicResource LabelDesign}" Content="{DynamicResource PhoneCasesButton}" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                        </StackPanel>
-                        <Image Source="/cases.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
-                    </Grid>
-                </Button>
-                <Button Grid.Row="1" Grid.Column="0" Style="{DynamicResource ButtonsArticles}" Name="PhoneEquipment">
-                    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,4,10,1">
-                        <StackPanel>
-                            <Label  FontSize="25" Style="{DynamicResource LabelDesign}" Content="{DynamicResource OtherPhoneButtonLabel}" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                            <Label  FontSize="25" Style="{DynamicResource LabelDesign}" Content="{DynamicResource EquipmentButtonLabel}" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                        </StackPanel>
-                        <Image Source="/earphonesq.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
-                    </Grid>
-                </Button>
-                <Button Grid.Row="1" Grid.Column="1" Style="{DynamicResource ButtonsArticles}">
-                    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1,4,10,1">
-                        <StackPanel>
-                            <Label   Style="{DynamicResource LabelDesign}" Content="Phoneadapters" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                            <Label   Style="{DynamicResource LabelDesign}" Content="and " HorizontalAlignment="Left" VerticalAlignment="Top" />
-                            <Label   Style="{DynamicResource LabelDesign}" Content="powerbanks " HorizontalAlignment="Left" VerticalAlignment="Top" />
-                        </StackPanel>
-                        <Image Source="/phoneadapter.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
-                    </Grid>
-                </Button>
+        </Grid>
+        <!--Prozor za prikaz maski za telefon-->
+        <Grid Name="PhoneCasesWin" Background="Transparent" Visibility="Hidden">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="9*"></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="1" x:Name="BorderTop2" Style="{DynamicResource BorderLeft}" CornerRadius="0 200 0 180">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Grid.Column="1" x:Name="NameOfWindow2" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Style="{DynamicResource WindowName}" Content="{DynamicResource WindowNameLabelPhoneCases}" >
+
+                    </Label>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="4*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton1" Content="{DynamicResource BackButtonContent}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 50 0 50"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+
             </Grid>
-        </Border>
+        </Grid>
+        <!--Prozor za prikaz ostale opreme-->
+        <Grid Name="OtherEquipmentWin" Background="Transparent" Visibility="Hidden">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="9*"></RowDefinition>
 
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="1" x:Name="BorderTop3" Style="{DynamicResource BorderLeft}" CornerRadius="0 200 0 180">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Grid.Column="1" x:Name="NameOfWindow3" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Style="{DynamicResource WindowName}" Content="{DynamicResource WindowNameLabelOtherEquipment}" >
+
+                    </Label>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="4*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton2" Content="{DynamicResource BackButtonContent}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 50 0 50"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+        <!--Prozor za prikaz powerbankova...-->
+        <Grid Name="PowerBanksWin" Background="Transparent" Visibility="Hidden">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="9*"></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="1" x:Name="BorderTop4" Style="{DynamicResource BorderLeft}" CornerRadius="0 200 0 180">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Grid.Column="1" x:Name="NameOfWindow4" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Style="{DynamicResource WindowName}" Content="{DynamicResource WindowNameLabelPowerBanks}" >
+
+                    </Label>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="4*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton3" Content="{DynamicResource BackButtonContent}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 50 0 50"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+
+            </Grid>
+
+        </Grid>
     </Grid>
+    
+    
+   
 </UserControl>

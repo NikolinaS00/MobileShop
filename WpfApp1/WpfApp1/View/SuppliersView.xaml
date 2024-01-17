@@ -21,7 +21,7 @@
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Row="1" x:Name="BorderTop" Style="{StaticResource BorderLeft}" CornerRadius="0 200 0 180">
+        <Border Grid.Row="1" x:Name="BorderTop" Style="{DynamicResource BorderLeft}" CornerRadius="0 200 0 180">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -30,7 +30,7 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Label Grid.Column="1" x:Name="NameOfWindow"  Style="{StaticResource WindowName}" Content="{StaticResource WindowNameLabelSuppliers}" >
+                <Label Grid.Column="1" x:Name="NameOfWindow" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Style="{DynamicResource WindowName}" Content="{DynamicResource WindowNameLabelSuppliers}" >
 
                 </Label>
             </Grid>
