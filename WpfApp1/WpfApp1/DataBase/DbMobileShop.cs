@@ -48,13 +48,20 @@ namespace WpfApp1.DataBase
                 if(reader.GetString(3)!=null)
                 result.Add(new Account()
                 {
-                    ThemeColor = reader.GetString(3)
+                    Name = reader.GetString(1),
+                    Password = reader.GetString(2),
+                    ThemeColor = reader.GetString(3),
+                    ThemeFontSize = reader.GetString(4),
+                    ThemeFontStyle = reader.GetString(5),
+                    Language = reader.GetString(6)
                 });
 
-                Console.WriteLine(reader.GetString(3));
+                
             }
 
             return result;
         }
+
+     
     }
 }

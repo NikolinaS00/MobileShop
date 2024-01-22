@@ -34,5 +34,13 @@
     <AccessText x:Key="AddButtonContent" Text="+Add"/>
     <AccessText x:Key="EditButtonContent" Text="Edit"/>
     <AccessText x:Key="DeleteButtonContent" Text="Delete"/>
+    <AccessText x:Key="WindowNameLabelAddArticle" Text="Add article"/>
+    <AccessText x:Key="ArticleNameLabel" Text="Article name:"/>
+    <AccessText x:Key="NumberOfArticleLabel" Text="Number of articles:"/>
+    <AccessText x:Key="ArticlePriceLabel" Text="Article price:"/>
+    <AccessText x:Key="WarrantyLabel" Text="Warranty period[month]:"/>
+    <AccessText x:Key="ArticleFotrographyLabel" Text="Article photography:"/>
+    <AccessText x:Key="AddPhotographyButton" Text="Add photography"/>
+    <AccessText x:Key="AddArticleButton" Text="Add article"/>
 
 </ResourceDictionary>

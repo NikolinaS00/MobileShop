@@ -75,7 +75,8 @@ namespace WpfApp1.View
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            AddArticleWindow winn = new AddArticleWindow();
+            winn.Show();
         }
 
         private void ButtonEdit_Click(object sender, RoutedEventArgs e)

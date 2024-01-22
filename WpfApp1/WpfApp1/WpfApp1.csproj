@@ -138,6 +138,9 @@
     <Compile Include="Model\SuppliersViewModel.cs" />
     <Compile Include="objects\ObservableObject.cs" />
     <Compile Include="objects\RelayCommand.cs" />
+    <Compile Include="View\AddArticleWindow.xaml.cs">
+      <DependentUpon>AddArticleWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ArticlesView.xaml.cs">
       <DependentUpon>ArticlesView.xaml</DependentUpon>
     </Compile>
@@ -229,6 +232,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\ResourceDictionaryThemeGREEN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddArticleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -34,5 +34,13 @@
     <AccessText x:Key="AddButtonContent" Text="+Dodaj"/>
     <AccessText x:Key="EditButtonContent" Text="Uredi"/>
     <AccessText x:Key="DeleteButtonContent" Text="Obriši"/>
+    <AccessText x:Key="WindowNameLabelAddArticle" Text="Dodavanje artikla"/>
+    <AccessText x:Key="ArticleNameLabel" Text="Naziv artikla:"/>
+    <AccessText x:Key="NumberOfArticleLabel" Text="Broj artikala:"/>
+    <AccessText x:Key="ArticlePriceLabel" Text="Cijena artikla:"/>
+    <AccessText x:Key="WarrantyLabel" Text="Period garancije[mjesec]:"/>
+    <AccessText x:Key="ArticleFotrographyLabel" Text="Fotografija artikla:"/>
+    <AccessText x:Key="AddPhotographyButton" Text="Dodaj fotografiju"/>
+    <AccessText x:Key="AddArticleButton" Text="Dodaj artikal"/>
 
 </ResourceDictionary>

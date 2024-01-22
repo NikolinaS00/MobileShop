@@ -41,16 +41,16 @@
                     <RowDefinition Height="2*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Label VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" Content="Korisnicko ime"></Label>
-                <TextBox Grid.Row="4" Grid.Column="1"></TextBox>
+                <TextBox Name="UserName" Grid.Row="4" Grid.Column="1"></TextBox>
                 <Label VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="1" Content="Lozinka"></Label>
-                <PasswordBox Grid.Row="8" Grid.Column="1"></PasswordBox>
+                <PasswordBox Name="Password" Grid.Row="8" Grid.Column="1"></PasswordBox>
                 <Grid Grid.Row="10" Grid.Column="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                         <ColumnDefinition Width="3*"></ColumnDefinition>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="1" Style="{DynamicResource applyButton}" Content="Prijavi se" Click="Button_Click"></Button>
+                    <Button Grid.Column="1" Style="{DynamicResource logInButton}" Content="Prijavi se" Click="Button_Click"></Button>
                 </Grid>
             </Grid> 
         </Border>

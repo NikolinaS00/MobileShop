@@ -168,6 +168,7 @@
 
     <Style TargetType="Button" x:Key="applyButton">
         <Setter Property="Background" Value="#81A9C8"/>
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -185,6 +186,24 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    <Style TargetType="Button" x:Key="logInButton">
+        <Setter Property="Background" Value="#81A9C8"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="#81A9C8" BorderThickness="1" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
 
+
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#b9cfdf"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
     <SolidColorBrush x:Key="comboBoxColor">#FF0F4E7A</SolidColorBrush>
 </ResourceDictionary>
