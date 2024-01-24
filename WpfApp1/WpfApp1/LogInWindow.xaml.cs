@@ -15,9 +15,6 @@ using WpfApp1.DataBase;
 
 namespace WpfApp1.View
 {
-    /// <summary>
-    /// Interaction logic for LogInWindow.xaml
-    /// </summary>
     public partial class LogInWindow : Window
     {
         Account LoggedInUser { get; set; } = null;

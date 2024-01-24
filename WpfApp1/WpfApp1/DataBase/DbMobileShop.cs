@@ -62,6 +62,36 @@ namespace WpfApp1.DataBase
             return result;
         }
 
+        public static void createArticle(Article art)
+        {
+
+        }
+
+        public static List<Article> GetArticlesByCategory(string category)
+        {
+            List<Article> result = new List<Article>();
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM `artikal` WHERE `KategorijaArtikla` = '" + category + "'";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                result.Add(new Article()
+                {
+                    Id = reader.GetInt32(0),
+                    Name = reader.GetString(1),
+                    NumberOfArticles = reader.GetInt32(2),
+                    ArticleCategory = reader.GetString(3),
+                    ArticlePrice = reader.GetInt32(4),
+                    Varrranty = reader.GetInt32(5),
+                  //  Photography = reader.GetString(6)
+                   
+                });
+            }
+            return result;
+        }
+
      
     }
 }

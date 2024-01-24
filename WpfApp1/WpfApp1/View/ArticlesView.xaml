@@ -6,12 +6,10 @@
              xmlns:local="clr-namespace:WpfApp1.View" xmlns:model="clr-namespace:WpfApp1.Model" d:DataContext="{d:DesignInstance Type=model:ArticlesViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.DataContext>
-        <model:ArticlesViewModel></model:ArticlesViewModel>
-    </UserControl.DataContext>
+  
     <Grid>
         <!--Glavni prozor sa karticama artikala-->
-        <Grid Name="DefaultWin" Background="Transparent" Visibility="Visible">
+        <Grid Name="DefaultWin" Background="Transparent" Visibility="Hidden">
             <Grid.RowDefinitions >
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="2*"></RowDefinition>
@@ -90,7 +88,7 @@
             </Border>
         </Grid>
         <!--Prozor za prikaz mobilnih telefona-->
-        <Grid Name="MobilePhonesWin" Background="Transparent" Visibility="Hidden">
+        <Grid Name="MobilePhonesWin" Background="Transparent" Visibility="Visible">
             <Grid.RowDefinitions >
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="2*"></RowDefinition>
@@ -136,7 +134,7 @@
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton" Content="{DynamicResource BackButtonContent}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
+                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton" Content="Nazad" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="0 50 0 50"/>
@@ -150,7 +148,31 @@
                 </Grid>
                 
             </Grid>
+            
+            <!--Border za tabelu-->
+            <Border Grid.Column="0" Grid.Row="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="20*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Grid.Column="1" RowHeaderWidth="0" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding MobilePhones}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
+                            <DataGridTextColumn Header="Number of articles" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="Article price" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="Varranty" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <!--Dodat i kolonu zaa fotografiju-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
 
+
+
+
+            </Border>
 
         </Grid>
         <!--Prozor za prikaz maski za telefon-->

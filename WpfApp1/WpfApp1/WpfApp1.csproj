@@ -125,6 +125,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataBase\Account.cs" />
+    <Compile Include="DataBase\Article.cs" />
     <Compile Include="DataBase\DbMobileShop.cs" />
     <Compile Include="DataBase\Employee.cs" />
     <Compile Include="Model\ArticlesViewModel.cs" />
