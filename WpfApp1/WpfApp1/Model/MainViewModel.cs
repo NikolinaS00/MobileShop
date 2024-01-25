@@ -132,6 +132,7 @@ namespace WpfApp1.Model
                 IsComponentVisible = Visibility.Hidden;
             }
 
+            MainWindow.ApplyTheme();
         }
 
         public void MobilePhonesCurrentView()

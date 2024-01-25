@@ -23,10 +23,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         bool isAdmin;
-        public static string themeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryTHEME.xaml";
-        public static string fontSizeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize20.xaml";
-        public static string fontStyleFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontStyle1.xaml";
-        public static string languageFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryEN.xaml";
+
         public ResourceDictionary ThemeDictionaryColor
         {
             get { return Resources.MergedDictionaries[0]; }
@@ -48,7 +45,6 @@ namespace WpfApp1
 
         public MainWindow()
         {
-           
             InitializeComponent();
         }
 
@@ -56,29 +52,20 @@ namespace WpfApp1
         public static void ApplyTheme()
         {
             Application.Current.Resources.MergedDictionaries.Clear();
-            Console.WriteLine("----------" + themeFileName);
+            Console.WriteLine("----------" + LogInWindow.themeFileName);
             ResourceDictionary dictionary1 = new ResourceDictionary();
             ResourceDictionary dictionary2 = new ResourceDictionary();
             ResourceDictionary dictionary3 = new ResourceDictionary();
             ResourceDictionary dictionary4 = new ResourceDictionary();
-            dictionary1.Source = new Uri(themeFileName, UriKind.RelativeOrAbsolute);
-            dictionary2.Source = new Uri(languageFileName, UriKind.RelativeOrAbsolute);
-            dictionary3.Source = new Uri(fontSizeFileName, UriKind.RelativeOrAbsolute); 
-            dictionary4.Source = new Uri(fontStyleFileName, UriKind.RelativeOrAbsolute); 
+            dictionary1.Source = new Uri(LogInWindow.themeFileName, UriKind.RelativeOrAbsolute);
+            dictionary2.Source = new Uri(LogInWindow.languageFileName, UriKind.RelativeOrAbsolute);
+            dictionary3.Source = new Uri(LogInWindow.fontSizeFileName, UriKind.RelativeOrAbsolute); 
+            dictionary4.Source = new Uri(LogInWindow.fontStyleFileName, UriKind.RelativeOrAbsolute); 
 
             Application.Current.Resources.MergedDictionaries.Add(dictionary1);
             Application.Current.Resources.MergedDictionaries.Add(dictionary2);
             Application.Current.Resources.MergedDictionaries.Add(dictionary3);
             Application.Current.Resources.MergedDictionaries.Add(dictionary4);
-        }
-
-    
-
-        private void settingsButton_Click(object sender, RoutedEventArgs e)
-        {
-
-         //   ApplyThemeee("utfgiu");
-
         }
 
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
