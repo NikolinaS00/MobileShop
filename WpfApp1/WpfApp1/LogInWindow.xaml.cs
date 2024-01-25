@@ -17,7 +17,8 @@ namespace WpfApp1.View
 {
     public partial class LogInWindow : Window
     {
-        Account LoggedInUser { get; set; } = null;
+       static Account LoggedInUser { get; set; } = null;
+        public static bool ItsAdmin = false;
         List<Account> Accounts = new List<Account>();
         public LogInWindow()
         {
@@ -38,6 +39,7 @@ namespace WpfApp1.View
             }
             return res;
         }
+     
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -46,6 +48,7 @@ namespace WpfApp1.View
             var pass = Password.Password;
             if(SearchAccount(username, pass)!= null)
             {
+               ItsAdmin = DbMobileShop.IsAdmin(LoggedInUser);
                 MainWindow win = new MainWindow();
                 win.Show();
             }

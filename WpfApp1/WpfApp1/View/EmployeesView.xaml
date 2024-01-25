@@ -42,7 +42,7 @@
                     <ColumnDefinition Width="20*"></ColumnDefinition>
                     <ColumnDefinition Width="1*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <DataGrid Grid.Column="1" RowHeaderWidth="0" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding Employees}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                <DataGrid Grid.Column="1" RowHeaderWidth="0" Style="{DynamicResource TableColor}" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding Employees}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="UID" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding UID}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
                         <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding FirstName}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>

@@ -48,6 +48,7 @@ namespace WpfApp1.DataBase
                 if(reader.GetString(3)!=null)
                 result.Add(new Account()
                 {
+                    Id = reader.GetInt32(0),
                     Name = reader.GetString(1),
                     Password = reader.GetString(2),
                     ThemeColor = reader.GetString(3),
@@ -90,6 +91,25 @@ namespace WpfApp1.DataBase
                 });
             }
             return result;
+        }
+
+        public static bool IsAdmin(Account acc)
+        {
+
+            MySqlConnection con = new MySqlConnection(connectionString);
+            con.Open();
+            MySqlCommand mySqlCommand = con.CreateCommand();
+            mySqlCommand.CommandText = "SELECT * FROM `administrator`";
+            MySqlDataReader reader = mySqlCommand.ExecuteReader();
+            while (reader.Read())
+            {
+                if(acc.Id == reader.GetInt32(4))
+                {
+                    return true;
+                }
+            }
+            return false;
+
         }
 
      

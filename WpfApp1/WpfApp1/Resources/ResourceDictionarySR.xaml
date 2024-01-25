@@ -30,10 +30,22 @@
     <AccessText x:Key="WindowNameLabelPhoneCases" Text="Maske za telefone"/>
     <AccessText x:Key="WindowNameLabelOtherEquipment" Text="Ostala oprema"/>
     <AccessText x:Key="WindowNameLabelPowerBanks" Text="Punjači i powerbank-ovi"/>
-    <AccessText x:Key="BackButtonContent" Text="&lt;Nazad"/>
-    <AccessText x:Key="AddButtonContent" Text="+Dodaj"/>
-    <AccessText x:Key="EditButtonContent" Text="Uredi"/>
-    <AccessText x:Key="DeleteButtonContent" Text="Obriši"/>
+    <AccessText x:Key="BackButtonContent1" Text="Nazad"/>
+    <AccessText x:Key="AddButtonContent1" Text="+Dodaj"/>
+    <AccessText x:Key="EditButtonContent1" Text="Uredi"/>
+    <AccessText x:Key="DeleteButtonContent1" Text="Obriši"/>
+    <AccessText x:Key="BackButtonContent2" Text="Nazad"/>
+    <AccessText x:Key="AddButtonContent2" Text="+Dodaj"/>
+    <AccessText x:Key="EditButtonContent2" Text="Uredi"/>
+    <AccessText x:Key="DeleteButtonContent2" Text="Obriši"/>
+    <AccessText x:Key="BackButtonContent3" Text="Nazad"/>
+    <AccessText x:Key="AddButtonContent3" Text="+Dodaj"/>
+    <AccessText x:Key="EditButtonContent3" Text="Uredi"/>
+    <AccessText x:Key="DeleteButtonContent3" Text="Obriši"/>
+    <AccessText x:Key="BackButtonContent4" Text="Nazad"/>
+    <AccessText x:Key="AddButtonContent4" Text="+Dodaj"/>
+    <AccessText x:Key="EditButtonContent4" Text="Uredi"/>
+    <AccessText x:Key="DeleteButtonContent4" Text="Obriši"/>
     <AccessText x:Key="WindowNameLabelAddArticle" Text="Dodavanje artikla"/>
     <AccessText x:Key="ArticleNameLabel" Text="Naziv artikla:"/>
     <AccessText x:Key="NumberOfArticleLabel" Text="Broj artikala:"/>

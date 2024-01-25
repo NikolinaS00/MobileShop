@@ -11,6 +11,10 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </Window.Resources>
+
     <Grid Style="{DynamicResource MainWindow}">
 
 
@@ -57,15 +61,15 @@
                                 <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource ArticlesButton}"/>
                             </StackPanel>
                         </Button>
-                        <Button Style="{DynamicResource ButtonsInTheMenu}" Height="50" Command="{Binding EmployeesRelayCommand}">
-                            <StackPanel Orientation="Horizontal">
+                        <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource SaleButton}" Height="50" Command="{Binding SaleRelayCommand}"/>
+                        <Button Name="ButtonEmployes" Style="{DynamicResource ButtonsInTheMenu}" Height="50" Command="{Binding EmployeesRelayCommand}" Visibility="{Binding IsComponentVisible}">
+                            <StackPanel Orientation="Horizontal"  Visibility="{Binding isAdminLogged}">
 
-                                <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource EmployeesButton}"/>
+                                <Label  Visibility="{Binding isAdminLogged}" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource EmployeesButton}"/>
                             </StackPanel>
                         </Button>
-                        <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource SuppliersButton}" Height="50" Command="{Binding SuppliersRelayCommand}"/>
-                        <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource ProcurementButton}" Height="50" Command="{Binding ProcurementRelayCommand}"/>
-                        <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource SaleButton}" Height="50" Command="{Binding SaleRelayCommand}"/>
+                        <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource SuppliersButton}" Height="50" Command="{Binding SuppliersRelayCommand}" Visibility="{Binding IsComponentVisible}"/>
+                        <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource ProcurementButton}" Height="50" Command="{Binding ProcurementRelayCommand}" Visibility="{Binding IsComponentVisible}"/>
                         <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Height="50" x:Name="settingsButton"  Command="{Binding SettingsRelayCommand}">
                             <StackPanel Orientation="Horizontal" >
                                 <Image Source="/settings.png" Width="30" Height="30"/>

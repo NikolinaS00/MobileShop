@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Windows;
 using System.Windows.Input;
 using WpfApp1.objects;
 using WpfApp1.View;
@@ -12,7 +13,7 @@ namespace WpfApp1.Model
 	internal class MainViewModel : ObservableObject {
 
       
-     
+        public Visibility isAdminLogged;
         public RelayCommand HomeRelayCommand { get; set; }
         public RelayCommand EmployeesRelayCommand { get; set; }
         public RelayCommand SuppliersRelayCommand { get; set; }
@@ -62,8 +63,23 @@ namespace WpfApp1.Model
                 onPropertyChanged();
             }
         }
-      public MainViewModel()
+
+        private Visibility _isComponentVisible;
+
+        public Visibility IsComponentVisible
         {
+            get { return _isComponentVisible; }
+            set
+            {
+                _isComponentVisible =value;
+                onPropertyChanged(nameof(IsComponentVisible));
+            }
+        }
+        public MainViewModel()
+        {
+
+
+           
             HomeVM = new HomeViewModel();
             ArticleVM = new ArticlesViewModel();
             EmployeesVM = new EmployeesViewModel();
@@ -107,7 +123,14 @@ namespace WpfApp1.Model
                 CurrentView = SettingsVM;
             });
 
-        
+        if(LogInWindow.ItsAdmin)
+            {
+                IsComponentVisible = Visibility.Visible;
+            }
+        else
+            {
+                IsComponentVisible = Visibility.Hidden;
+            }
 
         }
 

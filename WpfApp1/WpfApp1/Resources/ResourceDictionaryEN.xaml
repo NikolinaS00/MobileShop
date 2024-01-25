@@ -30,10 +30,22 @@
     <AccessText x:Key="WindowNameLabelPhoneCases" Text="Phone cases"/>
     <AccessText x:Key="WindowNameLabelOtherEquipment" Text="Other equipment"/>
     <AccessText x:Key="WindowNameLabelPowerBanks" Text="Phoneadapters and powerbanks"/>
-    <AccessText x:Key="BackButtonContent" Text="&lt;Back"/>
-    <AccessText x:Key="AddButtonContent" Text="+Add"/>
-    <AccessText x:Key="EditButtonContent" Text="Edit"/>
-    <AccessText x:Key="DeleteButtonContent" Text="Delete"/>
+    <AccessText x:Key="BackButtonContent1" Text="Back"/>
+    <AccessText x:Key="AddButtonContent1" Text="+Add"/>
+    <AccessText x:Key="EditButtonContent1" Text="Edit"/>
+    <AccessText x:Key="DeleteButtonContent1" Text="Delete"/>
+    <AccessText x:Key="BackButtonContent2" Text="Back"/>
+    <AccessText x:Key="AddButtonContent2" Text="+Add"/>
+    <AccessText x:Key="EditButtonContent2" Text="Edit"/>
+    <AccessText x:Key="DeleteButtonContent2" Text="Delete"/>
+    <AccessText x:Key="BackButtonContent3" Text="Back"/>
+    <AccessText x:Key="AddButtonContent3" Text="+Add"/>
+    <AccessText x:Key="EditButtonContent3" Text="Edit"/>
+    <AccessText x:Key="DeleteButtonContent3" Text="Delete"/>
+    <AccessText x:Key="BackButtonContent4" Text="Back"/>
+    <AccessText x:Key="AddButtonContent4" Text="+Add"/>
+    <AccessText x:Key="EditButtonContent4" Text="Edit"/>
+    <AccessText x:Key="DeleteButtonContent4" Text="Delete"/>
     <AccessText x:Key="WindowNameLabelAddArticle" Text="Add article"/>
     <AccessText x:Key="ArticleNameLabel" Text="Article name:"/>
     <AccessText x:Key="NumberOfArticleLabel" Text="Number of articles:"/>

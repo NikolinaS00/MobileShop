@@ -9,7 +9,7 @@
   
     <Grid>
         <!--Glavni prozor sa karticama artikala-->
-        <Grid Name="DefaultWin" Background="Transparent" Visibility="Hidden">
+        <Grid Name="DefaultWin" Background="Transparent" Visibility="Visible">
             <Grid.RowDefinitions >
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="2*"></RowDefinition>
@@ -88,7 +88,7 @@
             </Border>
         </Grid>
         <!--Prozor za prikaz mobilnih telefona-->
-        <Grid Name="MobilePhonesWin" Background="Transparent" Visibility="Visible">
+        <Grid Name="MobilePhonesWin" Background="Transparent" Visibility="Hidden">
             <Grid.RowDefinitions >
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="2*"></RowDefinition>
@@ -134,7 +134,7 @@
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton" Content="Nazad" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
+                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton1" Content="Nazad" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="0 50 0 50"/>
@@ -142,9 +142,9 @@
                             </Style>
                         </Button.Resources>
                     </Button>
-                    <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd" Content="{DynamicResource AddButtonContent}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd_Click"></Button>
-                    <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit" Content="{DynamicResource EditButtonContent}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit_Click"></Button>
-                    <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete" Content="{DynamicResource DeleteButtonContent}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete_Click"></Button>
+                    <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd1" Content="{DynamicResource AddButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd_Click"></Button>
+                    <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit1" Content="{DynamicResource EditButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit_Click"></Button>
+                    <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete1" Content="{DynamicResource DeleteButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete_Click"></Button>
                 </Grid>
                 
             </Grid>
@@ -157,13 +157,13 @@
                         <ColumnDefinition Width="20*"></ColumnDefinition>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <DataGrid Grid.Column="1" RowHeaderWidth="0" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding MobilePhones}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                    <DataGrid Grid.Column="1" CanUserAddRows="False" RowHeaderWidth="0" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding MobilePhones}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
-                            <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
-                            <DataGridTextColumn Header="Number of articles" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="Id" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn Header="Number of articles" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
                             <DataGridTextColumn Header="Article price" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
-                            <DataGridTextColumn Header="Varranty" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="Varranty" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <!--Dodat i kolonu zaa fotografiju-->
                         </DataGrid.Columns>
                     </DataGrid>
@@ -214,12 +214,15 @@
                         <RowDefinition Height="1*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
-                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton1" Content="{DynamicResource BackButtonContent}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
+                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton2" Content="{DynamicResource BackButtonContent2}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="0 50 0 50"/>
@@ -227,9 +230,38 @@
                             </Style>
                         </Button.Resources>
                     </Button>
+                    <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd2" Content="{DynamicResource AddButtonContent2}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd_Click"></Button>
+                    <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit2" Content="{DynamicResource EditButtonContent2}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit_Click"></Button>
+                    <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete2" Content="{DynamicResource DeleteButtonContent2}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete_Click"></Button>
                 </Grid>
 
             </Grid>
+
+            <!--Border za tabelu-->
+            <Border Grid.Column="0" Grid.Row="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="20*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
+                    <DataGrid Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PhoneCases}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn Header="Number of articles" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
+                            <DataGridTextColumn Header="Article price" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="Varranty" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <!--Dodat i kolonu zaa fotografiju-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+
+
+
+            </Border>
         </Grid>
         <!--Prozor za prikaz ostale opreme-->
         <Grid Name="OtherEquipmentWin" Background="Transparent" Visibility="Hidden">
@@ -269,12 +301,15 @@
                         <RowDefinition Height="1*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
-                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton2" Content="{DynamicResource BackButtonContent}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
+                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton3" Content="{DynamicResource BackButtonContent3}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="0 50 0 50"/>
@@ -282,9 +317,38 @@
                             </Style>
                         </Button.Resources>
                     </Button>
+                    <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd3" Content="{DynamicResource AddButtonContent3}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd_Click"></Button>
+                    <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit3" Content="{DynamicResource EditButtonContent3}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit_Click"></Button>
+                    <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete3" Content="{DynamicResource DeleteButtonContent3}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete_Click"></Button>
                 </Grid>
 
             </Grid>
+
+            <!--Border za tabelu-->
+            <Border Grid.Column="0" Grid.Row="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="20*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
+                    <DataGrid Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding OtherPhoneEquipment}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn Header="Number of articles" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
+                            <DataGridTextColumn Header="Article price" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="Varranty" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <!--Dodat i kolonu zaa fotografiju-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+
+
+
+            </Border>
 
         </Grid>
         <!--Prozor za prikaz powerbankova...-->
@@ -325,12 +389,15 @@
                         <RowDefinition Height="1*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
-                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton3" Content="{DynamicResource BackButtonContent}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
+                    <Button Grid.Column="0" Grid.Row="1"  Name="BackButton4" Content="{DynamicResource BackButtonContent4}" Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="BackButton_Click">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="0 50 0 50"/>
@@ -338,9 +405,38 @@
                             </Style>
                         </Button.Resources>
                     </Button>
+                    <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd4" Content="{DynamicResource AddButtonContent4}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd_Click"></Button>
+                    <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit4" Content="{DynamicResource EditButtonContent4}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit_Click"></Button>
+                    <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete4" Content="{DynamicResource DeleteButtonContent4}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete_Click"></Button>
                 </Grid>
 
             </Grid>
+
+            <!--Border za tabelu-->
+            <Border Grid.Column="0" Grid.Row="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="20*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
+                    <DataGrid Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PowerBanks}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn Header="Number of articles" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
+                            <DataGridTextColumn Header="Article price" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="Varranty" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <!--Dodat i kolonu zaa fotografiju-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+
+
+
+            </Border>
 
         </Grid>
     </Grid>
