@@ -29,6 +29,7 @@ namespace WpfApp1.View
         private void applyButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.ApplyTheme();
+
         }
 
         private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

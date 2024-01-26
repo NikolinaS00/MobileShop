@@ -54,5 +54,25 @@
     <AccessText x:Key="ArticleFotrographyLabel" Text="Fotografija artikla:"/>
     <AccessText x:Key="AddPhotographyButton" Text="Dodaj fotografiju"/>
     <AccessText x:Key="AddArticleButton" Text="Dodaj artikal"/>
+    <AccessText x:Key="HeaderContentArticleId1" Text="Id"/>
+    <AccessText x:Key="HeaderContentArticleName1" Text="Naziv"/>
+    <AccessText x:Key="HeaderContentNofArticles1" Text="Broj artikala"/>
+    <AccessText x:Key="HeaderContentArticlePrice1" Text="Cijena artikla"/>
+    <AccessText x:Key="HeaderContentArticleVarranty1" Text="Garancija"/>
+    <AccessText x:Key="HeaderContentArticleId2" Text="Id"/>
+    <AccessText x:Key="HeaderContentArticleName2" Text="Naziv"/>
+    <AccessText x:Key="HeaderContentNofArticles2" Text="Broj artikala"/>
+    <AccessText x:Key="HeaderContentArticlePrice2" Text="Cijena artikla"/>
+    <AccessText x:Key="HeaderContentArticleVarranty2" Text="Garancija"/>
+    <AccessText x:Key="HeaderContentArticleId3" Text="Id"/>
+    <AccessText x:Key="HeaderContentArticleName3" Text="Naziv"/>
+    <AccessText x:Key="HeaderContentNofArticles3" Text="Broj artikala"/>
+    <AccessText x:Key="HeaderContentArticlePrice3" Text="Cijena artikla"/>
+    <AccessText x:Key="HeaderContentArticleVarranty3" Text="Garancija"/>
+    <AccessText x:Key="HeaderContentArticleId4" Text="Id"/>
+    <AccessText x:Key="HeaderContentArticleName4" Text="Naziv"/>
+    <AccessText x:Key="HeaderContentNofArticles4" Text="Broj artikala"/>
+    <AccessText x:Key="HeaderContentArticlePrice4" Text="Cijena artikla"/>
+    <AccessText x:Key="HeaderContentArticleVarranty4" Text="Garancija"/>
 
 </ResourceDictionary>

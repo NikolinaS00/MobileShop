@@ -112,6 +112,11 @@ namespace WpfApp1.DataBase
 
         }
 
+        public static void changeThemeParameters(Account account)
+        {
+
+        }
+
      
     }
 }

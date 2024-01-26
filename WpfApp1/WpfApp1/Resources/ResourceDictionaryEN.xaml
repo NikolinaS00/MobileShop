@@ -54,5 +54,27 @@
     <AccessText x:Key="ArticleFotrographyLabel" Text="Article photography:"/>
     <AccessText x:Key="AddPhotographyButton" Text="Add photography"/>
     <AccessText x:Key="AddArticleButton" Text="Add article"/>
+    <AccessText x:Key="HeaderContentArticleId1" Text="Id"/>
+    <AccessText x:Key="HeaderContentArticleName1" Text="Name"/>
+    <AccessText x:Key="HeaderContentNofArticles1" Text="Number of articles"/>
+    <AccessText x:Key="HeaderContentArticlePrice1" Text="Article price"/>
+    <AccessText x:Key="HeaderContentArticleVarranty1" Text="Varranty"/>    
+    <AccessText x:Key="HeaderContentArticleId2" Text="Id"/>
+    <AccessText x:Key="HeaderContentArticleName2" Text="Name"/>
+    <AccessText x:Key="HeaderContentNofArticles2" Text="Number of articles"/>
+    <AccessText x:Key="HeaderContentArticlePrice2" Text="Article price"/>
+    <AccessText x:Key="HeaderContentArticleVarranty2" Text="Varranty"/>
+    <AccessText x:Key="HeaderContentArticleId3" Text="Id"/>
+    <AccessText x:Key="HeaderContentArticleName3" Text="Name"/>
+    <AccessText x:Key="HeaderContentNofArticles3" Text="Number of articles"/>
+    <AccessText x:Key="HeaderContentArticlePrice3" Text="Article price"/>
+    <AccessText x:Key="HeaderContentArticleVarranty3" Text="Varranty"/> 
+    <AccessText x:Key="HeaderContentArticleId4" Text="Id"/>
+    <AccessText x:Key="HeaderContentArticleName4" Text="Name"/>
+    <AccessText x:Key="HeaderContentNofArticles4" Text="Number of articles"/>
+    <AccessText x:Key="HeaderContentArticlePrice4" Text="Article price"/>
+    <AccessText x:Key="HeaderContentArticleVarranty4" Text="Varranty"/>
+    
+    
 
 </ResourceDictionary>

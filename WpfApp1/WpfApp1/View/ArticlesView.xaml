@@ -159,11 +159,11 @@
                     </Grid.ColumnDefinitions>
                     <DataGrid Grid.Column="1" CanUserAddRows="False" RowHeaderWidth="0" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding MobilePhones}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
-                            <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
-                            <DataGridTextColumn Header="Number of articles" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
-                            <DataGridTextColumn Header="Article price" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
-                            <DataGridTextColumn Header="Varranty" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleId1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleName1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentNofArticles1}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticlePrice1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleVarranty1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <!--Dodat i kolonu zaa fotografiju-->
                         </DataGrid.Columns>
                     </DataGrid>
@@ -248,11 +248,11 @@
                     <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
                     <DataGrid Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PhoneCases}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
-                            <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
-                            <DataGridTextColumn Header="Number of articles" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
-                            <DataGridTextColumn Header="Article price" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
-                            <DataGridTextColumn Header="Varranty" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleId2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleName2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentNofArticles2}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticlePrice2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleVarranty2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <!--Dodat i kolonu zaa fotografiju-->
                         </DataGrid.Columns>
                     </DataGrid>
@@ -335,11 +335,11 @@
                     <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
                     <DataGrid Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding OtherPhoneEquipment}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
-                            <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
-                            <DataGridTextColumn Header="Number of articles" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
-                            <DataGridTextColumn Header="Article price" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
-                            <DataGridTextColumn Header="Varranty" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleId3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleName3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentNofArticles3}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticlePrice3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleVarranty3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <!--Dodat i kolonu zaa fotografiju-->
                         </DataGrid.Columns>
                     </DataGrid>
@@ -423,11 +423,11 @@
                     <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
                     <DataGrid Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PowerBanks}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
-                            <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
-                            <DataGridTextColumn Header="Number of articles" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
-                            <DataGridTextColumn Header="Article price" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
-                            <DataGridTextColumn Header="Varranty" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleId4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleName4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentNofArticles4}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticlePrice4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn Header="{DynamicResource HeaderContentArticleVarranty4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <!--Dodat i kolonu zaa fotografiju-->
                         </DataGrid.Columns>
                     </DataGrid>
