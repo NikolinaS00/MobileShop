@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.DataBase;
 
 namespace WpfApp1.View
 {
@@ -28,7 +30,9 @@ namespace WpfApp1.View
 
         private void applyButton_Click(object sender, RoutedEventArgs e)
         {
+            SetThemeParameters();
             MainWindow.ApplyTheme();
+            DbMobileShop.changeThemeParameters();
 
         }
 
@@ -85,6 +89,43 @@ namespace WpfApp1.View
             {
                 LogInWindow.languageFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryEN.xaml";
             }
+        }
+
+        private  List<String> SetThemeParameters()
+        {
+            List<String> res = new List<string>();
+            if (LogInWindow.languageFileName == MainWindow.LanguageENFilePath)
+            {
+                DbMobileShop.ThemeAttributes.Add("en");
+            }
+            else DbMobileShop.ThemeAttributes.Add("sr");
+
+            if (LogInWindow.themeFileName == MainWindow.ThemeGreenFilePath)
+            {
+                DbMobileShop.ThemeAttributes.Add("g");
+            }
+            else if (LogInWindow.themeFileName == MainWindow.ThemeBlueFilePath)
+            {
+                DbMobileShop.ThemeAttributes.Add("b");
+            }
+            if (LogInWindow.fontSizeFileName == MainWindow.ThemeFontSize16FilePath)
+            {
+                DbMobileShop.ThemeAttributes.Add("16");
+            }
+            else if (LogInWindow.fontSizeFileName == MainWindow.ThemeFontSize20FilePath)
+            {
+                DbMobileShop.ThemeAttributes.Add("20");
+            }
+            else DbMobileShop.ThemeAttributes.Add("24");
+
+            if (LogInWindow.fontStyleFileName == MainWindow.ThemeFontStyle1FilePath)
+            {
+                DbMobileShop.ThemeAttributes.Add("g");
+            }
+            else DbMobileShop.ThemeAttributes.Add("t");
+
+         
+            return res;
         }
     }
 }

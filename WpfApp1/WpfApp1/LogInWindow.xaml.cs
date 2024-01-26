@@ -17,7 +17,7 @@ namespace WpfApp1.View
 {
     public partial class LogInWindow : Window
     {
-       static Account LoggedInUser { get; set; } = null;
+        static Account LoggedInUser { get; set; } = null;
         public static bool ItsAdmin = false;
         public static string themeFileName = "";
         public static string fontSizeFileName = "";
@@ -38,6 +38,7 @@ namespace WpfApp1.View
                 if(a.Name == name && a.Password==passw) 
                 { 
                     res = a;
+                    DbMobileShop.LoggedAccount = a;
                     LoggedInUser = a;
                 }
             }

@@ -2,15 +2,20 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfApp1.View;
 
 namespace WpfApp1.DataBase
 {
     internal class DbMobileShop
     {
         private static readonly string connectionString = ConfigurationManager.ConnectionStrings["hciMobileShop"].ConnectionString;
+        public static List<string> ThemeAttributes = new List<string>();
+        public static Account LoggedAccount;
         public static List<Employee> GetEmployees()
         {
             List<Employee> result = new List<Employee>();
@@ -112,9 +117,35 @@ namespace WpfApp1.DataBase
 
         }
 
-        public static void changeThemeParameters(Account account)
+        public static void changeThemeParameters()
         {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+               
+                connection.Open();
 
+                using (MySqlCommand cmd = new MySqlCommand("change_Theme_Parameters", connection))
+                {
+                   
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    
+                    cmd.Parameters.AddWithValue("@nalogID",LoggedAccount.Id);
+                    cmd.Parameters.AddWithValue("@lang", ThemeAttributes[0]);
+                    cmd.Parameters.AddWithValue("@color", ThemeAttributes[1]);
+                    cmd.Parameters.AddWithValue("@fontsize", ThemeAttributes[2]);
+                    cmd.Parameters.AddWithValue("@fontstyle", ThemeAttributes[3]);
+                    Console.WriteLine(LoggedAccount.Id);
+                    Console.WriteLine(ThemeAttributes[0]);
+                    Console.WriteLine(ThemeAttributes[1]);
+                    Console.WriteLine(ThemeAttributes[2]);
+                    Console.WriteLine(ThemeAttributes[3]);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                  
+                }
+            }
         }
 
      
