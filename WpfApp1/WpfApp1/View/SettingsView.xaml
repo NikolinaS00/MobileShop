@@ -77,8 +77,6 @@
                 </ComboBox>     
                 <Label Grid.Row="2" Grid.Column="1" Style="{DynamicResource LabelDesign}" Content="{DynamicResource LabelFontStyle}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}"></Label>
                 <ComboBox Name="FontStyleComboBox" Grid.Row="2" Grid.Column="3"  Style="{DynamicResource comboBox}" SelectionChanged="FontStyleComboBox_SelectionChanged">
-                    <ComboBox.Background >Yellow </ComboBox.Background>
-                   
                     <ComboBoxItem Content="Century Gothic" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
                     <ComboBoxItem Content="Times New Roman" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
                 </ComboBox>  

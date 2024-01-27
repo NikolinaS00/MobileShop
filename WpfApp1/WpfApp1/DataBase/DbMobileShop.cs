@@ -148,6 +148,15 @@ namespace WpfApp1.DataBase
             }
         }
 
+        public static void AddArticle(Article art)
+        {
+            MySqlConnection con = new MySqlConnection(connectionString);
+            con.Open();
+            MySqlCommand mySqlCommand = con.CreateCommand();
+            mySqlCommand.CommandText = "insert into artikal (NazivArtikla,BrojArtikalaNaStanju,KategorijaArtikla,CijenaArtikla,GarantniList) values (" + "'" + art.Name +"'," + "'" + art.NumberOfArticles + "'," + "'" + art.ArticleCategory + "'," + "'" + art.ArticlePrice + "'," + "'" + art.Varrranty + "'" + ")";
+            MySqlDataReader reader = mySqlCommand.ExecuteReader();
+        }
+
      
     }
 }
