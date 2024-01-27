@@ -87,20 +87,94 @@ namespace WpfApp1.View
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            if(ArticlesViewModel.SelectedMobilePhone.Id != 0)
+            if(ArticlesViewModel.SelectedItem.ArticleCategory == "mobilni telefon")
             {
-                Console.WriteLine("deleeeeeteeeeeee");
-                DbMobileShop.DeleteArticle(ArticlesViewModel.SelectedMobilePhone);
+                if (ArticlesViewModel.SelectedItem.Id != 0)
+                {
+                    DbMobileShop.DeleteArticle(ArticlesViewModel.SelectedItem);
+                    var itemToRemove = MobilePhonesDataGrid.Items.Cast<Article>().FirstOrDefault(item => item == ArticlesViewModel.SelectedItem);
+                    ArticlesViewModel.MobilePhones.Remove(ArticlesViewModel.SelectedItem);
+                    MobilePhonesDataGrid.Items.Refresh();
+
+
+                }
+                else
+                {
+                    string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
+                    string caption = "Greška";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.Warning;
+                    MessageBoxResult result;
+                    result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+                }
             }
-            else
+            else if(ArticlesViewModel.SelectedItem.ArticleCategory == "maska za telefon")
             {
-                string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
-                string caption = "Greška";
-                MessageBoxButton button = MessageBoxButton.OK;
-                MessageBoxImage icon = MessageBoxImage.Warning;
-                MessageBoxResult result;
-                result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+                if (ArticlesViewModel.SelectedItem.Id != 0)
+                {
+                    
+                    DbMobileShop.DeleteArticle(ArticlesViewModel.SelectedItem);
+                    var itemToRemove = PhoneCasesDataGrid.Items.Cast<Article>().FirstOrDefault(item => item == ArticlesViewModel.SelectedItem);
+                    ArticlesViewModel.PhoneCases.Remove(ArticlesViewModel.SelectedItem);
+                    PhoneCasesDataGrid.Items.Refresh();
+
+
+                }
+                else
+                {
+                    string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
+                    string caption = "Greška";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.Warning;
+                    MessageBoxResult result;
+                    result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+                }
             }
+            else if(ArticlesViewModel.SelectedItem.ArticleCategory == "punjaci")
+            {
+                if (ArticlesViewModel.SelectedItem.Id != 0)
+                {
+                  
+                    DbMobileShop.DeleteArticle(ArticlesViewModel.SelectedItem);
+                    var itemToRemove = PowerBanksDataGrid.Items.Cast<Article>().FirstOrDefault(item => item == ArticlesViewModel.SelectedItem);
+                    ArticlesViewModel.PowerBanks.Remove(ArticlesViewModel.SelectedItem);
+                    PowerBanksDataGrid.Items.Refresh();
+
+
+                }
+                else
+                {
+                    string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
+                    string caption = "Greška";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.Warning;
+                    MessageBoxResult result;
+                    result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+                }
+            }
+            else if(ArticlesViewModel.SelectedItem.ArticleCategory == "ostala oprema")
+            {
+                if (ArticlesViewModel.SelectedItem.Id != 0)
+                {
+
+                    DbMobileShop.DeleteArticle(ArticlesViewModel.SelectedItem);
+                    var itemToRemove = OtherEquipmentDataGrid.Items.Cast<Article>().FirstOrDefault(item => item == ArticlesViewModel.SelectedItem);
+                    ArticlesViewModel.OtherPhoneEquipment.Remove(ArticlesViewModel.SelectedItem);
+                    OtherEquipmentDataGrid.Items.Refresh();
+
+
+                }
+                else
+                {
+                    string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
+                    string caption = "Greška";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.Warning;
+                    MessageBoxResult result;
+                    result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+                }
+            }
+           
         }
     }
 }

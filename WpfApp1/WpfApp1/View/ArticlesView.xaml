@@ -157,7 +157,7 @@
                         <ColumnDefinition Width="20*"></ColumnDefinition>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <DataGrid Grid.Column="1" CanUserAddRows="False" RowHeaderWidth="0" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding MobilePhones}" SelectedItem="{Binding Path=SelectedMobilePhone, Mode=TwoWay}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                    <DataGrid x:Name="MobilePhonesDataGrid" Grid.Column="1" CanUserAddRows="False" RowHeaderWidth="0" Style="{DynamicResource TableColor}" ItemsSource="{Binding MobilePhones}"  AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.Columns>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleId1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
@@ -246,7 +246,7 @@
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
-                    <DataGrid Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PhoneCases}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                    <DataGrid x:Name="PhoneCasesDataGrid" Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PhoneCases}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.Columns>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleId2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
@@ -333,7 +333,7 @@
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
-                    <DataGrid Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding OtherPhoneEquipment}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                    <DataGrid x:Name="OtherEquipmentDataGrid" Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding OtherPhoneEquipment}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}" CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.Columns>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleId3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
@@ -421,7 +421,7 @@
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
-                    <DataGrid Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PowerBanks}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                    <DataGrid x:Name="PowerBanksDataGrid" Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PowerBanks}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}" CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.Columns>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleId4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
