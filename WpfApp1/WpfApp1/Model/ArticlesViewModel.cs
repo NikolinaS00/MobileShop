@@ -17,6 +17,7 @@ namespace WpfApp1.Model
         public ObservableCollection<Article> OtherPhoneEquipment { get; set; }
         public ObservableCollection<Article> PhoneCases { get; set; }
         public ObservableCollection<Article> PowerBanks { get; set; }
+        public static Article SelectedMobilePhone { get; set; }
 
         public ArticlesViewModel()
         {

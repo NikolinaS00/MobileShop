@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.DataBase;
 using WpfApp1.Model;
 
 namespace WpfApp1.View
@@ -86,7 +87,20 @@ namespace WpfApp1.View
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            if(ArticlesViewModel.SelectedMobilePhone.Id != 0)
+            {
+                Console.WriteLine("deleeeeeteeeeeee");
+                DbMobileShop.DeleteArticle(ArticlesViewModel.SelectedMobilePhone);
+            }
+            else
+            {
+                string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
+                string caption = "Greška";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Warning;
+                MessageBoxResult result;
+                result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+            }
         }
     }
 }

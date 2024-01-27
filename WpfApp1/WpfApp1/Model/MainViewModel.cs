@@ -87,7 +87,7 @@ namespace WpfApp1.Model
             ProcurementVM = new ProcurementViewModel();
             SaleVM = new SaleViewModel();
             SettingsVM = new SettingsViewModel();
-            CurrentView = HomeVM;
+            CurrentView = ArticleVM;
 
             HomeRelayCommand = new RelayCommand((o) =>
             {

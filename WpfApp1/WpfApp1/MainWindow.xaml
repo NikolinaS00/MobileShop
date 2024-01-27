@@ -49,12 +49,14 @@
 
                     <StackPanel Grid.ColumnSpan="2" Margin="0,186,0,0" Grid.RowSpan="2">
 
-                        <Button Style="{DynamicResource ButtonsInTheMenu}"   Height="50" Command="{Binding HomeRelayCommand}">
+                        <!--  <Button Style="{DynamicResource ButtonsInTheMenu}"   Height="50" Command="{Binding HomeRelayCommand}">
                             <StackPanel Orientation="Horizontal">
 
                                 <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource HomeButton}"/>
                             </StackPanel>
-                        </Button>
+                        </Button> -->
+                      
+                        
                         <Button Name="ArticleButton" Style="{DynamicResource ButtonsInTheMenu}" Height="50" Command="{Binding ArticlesRelayCommand}" Click="ArticleButton_Click">
                             <StackPanel Orientation="Horizontal">
 

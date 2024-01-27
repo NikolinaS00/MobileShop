@@ -134,9 +134,11 @@
     </Style>
     <Style TargetType="DataGridCell" x:Key="gridCell">
         <Setter Property="Background" Value="#84AE85"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="IsEditing" Value="False"/>
     </Style>
-
+    <Style TargetType="DataGridColumnHeader" x:Key="rowHeader">
+        <Setter Property="Background" Value="#547A56"/>
+    </Style>
     <Style TargetType="DataGridColumnHeader" x:Key="gridCellHeader">
         <Setter Property="Background" Value="#547A56"/>
         <Setter Property="FontSize" Value="16"/>

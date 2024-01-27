@@ -44,10 +44,10 @@
                 </Grid.ColumnDefinitions>
                 <DataGrid Grid.Column="1" RowHeaderWidth="0" Style="{DynamicResource TableColor}" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding Employees}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="UID" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding UID}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
-                        <DataGridTextColumn Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding FirstName}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
-                        <DataGridTextColumn Header="Surname" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding LastName}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
-                        <DataGridTextColumn Header="Date of birth" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding dateOfBirth}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
+                        <DataGridTextColumn IsReadOnly="True" Header="UID" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding UID}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
+                        <DataGridTextColumn IsReadOnly="True" Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding FirstName}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
+                        <DataGridTextColumn IsReadOnly="True" Header="Surname" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding LastName}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
+                        <DataGridTextColumn IsReadOnly="True" Header="Date of birth" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding dateOfBirth}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>

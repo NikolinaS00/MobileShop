@@ -157,6 +157,15 @@ namespace WpfApp1.DataBase
             MySqlDataReader reader = mySqlCommand.ExecuteReader();
         }
 
+        public static void DeleteArticle(Article article)
+        {
+            MySqlConnection con = new MySqlConnection(connectionString);
+            con.Open();
+            MySqlCommand sqlCommand = con.CreateCommand();
+            sqlCommand.CommandText = "delete from artikal where idArtikal='" +article.Id +"'";
+            MySqlDataReader reader = sqlCommand.ExecuteReader();
+        }
+
      
     }
 }
