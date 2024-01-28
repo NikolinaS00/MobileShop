@@ -134,6 +134,8 @@
     </Style>
     <Style TargetType="DataGridCell" x:Key="gridCell">
         <Setter Property="Background" Value="#84AE85"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="TextBlock.TextWrapping" Value="WrapWithOverflow"/>
         <Setter Property="IsEditing" Value="False"/>
     </Style>
     <Style TargetType="DataGridColumnHeader" x:Key="rowHeader">

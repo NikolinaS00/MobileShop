@@ -85,11 +85,28 @@ namespace WpfApp1.View
         {
             Refresh();
         }
+        private void UpdateArticleWindow_Closed(object sender, EventArgs e)
+        {
+            Refresh();
+        }
         private void ButtonEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            if (ArticlesViewModel.SelectedItem != null)
+            {
+                UpdateArticleWindow win = new UpdateArticleWindow();
+                win.Closed += UpdateArticleWindow_Closed;
+                win.Show();
+            }
+            else
+            {
+                string messageBoxText = "Niste izabrali artikal za uređivanje, pokušajte ponovo!";
+                string caption = "Greška";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Error;
+                MessageBoxResult result;
+                result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+            }
         }
-
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
             if(ArticlesViewModel.SelectedItem!=null)
@@ -233,7 +250,6 @@ namespace WpfApp1.View
 
         private void Refresh()
         {
-            Console.WriteLine("rrrrrrrrrrrrrrrrrr");
             ArticlesViewModel.RefreshList();
             PhoneCasesDataGrid.Items.Refresh();
             OtherEquipmentDataGrid.Items.Refresh();

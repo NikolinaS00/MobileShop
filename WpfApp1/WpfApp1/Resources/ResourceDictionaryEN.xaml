@@ -52,7 +52,7 @@
     <AccessText x:Key="ArticlePriceLabel" Text="Article price:"/>
     <AccessText x:Key="WarrantyLabel" Text="Warranty period[month]:"/>
     <AccessText x:Key="CategoryLabel" Text="Category"/>
-    <AccessText x:Key="ArticleFotrographyLabel" Text="Article photography:"/>
+    <AccessText x:Key="ArticleFotrographyLabel" Text="Article description:"/>
     <AccessText x:Key="AddPhotographyButton" Text="Add photography"/>
     <AccessText x:Key="AddArticleButton" Text="Add article"/>
     <AccessText x:Key="HeaderContentArticleId1" Text="Id"/>
@@ -79,7 +79,9 @@
     <AccessText x:Key="CategoryPhoneCases" Text="Phone case"/>
     <AccessText x:Key="CategoryPowerBanks" Text="Powerbanks and chargers"/>
     <AccessText x:Key="CategoryOtherEquipment" Text="Other equipment"/>
-    
-    
+    <AccessText x:Key="WindowNameLabelUpdateArticle" Text="Update article"/>
+    <AccessText x:Key="UpdateArticleButton" Text="Update article"/>
+
+
 
 </ResourceDictionary>

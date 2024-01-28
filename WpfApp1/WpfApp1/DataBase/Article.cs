@@ -15,7 +15,7 @@ namespace WpfApp1.DataBase
     public string ArticleCategory { get; set; }
     public int ArticlePrice { get; set; }
     public int Varrranty { get; set; }
-    public string Photography { get; set; }
+    public string Description { get; set; }
 
 
     }

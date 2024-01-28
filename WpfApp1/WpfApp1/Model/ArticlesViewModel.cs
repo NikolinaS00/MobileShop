@@ -84,7 +84,6 @@ namespace WpfApp1.Model
             {
                 PowerBanks.Add(p);
             }
-            Console.WriteLine("lista rrrrrrrr");
         }
     }
 }

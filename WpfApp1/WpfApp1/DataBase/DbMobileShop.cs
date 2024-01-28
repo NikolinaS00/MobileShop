@@ -15,6 +15,7 @@ namespace WpfApp1.DataBase
     {
         private static readonly string connectionString = ConfigurationManager.ConnectionStrings["hciMobileShop"].ConnectionString;
         public static List<string> ThemeAttributes = new List<string>();
+        public static Article UpdatedArticle = new Article();
         public static Account LoggedAccount;
         public static List<Employee> GetEmployees()
         {
@@ -68,10 +69,7 @@ namespace WpfApp1.DataBase
             return result;
         }
 
-        public static void createArticle(Article art)
-        {
-
-        }
+  
 
         public static List<Article> GetArticlesByCategory(string category)
         {
@@ -91,7 +89,7 @@ namespace WpfApp1.DataBase
                     ArticleCategory = reader.GetString(3),
                     ArticlePrice = reader.GetInt32(4),
                     Varrranty = reader.GetInt32(5),
-                  //  Photography = reader.GetString(6)
+                   Description = reader.GetString(6)
                    
                 });
             }
@@ -135,11 +133,6 @@ namespace WpfApp1.DataBase
                     cmd.Parameters.AddWithValue("@color", ThemeAttributes[1]);
                     cmd.Parameters.AddWithValue("@fontsize", ThemeAttributes[2]);
                     cmd.Parameters.AddWithValue("@fontstyle", ThemeAttributes[3]);
-                    Console.WriteLine(LoggedAccount.Id);
-                    Console.WriteLine(ThemeAttributes[0]);
-                    Console.WriteLine(ThemeAttributes[1]);
-                    Console.WriteLine(ThemeAttributes[2]);
-                    Console.WriteLine(ThemeAttributes[3]);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
 
@@ -166,6 +159,34 @@ namespace WpfApp1.DataBase
             MySqlDataReader reader = sqlCommand.ExecuteReader();
         }
 
+        public static void EditArticle(Article article)
+        {
+          
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+
+                connection.Open();
+
+                using (MySqlCommand cmd = new MySqlCommand("update_article", connection))
+                {
+
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    Console.WriteLine("++++++++++" + article.Id);
+                    cmd.Parameters.AddWithValue("@id", article.Id);
+                    cmd.Parameters.AddWithValue("@naziv_artikla", article.Name);
+                    cmd.Parameters.AddWithValue("@br_artikala", article.NumberOfArticles);
+                    cmd.Parameters.AddWithValue("@kategorija", article.ArticleCategory);
+                    cmd.Parameters.AddWithValue("@cijena", article.ArticlePrice);
+                    cmd.Parameters.AddWithValue("@garancija", article.Varrranty);
+                    cmd.Parameters.AddWithValue("@opis", article.Description);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+
+
+                }
+            }
+        }
      
     }
 }

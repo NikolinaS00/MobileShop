@@ -52,7 +52,7 @@
     <AccessText x:Key="ArticlePriceLabel" Text="Cijena artikla:"/>
     <AccessText x:Key="WarrantyLabel" Text="Period garancije[mjesec]:"/>
     <AccessText x:Key="CategoryLabel" Text="Kategorija"/>
-    <AccessText x:Key="ArticleFotrographyLabel" Text="Fotografija artikla:"/>
+    <AccessText x:Key="ArticleFotrographyLabel" Text="Opis artikla:"/>
     <AccessText x:Key="AddPhotographyButton" Text="Dodaj fotografiju"/>
     <AccessText x:Key="AddArticleButton" Text="Dodaj artikal"/>
     <AccessText x:Key="HeaderContentArticleId1" Text="Id"/>
@@ -79,5 +79,7 @@
     <AccessText x:Key="CategoryPhoneCases" Text="Maska za telefon"/>
     <AccessText x:Key="CategoryPowerBanks" Text="Powerbank-ovi i punjači"/>
     <AccessText x:Key="CategoryOtherEquipment" Text="Ostala oprema"/>
+    <AccessText x:Key="WindowNameLabelUpdateArticle" Text="Izmijeni artikal"/>
+    <AccessText x:Key="UpdateArticleButton" Text="Izmijeni artikal"/>
 
 </ResourceDictionary>

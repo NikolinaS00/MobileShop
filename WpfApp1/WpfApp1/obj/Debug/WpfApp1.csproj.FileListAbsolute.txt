@@ -145,3 +145,5 @@ C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\Ph
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\PhoneCasesView.baml
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\AddArticleWindow.g.cs
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\AddArticleWindow.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\UpdateArticleWindow.g.cs
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\UpdateArticleWindow.baml

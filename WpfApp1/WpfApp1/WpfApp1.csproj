@@ -184,6 +184,9 @@
     <Compile Include="View\SuppliersView.xaml.cs">
       <DependentUpon>SuppliersView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\UpdateArticleWindow.xaml.cs">
+      <DependentUpon>UpdateArticleWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -293,6 +296,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SuppliersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UpdateArticleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
