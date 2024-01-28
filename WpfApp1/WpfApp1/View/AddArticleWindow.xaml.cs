@@ -24,6 +24,11 @@ namespace WpfApp1.View
         public AddArticleWindow()
         {
             InitializeComponent();
+            Closed += AddArticleWindow_Closed;
+        }
+        private void AddArticleWindow_Closed(object sender, EventArgs e)
+        {
+            // Your code to handle the closing of Window1
         }
 
         private void AddArticleButton_Click(object sender, RoutedEventArgs e)

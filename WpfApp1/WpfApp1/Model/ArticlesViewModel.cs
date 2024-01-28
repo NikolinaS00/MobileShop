@@ -55,10 +55,11 @@ namespace WpfApp1.Model
 
         public static void RefreshList()
         {
-            MobilePhones = new ObservableCollection<Article>();
-            OtherPhoneEquipment = new ObservableCollection<Article>();
-            PhoneCases = new ObservableCollection<Article>();
-            PowerBanks = new ObservableCollection<Article>();
+
+            MobilePhones.Clear();
+            OtherPhoneEquipment.Clear();
+            PhoneCases.Clear();
+            PowerBanks.Clear();
             List<Article> MobPhones = DbMobileShop.GetArticlesByCategory("mobilni telefon");
             List<Article> OtherEquip = DbMobileShop.GetArticlesByCategory("ostala oprema");
             List<Article> PHCases = DbMobileShop.GetArticlesByCategory("maska za telefon");
@@ -83,6 +84,7 @@ namespace WpfApp1.Model
             {
                 PowerBanks.Add(p);
             }
+            Console.WriteLine("lista rrrrrrrr");
         }
     }
 }
