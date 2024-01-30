@@ -81,5 +81,19 @@
     <AccessText x:Key="CategoryOtherEquipment" Text="Ostala oprema"/>
     <AccessText x:Key="WindowNameLabelUpdateArticle" Text="Izmijeni artikal"/>
     <AccessText x:Key="UpdateArticleButton" Text="Izmijeni artikal"/>
-
+    <AccessText x:Key="SaleReviseButtonContent" Text="Pregled prodaja"/>
+    <AccessText x:Key="LabelIdArticle" Text="Unesite id artikla:"/>
+    <AccessText x:Key="LabelAmountOfArticles" Text="Količina:"/>
+    <AccessText x:Key="LabelPriceOfArticle" Text="Cijena jednog artikla:"/>
+    <AccessText x:Key="LabelPriceForMoreArticles" Text="Ukupna cijena artikala:"/>
+    <AccessText x:Key="AddItemOnReceiptButtonContent" Text="Dodaj artikal na račun"/>
+    <AccessText x:Key="PreviewReceiptButtonContent" Text="Pregled računa"/>
+    <AccessText x:Key="NewSaleButtonContent" Text="Nova prodaja"/>
+    <AccessText x:Key="WindowNameLabelPreviewReceipt" Text="Pregled računa"/>
+    <AccessText x:Key="PrintReceiptButtonContent" Text="Štampaj račun"/>
+    <AccessText x:Key="HeaderContentIdArticle" Text="ID artikla"/>
+    <AccessText x:Key="HeaderContentNameArticle" Text="Naziv artikla"/>
+    <AccessText x:Key="HeaderContentAmount" Text="Količina"/>
+    <AccessText x:Key="HeaderContentArticlePrice" Text="Cijena artikla"/>
+    <AccessText x:Key="HeaderContentTotalPrice" Text="Ukupna cijena"/>
 </ResourceDictionary>

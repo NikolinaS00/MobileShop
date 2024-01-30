@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.View"
         mc:Ignorable="d"
-        Title="AddArticleWindow" Height="700" Width="550">
+        Title="MobileShop" Height="700" Width="550">
     <Grid Style="{DynamicResource MainWindow}">
         <Grid.RowDefinitions >
             <RowDefinition Height="1*"></RowDefinition>

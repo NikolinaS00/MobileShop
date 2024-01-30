@@ -53,6 +53,12 @@ namespace WpfApp1.View
                 MessageBoxResult result;
                 result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
             }
+            ArticleNametxtbox.Clear();
+            ArticlePricetxtbox.Clear();
+            Descriptiontxtbox.Clear();
+            NumofArticlestxtbox.Clear();
+            Varrantytxtbox.Clear();
+
         }
 
         private void CategoryComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

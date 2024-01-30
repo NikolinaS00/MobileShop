@@ -70,7 +70,7 @@ namespace WpfApp1.View
                     Varrranty = Int32.Parse(Varrantytxtbox.Text),
                     Description = Descriptiontxtbox.Text
                 };
-                Console.Write("-----------" + NumofArticlestxtbox.Text);
+              
                 DbMobileShop.EditArticle(art);
             }
             else

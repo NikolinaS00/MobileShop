@@ -23,6 +23,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         bool isAdmin;
+
         public static string ThemeBlueFilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryTHEME.xaml";
         public static string ThemeGreenFilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryThemeGREEN.xaml";
         public static string ThemeFontSize16FilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize16.xaml";
@@ -61,7 +62,6 @@ namespace WpfApp1
         public static void ApplyTheme()
         {
             Application.Current.Resources.MergedDictionaries.Clear();
-            Console.WriteLine("----------" + LogInWindow.themeFileName);
             ResourceDictionary dictionary1 = new ResourceDictionary();
             ResourceDictionary dictionary2 = new ResourceDictionary();
             ResourceDictionary dictionary3 = new ResourceDictionary();

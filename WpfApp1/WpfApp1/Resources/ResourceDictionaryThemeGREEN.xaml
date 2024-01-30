@@ -203,10 +203,16 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+   
 
     <Style TargetType="ComboBoxItem" x:Key="comboboxitm">
         <Setter Property="Background" Value="#547A56"/>
         <Setter Property="Foreground" Value="White"/>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="Black"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
 </ResourceDictionary>

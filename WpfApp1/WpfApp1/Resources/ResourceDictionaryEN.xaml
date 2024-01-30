@@ -81,7 +81,19 @@
     <AccessText x:Key="CategoryOtherEquipment" Text="Other equipment"/>
     <AccessText x:Key="WindowNameLabelUpdateArticle" Text="Update article"/>
     <AccessText x:Key="UpdateArticleButton" Text="Update article"/>
-
-
-
+    <AccessText x:Key="SaleReviseButtonContent" Text="Sale revise"/>
+    <AccessText x:Key="LabelIdArticle" Text="Insert article id:"/>
+    <AccessText x:Key="LabelAmountOfArticles" Text="Amount of articles:"/>
+    <AccessText x:Key="LabelPriceOfArticle" Text="Price of article:"/>
+    <AccessText x:Key="LabelPriceForMoreArticles" Text="Total price of articles:"/>
+    <AccessText x:Key="AddItemOnReceiptButtonContent" Text="Add item in receipt"/>
+    <AccessText x:Key="PreviewReceiptButtonContent" Text="Receipt preview"/>
+    <AccessText x:Key="NewSaleButtonContent" Text="New sale"/>
+    <AccessText x:Key="WindowNameLabelPreviewReceipt" Text="Preview receipt"/>
+    <AccessText x:Key="PrintReceiptButtonContent" Text="Print receipt"/>
+    <AccessText x:Key="HeaderContentIdArticle" Text="Article ID"/>
+    <AccessText x:Key="HeaderContentNameArticle" Text="Article name"/>
+    <AccessText x:Key="HeaderContentAmount" Text="Amount"/>
+    <AccessText x:Key="HeaderContentArticlePrice" Text="Article price"/>
+    <AccessText x:Key="HeaderContentTotalPrice" Text="Total price"/>
 </ResourceDictionary>

@@ -128,12 +128,15 @@
     <Compile Include="DataBase\Article.cs" />
     <Compile Include="DataBase\DbMobileShop.cs" />
     <Compile Include="DataBase\Employee.cs" />
+    <Compile Include="DataBase\Sale.cs" />
+    <Compile Include="DataBase\SaleItem.cs" />
     <Compile Include="Model\ArticlesViewModel.cs" />
     <Compile Include="Model\EmployeesViewModel.cs" />
     <Compile Include="Model\HomeViewModel.cs" />
     <Compile Include="Model\MainViewModel.cs" />
     <Compile Include="Model\MobilePhonesViewModel.cs" />
     <Compile Include="Model\ProcurementViewModel.cs" />
+    <Compile Include="Model\ReceiptPreviewViewModel.cs" />
     <Compile Include="Model\SaleViewModel.cs" />
     <Compile Include="Model\SettingsViewModel.cs" />
     <Compile Include="Model\SuppliersViewModel.cs" />
@@ -171,6 +174,9 @@
     </Compile>
     <Compile Include="View\PhoneCasesView.xaml.cs">
       <DependentUpon>PhoneCasesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PreviewReceiptWindow.xaml.cs">
+      <DependentUpon>PreviewReceiptWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ProcurementView.xaml.cs">
       <DependentUpon>ProcurementView.xaml</DependentUpon>
@@ -283,6 +289,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\PreviewReceiptWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ProcurementView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -357,9 +367,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="settings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="shoppingbag.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="employees.png" />

@@ -158,7 +158,7 @@
                         <ColumnDefinition Width="20*"></ColumnDefinition>
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="MobilePhonesDataGrid" Grid.Column="1" CanUserAddRows="False" RowHeaderWidth="0" Style="{DynamicResource TableColor}" ItemsSource="{Binding MobilePhones}"  AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                    <DataGrid x:Name="MobilePhonesDataGrid" Grid.Column="1" CanUserResizeRows="True" CanUserAddRows="False" RowHeaderWidth="0" Style="{DynamicResource TableColor}" ItemsSource="{Binding MobilePhones}"  AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.RowStyle>
                             <Style TargetType="DataGridRow">
                                 <Setter Property="Height" Value="Auto"/>
@@ -173,9 +173,13 @@
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticlePrice1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="Opis" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Description}" CellStyle="{DynamicResource gridCell}" Width="0.4*">
-                      
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
-                            <!--Dodat i kolonu zaa fotografiju-->
+
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -257,7 +261,7 @@
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
-                    <DataGrid x:Name="PhoneCasesDataGrid" Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PhoneCases}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                    <DataGrid x:Name="PhoneCasesDataGrid" Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PhoneCases}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"  CanUserResizeRows="True" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.RowStyle>
                             <Style TargetType="DataGridRow">
                                 <Setter Property="Height" Value="Auto"/>
@@ -270,7 +274,13 @@
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentNofArticles2}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticlePrice2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
-                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
                             <!--Dodat i kolonu zaa fotografiju-->
                         </DataGrid.Columns>
                     </DataGrid>
@@ -351,7 +361,7 @@
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
-                    <DataGrid x:Name="OtherEquipmentDataGrid" Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding OtherPhoneEquipment}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}" CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                    <DataGrid x:Name="OtherEquipmentDataGrid" Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding OtherPhoneEquipment}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}" CanUserResizeRows="True" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.RowStyle>
                 <Style TargetType="DataGridRow">
                     <Setter Property="Height" Value="Auto"/>
@@ -363,7 +373,13 @@
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentNofArticles3}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticlePrice3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
-                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
                             <!--Dodat i kolonu zaa fotografiju-->
                         </DataGrid.Columns>
                     </DataGrid>
@@ -445,7 +461,7 @@
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <!--Mijenjam samo ovdje ItemsSource u zavisnosti iz koje liste ce vuci podatke-->
-                    <DataGrid x:Name="PowerBanksDataGrid" Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PowerBanks}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}" CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                    <DataGrid x:Name="PowerBanksDataGrid" Grid.Column="1" RowHeaderWidth="0" CanUserAddRows="False" Style="{DynamicResource TableColor}" AutoGenerateColumns="False" ItemsSource="{Binding PowerBanks}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}" CanUserResizeRows="False" CanUserResizeColumns="True" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                         <DataGrid.RowStyle>
                             <Style TargetType="DataGridRow">
                                 <Setter Property="Height" Value="Auto"/>
@@ -457,8 +473,13 @@
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentNofArticles4}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticlePrice4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
-                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
-                            <!--Dodat i kolonu zaa fotografiju-->
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>

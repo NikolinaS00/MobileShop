@@ -67,19 +67,18 @@ namespace WpfApp1.View
                 MessageBoxResult result;
                 result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
             }
-
+            UserName.Clear();
+            Password.Clear();
         }
 
         private void ApplyTheme()
         {
             if(LoggedInUser.Language == "sr")
             {
-                Console.WriteLine("ssssssssssrrrrrrrrr");
                 LogInWindow.languageFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionarySR.xaml";
             }
             else if(LoggedInUser.Language == "en")
             {
-                Console.WriteLine("eeeeeeeeeennnnnnnnnnnnn");
                 LogInWindow.languageFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryEN.xaml";
             }
 
