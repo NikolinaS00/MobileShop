@@ -96,4 +96,7 @@
     <AccessText x:Key="HeaderContentAmount" Text="Količina"/>
     <AccessText x:Key="HeaderContentArticlePrice" Text="Cijena artikla"/>
     <AccessText x:Key="HeaderContentTotalPrice" Text="Ukupna cijena"/>
+    <AccessText x:Key="HeaderContentSaleNumber" Text="Broj prodaje"/>
+    <AccessText x:Key="HeaderContentEmployee" Text="Zaposleni"/>
+    <AccessText x:Key="HeaderContentDate" Text="Datum prodaje"/>
 </ResourceDictionary>

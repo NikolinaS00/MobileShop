@@ -11,9 +11,20 @@ namespace WpfApp1.Model
     internal class SaleViewModel
     {
         public static ObservableCollection<SaleItem> Items { get; set; }
+        public static ObservableCollection<Sale> Sales { get; set; }
         public static SaleItem SelectedItem { get; set; }
+        public static Sale SelectedSale { get; set; }
+
         public SaleViewModel() {
             Items = new ObservableCollection<SaleItem>();
+            Sales = new ObservableCollection<Sale>();
+            List<Sale> list = new List<Sale>();
+            list = DbMobileShop.GetSales();
+          
+            foreach (Sale item in list)
+            {
+                Sales.Add(item);
+            }
         }
         
   

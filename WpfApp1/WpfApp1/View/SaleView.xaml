@@ -91,9 +91,11 @@
                 <ColumnDefinition Width="20*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <DataGrid Grid.Column="1" Style="{DynamicResource TableColor}">
+            <DataGrid Grid.Column="1" Style="{DynamicResource TableColor}" CanUserAddRows="False" RowHeaderWidth="0" ItemsSource="{Binding Sales}" AutoGenerateColumns="False" SelectedItem="{Binding SelectedSale}" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="IdProdaje" HeaderStyle="{DynamicResource gridCellHeader}" CellStyle="{DynamicResource gridCell}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="{DynamicResource HeaderContentSaleNumber}" Binding="{Binding SaleNumber}"  HeaderStyle="{DynamicResource gridCellHeader}" CellStyle="{DynamicResource gridCell}"  Width="0.3*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="{DynamicResource HeaderContentEmployee}" Binding="{Binding EmployeeNameAndSurname}" HeaderStyle="{DynamicResource gridCellHeader}" CellStyle="{DynamicResource gridCell}"  Width="0.4*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="{DynamicResource HeaderContentDate}" Binding="{Binding SaleDate}" HeaderStyle="{DynamicResource gridCellHeader}" CellStyle="{DynamicResource gridCell}"  Width="0.3*"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

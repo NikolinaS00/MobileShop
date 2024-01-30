@@ -96,4 +96,7 @@
     <AccessText x:Key="HeaderContentAmount" Text="Amount"/>
     <AccessText x:Key="HeaderContentArticlePrice" Text="Article price"/>
     <AccessText x:Key="HeaderContentTotalPrice" Text="Total price"/>
+    <AccessText x:Key="HeaderContentSaleNumber" Text="Sale number"/>
+    <AccessText x:Key="HeaderContentEmployee" Text="Employee"/>
+    <AccessText x:Key="HeaderContentDate" Text="Date"/>
 </ResourceDictionary>

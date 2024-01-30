@@ -282,7 +282,55 @@ namespace WpfApp1.DataBase
             MySqlDataReader reader = mySqlCommand.ExecuteReader();
         }
 
-   
-     
+        public static List<Sale> GetSales()
+        {
+            List<Sale> res = new List<Sale>();
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM `prodaja`";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                res.Add(new Sale()
+                {
+                    SaleNumber = reader.GetInt32(0),
+                    EmployeeUID = reader.GetString(1),
+                    SaleDate = reader.GetString(2),
+                    EmployeeNameAndSurname = GetEmployeeById(reader.GetString(1)).FirstName + " " + GetEmployeeById(reader.GetString(1)).LastName
+                }); 
+            }
+                return res;
+        }
+
+        public static Employee GetEmployeeById(string id)
+        {
+            Employee emp = new Employee();
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM `zaposleni` WHERE `JMBG` = '" + id + "'";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                emp = new Employee
+                {
+                    UID = reader.GetString(0),
+                    FirstName = reader.GetString(1),
+                    LastName = reader.GetString(2),
+                    DateOfBirth = reader.GetString(3),
+                    YearOfEmployment = reader.GetString(4),
+                    Email = reader.GetString(5),
+                    ExpirationOfContract = reader.GetString(6),
+                    Salary = reader.GetInt32(7),
+                    Address = reader.GetString(8),
+
+
+                };
+            
+            }
+            return emp;
+        }
+
     }
 }
