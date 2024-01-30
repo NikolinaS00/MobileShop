@@ -54,7 +54,7 @@
     <AccessText x:Key="CategoryLabel" Text="Category"/>
     <AccessText x:Key="ArticleFotrographyLabel" Text="Article description:"/>
     <AccessText x:Key="AddPhotographyButton" Text="Add photography"/>
-    <AccessText x:Key="AddArticleButton" Text="Add article"/>
+    <AccessText x:Key="AddArticleButton" Text="Add"/>
     <AccessText x:Key="HeaderContentArticleId1" Text="Id"/>
     <AccessText x:Key="HeaderContentArticleName1" Text="Name"/>
     <AccessText x:Key="HeaderContentNofArticles1" Text="Number of articles"/>
@@ -99,4 +99,6 @@
     <AccessText x:Key="HeaderContentSaleNumber" Text="Sale number"/>
     <AccessText x:Key="HeaderContentEmployee" Text="Employee"/>
     <AccessText x:Key="HeaderContentDate" Text="Date"/>
+    <AccessText x:Key="HeaderContentAddres" Text="Addres"/>
+    <AccessText x:Key="WindowNameLabelAddEmployee" Text="Add employee"/>
 </ResourceDictionary>

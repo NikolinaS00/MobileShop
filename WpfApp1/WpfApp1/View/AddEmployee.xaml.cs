@@ -10,28 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp1.DataBase;
 
 namespace WpfApp1.View
 {
     /// <summary>
-    /// Interaction logic for EmployeesView.xaml
+    /// Interaction logic for AddEmployee.xaml
     /// </summary>
-    public partial class EmployeesView : UserControl
+    public partial class AddEmployee : Window
     {
-     
-        public EmployeesView()
+        public AddEmployee()
         {
-
             InitializeComponent();
-           
-        }
-
-        private void ButtonAdd1_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

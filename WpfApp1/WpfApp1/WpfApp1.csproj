@@ -130,6 +130,7 @@
     <Compile Include="DataBase\Employee.cs" />
     <Compile Include="DataBase\Sale.cs" />
     <Compile Include="DataBase\SaleItem.cs" />
+    <Compile Include="DataBase\Supplier.cs" />
     <Compile Include="Model\ArticlesViewModel.cs" />
     <Compile Include="Model\EmployeesViewModel.cs" />
     <Compile Include="Model\HomeViewModel.cs" />

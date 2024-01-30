@@ -54,7 +54,7 @@
     <AccessText x:Key="CategoryLabel" Text="Kategorija"/>
     <AccessText x:Key="ArticleFotrographyLabel" Text="Opis artikla:"/>
     <AccessText x:Key="AddPhotographyButton" Text="Dodaj fotografiju"/>
-    <AccessText x:Key="AddArticleButton" Text="Dodaj artikal"/>
+    <AccessText x:Key="AddArticleButton" Text="Dodaj"/>
     <AccessText x:Key="HeaderContentArticleId1" Text="Id"/>
     <AccessText x:Key="HeaderContentArticleName1" Text="Naziv"/>
     <AccessText x:Key="HeaderContentNofArticles1" Text="Broj artikala"/>
@@ -99,4 +99,6 @@
     <AccessText x:Key="HeaderContentSaleNumber" Text="Broj prodaje"/>
     <AccessText x:Key="HeaderContentEmployee" Text="Zaposleni"/>
     <AccessText x:Key="HeaderContentDate" Text="Datum prodaje"/>
+    <AccessText x:Key="HeaderContentAddres" Text="Adresa"/>
+    <AccessText x:Key="WindowNameLabelAddEmployee" Text="Dodaj zaposlenog"/>
 </ResourceDictionary>

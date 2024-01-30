@@ -332,5 +332,25 @@ namespace WpfApp1.DataBase
             return emp;
         }
 
+        public static List<Supplier> GetSuppliers()
+        {
+            List<Supplier> suppliers = new List<Supplier>();
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM `dobavljac`";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                suppliers.Add(new Supplier()
+                {
+                    Id = reader.GetInt32(0),
+                    Name = reader.GetString(1),
+                    Addres = reader.GetString(2)
+                });
+            }
+            return suppliers;
+        }
+
     }
 }

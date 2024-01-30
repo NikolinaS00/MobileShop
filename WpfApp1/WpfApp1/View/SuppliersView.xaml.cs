@@ -24,5 +24,20 @@ namespace WpfApp1.View
         {
             InitializeComponent();
         }
+
+        private void ButtonAdd1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonEdit1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDelete1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
