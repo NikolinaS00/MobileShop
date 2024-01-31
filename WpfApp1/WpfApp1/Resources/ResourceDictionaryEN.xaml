@@ -50,30 +50,30 @@
     <AccessText x:Key="ArticleNameLabel" Text="Article name:"/>
     <AccessText x:Key="NumberOfArticleLabel" Text="Number of articles:"/>
     <AccessText x:Key="ArticlePriceLabel" Text="Article price:"/>
-    <AccessText x:Key="WarrantyLabel" Text="Warranty period[month]:"/>
+    <AccessText x:Key="WarrantyLabel" Text="Varranty period[month]:"/>
     <AccessText x:Key="CategoryLabel" Text="Category"/>
     <AccessText x:Key="ArticleFotrographyLabel" Text="Article description:"/>
     <AccessText x:Key="AddPhotographyButton" Text="Add photography"/>
     <AccessText x:Key="AddArticleButton" Text="Add"/>
     <AccessText x:Key="HeaderContentArticleId1" Text="Id"/>
     <AccessText x:Key="HeaderContentArticleName1" Text="Name"/>
-    <AccessText x:Key="HeaderContentNofArticles1" Text="Number of articles"/>
-    <AccessText x:Key="HeaderContentArticlePrice1" Text="Article price"/>
+    <AccessText x:Key="HeaderContentNofArticles1" Text="Ammount"/>
+    <AccessText x:Key="HeaderContentArticlePrice1" Text="Price"/>
     <AccessText x:Key="HeaderContentArticleVarranty1" Text="Varranty"/>    
     <AccessText x:Key="HeaderContentArticleId2" Text="Id"/>
     <AccessText x:Key="HeaderContentArticleName2" Text="Name"/>
-    <AccessText x:Key="HeaderContentNofArticles2" Text="Number of articles"/>
-    <AccessText x:Key="HeaderContentArticlePrice2" Text="Article price"/>
+    <AccessText x:Key="HeaderContentNofArticles2" Text="Ammount"/>
+    <AccessText x:Key="HeaderContentArticlePrice2" Text="Price"/>
     <AccessText x:Key="HeaderContentArticleVarranty2" Text="Varranty"/>
     <AccessText x:Key="HeaderContentArticleId3" Text="Id"/>
     <AccessText x:Key="HeaderContentArticleName3" Text="Name"/>
-    <AccessText x:Key="HeaderContentNofArticles3" Text="Number of articles"/>
-    <AccessText x:Key="HeaderContentArticlePrice3" Text="Article price"/>
+    <AccessText x:Key="HeaderContentNofArticles3" Text="Ammount"/>
+    <AccessText x:Key="HeaderContentArticlePrice3" Text="Price"/>
     <AccessText x:Key="HeaderContentArticleVarranty3" Text="Varranty"/> 
     <AccessText x:Key="HeaderContentArticleId4" Text="Id"/>
     <AccessText x:Key="HeaderContentArticleName4" Text="Name"/>
-    <AccessText x:Key="HeaderContentNofArticles4" Text="Number of articles"/>
-    <AccessText x:Key="HeaderContentArticlePrice4" Text="Article price"/>
+    <AccessText x:Key="HeaderContentNofArticles4" Text="Ammount"/>
+    <AccessText x:Key="HeaderContentArticlePrice4" Text="Prices"/>
     <AccessText x:Key="HeaderContentArticleVarranty4" Text="Varranty"/>
     <AccessText x:Key="CategoryMobilePhone" Text="Mobile phones"/>
     <AccessText x:Key="CategoryPhoneCases" Text="Phone case"/>
@@ -89,16 +89,24 @@
     <AccessText x:Key="AddItemOnReceiptButtonContent" Text="Add item in receipt"/>
     <AccessText x:Key="PreviewReceiptButtonContent" Text="Receipt preview"/>
     <AccessText x:Key="NewSaleButtonContent" Text="New sale"/>
+    <AccessText x:Key="NewProcurementButtonContent" Text="New procurement"/>
     <AccessText x:Key="WindowNameLabelPreviewReceipt" Text="Preview receipt"/>
-    <AccessText x:Key="PrintReceiptButtonContent" Text="Print receipt"/>
+    <AccessText x:Key="PrintReceiptButtonContent" Text="Save"/>
     <AccessText x:Key="HeaderContentIdArticle" Text="Article ID"/>
     <AccessText x:Key="HeaderContentNameArticle" Text="Article name"/>
     <AccessText x:Key="HeaderContentAmount" Text="Amount"/>
     <AccessText x:Key="HeaderContentArticlePrice" Text="Article price"/>
     <AccessText x:Key="HeaderContentTotalPrice" Text="Total price"/>
-    <AccessText x:Key="HeaderContentSaleNumber" Text="Sale number"/>
+    <AccessText x:Key="HeaderContentSaleNumber" Text="Number"/>
     <AccessText x:Key="HeaderContentEmployee" Text="Employee"/>
     <AccessText x:Key="HeaderContentDate" Text="Date"/>
     <AccessText x:Key="HeaderContentAddres" Text="Addres"/>
     <AccessText x:Key="WindowNameLabelAddEmployee" Text="Add employee"/>
+    <AccessText x:Key="ComboBoxItemThemeColorBlue" Text="Blue"/>
+    <AccessText x:Key="ComboBoxItemThemeColorGreen" Text="Green"/>
+    <AccessText x:Key="ProcurementReviseButtonContent" Text="Procurement revise"/>
+    <AccessText x:Key="HeaderContentArticleDescription1" Text="Description"/>
+    <AccessText x:Key="HeaderContentArticleDescription2" Text="Description"/>
+    <AccessText x:Key="HeaderContentArticleDescription3" Text="Description"/>
+    <AccessText x:Key="HeaderContentArticleDescription4" Text="Description"/>
 </ResourceDictionary>

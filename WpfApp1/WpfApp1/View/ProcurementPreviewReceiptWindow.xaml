@@ -1,14 +1,14 @@
-﻿<Window x:Class="WpfApp1.View.PreviewReceiptWindow"
+﻿<Window x:Class="WpfApp1.View.ProcurementPreviewReceiptWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.View"
-        xmlns:viewModel ="clr-namespace:WpfApp1.Model"
+          xmlns:viewModel ="clr-namespace:WpfApp1.Model"
         mc:Ignorable="d"
-        Title="MobileShop"  Height="700" Width="700" ResizeMode="NoResize" Icon="/phone.png">
+         Title="MobileShop"  Height="700" Width="700" ResizeMode="NoResize" Icon="/phone.png">
     <Window.DataContext>
-        <viewModel:SaleViewModel/>
+        <viewModel:ProcurementViewModel/>
     </Window.DataContext>
     <Grid Style="{DynamicResource MainWindow}">
         <Grid.RowDefinitions >
@@ -80,7 +80,7 @@
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
-                    <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentAmount}" Binding="{Binding AmountOfArticles}" HeaderStyle="{DynamicResource gridCellHeader}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
+                    <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentAmount}" Binding="{Binding Amount}" HeaderStyle="{DynamicResource gridCellHeader}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                     <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticlePrice}" Binding="{Binding ArticlePrice}" HeaderStyle="{DynamicResource gridCellHeader}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
                     <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentTotalPrice}" Binding="{Binding TotalPrice}" HeaderStyle="{DynamicResource gridCellHeader}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
                 </DataGrid.Columns>

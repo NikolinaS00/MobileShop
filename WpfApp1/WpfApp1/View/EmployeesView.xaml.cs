@@ -33,5 +33,15 @@ namespace WpfApp1.View
         {
 
         }
+
+        private void ButtonEdit1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDelete1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

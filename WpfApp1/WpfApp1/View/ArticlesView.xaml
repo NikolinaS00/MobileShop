@@ -168,11 +168,17 @@
                         </DataGrid.RowStyle>
                         <DataGrid.Columns>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleId1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
-                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.2*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentNofArticles1}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticlePrice1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
-                            <DataGridTextColumn IsReadOnly="True" Header="Opis" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Description}" CellStyle="{DynamicResource gridCell}" Width="0.4*">
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleDescription1}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Description}" CellStyle="{DynamicResource gridCell}" Width="0.4*">
                                 <DataGridTextColumn.ElementStyle>
                                     <Style TargetType="TextBlock">
                                         <Setter Property="TextWrapping" Value="Wrap"/>
@@ -271,10 +277,23 @@
                         </DataGrid.RowStyle>
                         <DataGrid.Columns>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleId2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
-                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentNofArticles2}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticlePrice2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleDescription2}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Description}" CellStyle="{DynamicResource gridCell}" Width="0.4*">
                                 <DataGridTextColumn.ElementStyle>
                                     <Style TargetType="TextBlock">
                                         <Setter Property="TextWrapping" Value="Wrap"/>
@@ -370,10 +389,23 @@
             </DataGrid.RowStyle>
                         <DataGrid.Columns>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleId3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
-                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentNofArticles3}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticlePrice3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleDescription3}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Description}" CellStyle="{DynamicResource gridCell}" Width="0.4*">
                                 <DataGridTextColumn.ElementStyle>
                                     <Style TargetType="TextBlock">
                                         <Setter Property="TextWrapping" Value="Wrap"/>
@@ -470,10 +502,23 @@
                         </DataGrid.RowStyle>
                         <DataGrid.Columns>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleId4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Id}" CellStyle="{DynamicResource gridCell}" Width="0.1*"/>
-                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*"/>
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleName4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Name}" CellStyle="{DynamicResource gridCell}" Width="0.4*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentNofArticles4}" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding NumberOfArticles}" CellStyle="{DynamicResource gridCell}" Width="0.3*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticlePrice4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding ArticlePrice}" CellStyle="{DynamicResource gridCell}" Width="0.2*"/>
                             <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleVarranty4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Varrranty}" CellStyle="{DynamicResource gridCell}" Width="0.1*">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn IsReadOnly="True" Header="{DynamicResource HeaderContentArticleDescription4}" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding Description}" CellStyle="{DynamicResource gridCell}" Width="0.4*">
                                 <DataGridTextColumn.ElementStyle>
                                     <Style TargetType="TextBlock">
                                         <Setter Property="TextWrapping" Value="Wrap"/>

@@ -26,6 +26,7 @@ namespace WpfApp1.View
         public SettingsView()
         {
             InitializeComponent();
+            SetValuesForComboBox();
         }
 
         private void applyButton_Click(object sender, RoutedEventArgs e)
@@ -36,17 +37,61 @@ namespace WpfApp1.View
 
         }
 
+        private void SetValuesForComboBox()
+        {
+            if (DbMobileShop.LoggedAccount.ThemeColor == "b")
+            {
+                themeComboBox.SelectedIndex = 0;
+            }
+            else if(DbMobileShop.LoggedAccount.ThemeColor == "g")
+            {
+                themeComboBox.SelectedIndex = 1;
+            }
+
+            if (DbMobileShop.LoggedAccount.ThemeFontSize == "16")
+            {
+                FontSizeComboBox.SelectedIndex = 0;
+            }
+            else if(DbMobileShop.LoggedAccount.ThemeFontSize == "20")
+            {
+                FontSizeComboBox.SelectedIndex = 1;
+            }
+            else if(DbMobileShop.LoggedAccount.ThemeFontSize == "24")
+            {
+                FontSizeComboBox.SelectedIndex = 2;
+            }
+
+            if(DbMobileShop.LoggedAccount.ThemeFontStyle == "g")
+            {
+                FontStyleComboBox.SelectedIndex = 0;
+            }
+            else if(DbMobileShop.LoggedAccount.ThemeFontStyle == "t")
+            {
+
+                FontStyleComboBox.SelectedIndex = 1;
+            }
+
+            if (DbMobileShop.LoggedAccount.Language == "sr")
+            {
+                LanguageComboBox.SelectedIndex = 0;
+            }
+            else if(DbMobileShop.LoggedAccount.Language == "en")
+            {
+                LanguageComboBox.SelectedIndex = 1;
+            }
+        }
         private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
            
             Console.WriteLine(themeComboBox.SelectedIndex);
             if (themeComboBox.SelectedIndex == 0)
             {
-                LogInWindow.themeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryTHEME.xaml";
+                   
+                LogInWindow.themeFileName =MainWindow.ThemeBlueFilePath;
             }
             else if (themeComboBox.SelectedIndex == 1)
             {
-                LogInWindow.themeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryThemeGREEN.xaml";
+                LogInWindow.themeFileName = MainWindow.ThemeGreenFilePath;
             }
 
         }
@@ -55,11 +100,12 @@ namespace WpfApp1.View
         {
             if(FontStyleComboBox.SelectedIndex==0)
             {
-                LogInWindow.fontStyleFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontStyle1.xaml";
+                
+                LogInWindow.fontStyleFileName = MainWindow.ThemeFontStyle1FilePath;
             }
             else if(FontStyleComboBox.SelectedIndex==1)
             {
-                LogInWindow.fontStyleFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontStyle2.xaml";
+                LogInWindow.fontStyleFileName = MainWindow.ThemeFontStyle2FilePath;
             }
         }
 

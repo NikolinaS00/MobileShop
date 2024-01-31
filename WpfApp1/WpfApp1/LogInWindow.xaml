@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.View"
         mc:Ignorable="d"
-        Title="MobileShop" Height="450" Width="400" ResizeMode="NoResize">
+        Title="MobileShop" Height="450" Width="400" ResizeMode="NoResize" Icon="/phone.png">
     <Grid Style="{DynamicResource MainWindow}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>

@@ -57,24 +57,28 @@
     <AccessText x:Key="AddArticleButton" Text="Dodaj"/>
     <AccessText x:Key="HeaderContentArticleId1" Text="Id"/>
     <AccessText x:Key="HeaderContentArticleName1" Text="Naziv"/>
-    <AccessText x:Key="HeaderContentNofArticles1" Text="Broj artikala"/>
-    <AccessText x:Key="HeaderContentArticlePrice1" Text="Cijena artikla"/>
+    <AccessText x:Key="HeaderContentNofArticles1" Text="Količina"/>
+    <AccessText x:Key="HeaderContentArticlePrice1" Text="Cijena"/>
     <AccessText x:Key="HeaderContentArticleVarranty1" Text="Garancija"/>
     <AccessText x:Key="HeaderContentArticleId2" Text="Id"/>
     <AccessText x:Key="HeaderContentArticleName2" Text="Naziv"/>
-    <AccessText x:Key="HeaderContentNofArticles2" Text="Broj artikala"/>
-    <AccessText x:Key="HeaderContentArticlePrice2" Text="Cijena artikla"/>
+    <AccessText x:Key="HeaderContentNofArticles2" Text="Količina"/>
+    <AccessText x:Key="HeaderContentArticlePrice2" Text="Cijena"/>
     <AccessText x:Key="HeaderContentArticleVarranty2" Text="Garancija"/>
     <AccessText x:Key="HeaderContentArticleId3" Text="Id"/>
     <AccessText x:Key="HeaderContentArticleName3" Text="Naziv"/>
-    <AccessText x:Key="HeaderContentNofArticles3" Text="Broj artikala"/>
-    <AccessText x:Key="HeaderContentArticlePrice3" Text="Cijena artikla"/>
+    <AccessText x:Key="HeaderContentNofArticles3" Text="Količina"/>
+    <AccessText x:Key="HeaderContentArticlePrice3" Text="Cijena"/>
     <AccessText x:Key="HeaderContentArticleVarranty3" Text="Garancija"/>
     <AccessText x:Key="HeaderContentArticleId4" Text="Id"/>
     <AccessText x:Key="HeaderContentArticleName4" Text="Naziv"/>
-    <AccessText x:Key="HeaderContentNofArticles4" Text="Broj artikala"/>
-    <AccessText x:Key="HeaderContentArticlePrice4" Text="Cijena artikla"/>
+    <AccessText x:Key="HeaderContentNofArticles4" Text="Količina"/>
+    <AccessText x:Key="HeaderContentArticlePrice4" Text="Cijena"/>
     <AccessText x:Key="HeaderContentArticleVarranty4" Text="Garancija"/>
+    <AccessText x:Key="HeaderContentArticleDescription1" Text="Opis"/>
+    <AccessText x:Key="HeaderContentArticleDescription2" Text="Opis"/>
+    <AccessText x:Key="HeaderContentArticleDescription3" Text="Opis"/>
+    <AccessText x:Key="HeaderContentArticleDescription4" Text="Opis"/>
     <AccessText x:Key="CategoryMobilePhone" Text="Mobilni telefon"/>
     <AccessText x:Key="CategoryPhoneCases" Text="Maska za telefon"/>
     <AccessText x:Key="CategoryPowerBanks" Text="Powerbank-ovi i punjači"/>
@@ -82,6 +86,7 @@
     <AccessText x:Key="WindowNameLabelUpdateArticle" Text="Izmijeni artikal"/>
     <AccessText x:Key="UpdateArticleButton" Text="Izmijeni artikal"/>
     <AccessText x:Key="SaleReviseButtonContent" Text="Pregled prodaja"/>
+    <AccessText x:Key="ProcurementReviseButtonContent" Text="Pregled nabavki"/>
     <AccessText x:Key="LabelIdArticle" Text="Unesite id artikla:"/>
     <AccessText x:Key="LabelAmountOfArticles" Text="Količina:"/>
     <AccessText x:Key="LabelPriceOfArticle" Text="Cijena jednog artikla:"/>
@@ -90,15 +95,18 @@
     <AccessText x:Key="PreviewReceiptButtonContent" Text="Pregled računa"/>
     <AccessText x:Key="NewSaleButtonContent" Text="Nova prodaja"/>
     <AccessText x:Key="WindowNameLabelPreviewReceipt" Text="Pregled računa"/>
-    <AccessText x:Key="PrintReceiptButtonContent" Text="Štampaj račun"/>
+    <AccessText x:Key="PrintReceiptButtonContent" Text="Sačuvaj"/>
     <AccessText x:Key="HeaderContentIdArticle" Text="ID artikla"/>
     <AccessText x:Key="HeaderContentNameArticle" Text="Naziv artikla"/>
     <AccessText x:Key="HeaderContentAmount" Text="Količina"/>
     <AccessText x:Key="HeaderContentArticlePrice" Text="Cijena artikla"/>
     <AccessText x:Key="HeaderContentTotalPrice" Text="Ukupna cijena"/>
-    <AccessText x:Key="HeaderContentSaleNumber" Text="Broj prodaje"/>
+    <AccessText x:Key="HeaderContentSaleNumber" Text="Broj "/>
     <AccessText x:Key="HeaderContentEmployee" Text="Zaposleni"/>
-    <AccessText x:Key="HeaderContentDate" Text="Datum prodaje"/>
+    <AccessText x:Key="HeaderContentDate" Text="Datum"/>
     <AccessText x:Key="HeaderContentAddres" Text="Adresa"/>
     <AccessText x:Key="WindowNameLabelAddEmployee" Text="Dodaj zaposlenog"/>
+    <AccessText x:Key="ComboBoxItemThemeColorBlue" Text="Plava"/>
+    <AccessText x:Key="ComboBoxItemThemeColorGreen" Text="Zelena"/>
+    <AccessText x:Key="NewProcurementButtonContent" Text="Nova nabavka"/>
 </ResourceDictionary>

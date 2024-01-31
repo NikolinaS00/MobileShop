@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:viewModel ="clr-namespace:WpfApp1.Model"
         mc:Ignorable="d"
-        Title="MobileShop" Height="750" Width="1200" WindowStartupLocation="CenterScreen">
+        Title="MobileShop" Height="750" Width="1200" WindowStartupLocation="CenterScreen" Icon="/phone.png">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
@@ -49,12 +49,7 @@
 
                     <StackPanel Grid.ColumnSpan="2" Margin="0,186,0,0" Grid.RowSpan="2">
 
-                        <!--  <Button Style="{DynamicResource ButtonsInTheMenu}"   Height="50" Command="{Binding HomeRelayCommand}">
-                            <StackPanel Orientation="Horizontal">
-
-                                <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource HomeButton}"/>
-                            </StackPanel>
-                        </Button> -->
+                     
                       
                         
                         <Button Name="ArticleButton" Style="{DynamicResource ButtonsInTheMenu}" Height="50" Command="{Binding ArticlesRelayCommand}" Click="ArticleButton_Click">

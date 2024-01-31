@@ -79,7 +79,7 @@ namespace WpfApp1.View
         {
             AddArticleWindow winn = new AddArticleWindow();
             winn.Closed += AddArticleWindow_Closed;
-            winn.Show();
+            winn.ShowDialog();
         }
         private void AddArticleWindow_Closed(object sender, EventArgs e)
         {
@@ -95,7 +95,7 @@ namespace WpfApp1.View
             {
                 UpdateArticleWindow win = new UpdateArticleWindow();
                 win.Closed += UpdateArticleWindow_Closed;
-                win.Show();
+                win.ShowDialog();
             }
             else
             {

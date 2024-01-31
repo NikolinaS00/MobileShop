@@ -352,5 +352,82 @@ namespace WpfApp1.DataBase
             return suppliers;
         }
 
+        public static List<Procurement> GetProcurements()
+        {
+            List<Procurement> procurements = new List<Procurement>();
+            MySqlConnection conn = new MySqlConnection( connectionString);
+            conn.Open();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM `nabavka`";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                procurements.Add(new Procurement()
+                {
+                   ProcurementNumber = reader.GetInt32(0),
+                   Date = reader.GetString(1),
+                   SupplierId = reader.GetInt32(2),
+                   AdminUID = reader.GetString(3),
+                   EmployeeNameAndSurname = GetAdminById(reader.GetString(3)).Name + " " + GetAdminById(reader.GetString(3)).Surname
+                });
+            }
+            return procurements;
+        }
+
+        public static Administrator GetAdminById(string id)
+        {
+            Administrator emp = new Administrator();
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            conn.Open();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * FROM `administrator` WHERE `JMBG` = '" + id + "'";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                emp = new Administrator
+                {
+                    UID = reader.GetString(0),
+                    Name = reader.GetString(1),
+                    Surname = reader.GetString(2),
+                    DateOfBirth = reader.GetString(3),
+                    AccountId = reader.GetInt32(4)
+
+
+                };
+
+            }
+            return emp;
+        }
+
+        public static void CreateProcurementItem(int brNabavke, int id, int brArtikala, double cijena)
+        {
+            MySqlConnection con = new MySqlConnection(connectionString);
+            con.Open();
+            MySqlCommand mySqlCommand = con.CreateCommand();
+            mySqlCommand.CommandText = "insert into nabavkastavka (`Nabavka_brojNabavke`,`Artikal_idArtikal`,`brojArtikala`,`ukupnaCijena`) values (" + "'" + brNabavke + "'," + "'" + id + "'," + "'" + brArtikala + "'," + "'" + cijena + "')";
+            MySqlDataReader reader = mySqlCommand.ExecuteReader();
+        }
+
+
+        public static int CreateProcurement(int idDob,string jmbg, DateTime dateTime, List<ProcurementItem> items)
+        {
+            int res = 0;
+            MySqlConnection con = new MySqlConnection(connectionString);
+            con.Open();
+            MySqlCommand mySqlCommand = con.CreateCommand();
+            mySqlCommand.CommandText = "insert into nabavka (`DatumNabavke`,`Dobavljac_idDobavljaca`,`Administrator_JMBG`) values (" + "'" + "2023-04-02" + "'," + "'" + idDob + "'," + "'" + jmbg +"')";
+            MySqlDataReader reader = mySqlCommand.ExecuteReader();
+            res = Convert.ToInt32(mySqlCommand.LastInsertedId);
+            Console.WriteLine(res);
+            //iskoristiti id za kreiranje prodajastavke
+
+
+            foreach (ProcurementItem item in items)
+            {
+
+                DbMobileShop.CreateProcurementItem(res, item.ArticleId, item.Amount, item.TotalPrice);
+            }
+            return res;
+        }
     }
 }

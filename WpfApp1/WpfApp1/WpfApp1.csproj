@@ -125,9 +125,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataBase\Account.cs" />
+    <Compile Include="DataBase\Administrator.cs" />
     <Compile Include="DataBase\Article.cs" />
     <Compile Include="DataBase\DbMobileShop.cs" />
     <Compile Include="DataBase\Employee.cs" />
+    <Compile Include="DataBase\Procurement.cs" />
+    <Compile Include="DataBase\ProcurementItem.cs" />
     <Compile Include="DataBase\Sale.cs" />
     <Compile Include="DataBase\SaleItem.cs" />
     <Compile Include="DataBase\Supplier.cs" />
@@ -145,6 +148,9 @@
     <Compile Include="objects\RelayCommand.cs" />
     <Compile Include="View\AddArticleWindow.xaml.cs">
       <DependentUpon>AddArticleWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddEmployee.xaml.cs">
+      <DependentUpon>AddEmployee.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ArticlesView.xaml.cs">
       <DependentUpon>ArticlesView.xaml</DependentUpon>
@@ -178,6 +184,9 @@
     </Compile>
     <Compile Include="View\PreviewReceiptWindow.xaml.cs">
       <DependentUpon>PreviewReceiptWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProcurementPreviewReceiptWindow.xaml.cs">
+      <DependentUpon>ProcurementPreviewReceiptWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ProcurementView.xaml.cs">
       <DependentUpon>ProcurementView.xaml</DependentUpon>
@@ -250,6 +259,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AddEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ArticlesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -291,6 +304,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PreviewReceiptWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProcurementPreviewReceiptWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

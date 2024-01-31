@@ -77,7 +77,7 @@ namespace WpfApp1.View
         {
           
             PreviewReceiptWindow win = new PreviewReceiptWindow();
-            win.Show();
+            win.ShowDialog();
         }
 
         private void ArticleAmountTxtBox_TextChanged(object sender, TextChangedEventArgs e)

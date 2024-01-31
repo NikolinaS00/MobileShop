@@ -149,3 +149,7 @@ C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\Up
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\UpdateArticleWindow.baml
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\PreviewReceiptWindow.g.cs
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\PreviewReceiptWindow.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\AddEmployee.g.cs
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\AddEmployee.baml
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\ProcurementPreviewReceiptWindow.g.cs
+C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\ProcurementPreviewReceiptWindow.baml

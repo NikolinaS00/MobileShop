@@ -72,8 +72,8 @@
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Grid.Column="1" Style="{DynamicResource LabelDesign}" Content="{DynamicResource LabelTheme}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}"></Label>
                 <ComboBox Name="themeComboBox" Grid.Row="0" Grid.Column="3" Style="{DynamicResource comboBox}" SelectionChanged="ThemeComboBox_SelectionChanged" >
-                    <ComboBoxItem Content="Plava" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
-                    <ComboBoxItem Content="Zelena" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                    <ComboBoxItem Content="{DynamicResource ComboBoxItemThemeColorBlue}" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
+                    <ComboBoxItem Content="{DynamicResource ComboBoxItemThemeColorGreen}" Style="{DynamicResource comboboxitm}"></ComboBoxItem>
                 </ComboBox>     
                 <Label Grid.Row="2" Grid.Column="1" Style="{DynamicResource LabelDesign}" Content="{DynamicResource LabelFontStyle}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}"></Label>
                 <ComboBox Name="FontStyleComboBox" Grid.Row="2" Grid.Column="3"  Style="{DynamicResource comboBox}" SelectionChanged="FontStyleComboBox_SelectionChanged">
