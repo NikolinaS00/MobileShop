@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.View"
         mc:Ignorable="d"
-        Title="AddEmployee" Height="700" Width="550" ResizeMode="NoResize" Icon="/phone.png">
+        Title="AddEmployee" Height="700" Width="550" ResizeMode="NoResize" Icon="/WpfApp1;component/Assets/phone.png">
     <Grid Style="{DynamicResource MainWindow}">
         <Grid.RowDefinitions >
             <RowDefinition Height="1*"></RowDefinition>
@@ -52,21 +52,36 @@
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Name="Naziv1" Content="{DynamicResource ArticleNameLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
-            <Label Grid.Row="1" Grid.Column="0" Name="Naziv2" Content="{DynamicResource NumberOfArticleLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
-            <Label Grid.Row="2" Grid.Column="0" Name="Naziv3" Content="{DynamicResource ArticlePriceLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
-            <Label Grid.Row="3" Grid.Column="0" Name="Naziv4" Content="{DynamicResource WarrantyLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
-            <Label Grid.Row="4" Grid.Column="0" Name="Naziv5" Content="{DynamicResource CategoryLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
-            <Label Grid.Row="5" Grid.Column="0" Name="Naziv6" Content="{DynamicResource ArticleFotrographyLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="0" Grid.Column="0" Name="Naziv1" Content="{DynamicResource EmployeeNameLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Name="Naziv2" Content="{DynamicResource EmployeeSurnameLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Name="Naziv3" Content="{DynamicResource EmployeeUIDLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="3" Grid.Column="0" Name="Naziv4" Content="{DynamicResource EmployeeDateOfBirthLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="4" Grid.Column="0" Name="Naziv5" Content="{DynamicResource EmployeeYearOfEmploymentLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="5" Grid.Column="0" Name="Naziv6" Content="{DynamicResource EmployeeYearEmailLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="6" Grid.Column="0" Name="Naziv7" Content="{DynamicResource EmployeeExpirationOfContractLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="7" Grid.Column="0" Name="Naziv8" Content="{DynamicResource EmployeeSalaryLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="8" Grid.Column="0" Name="Naziv9" Content="{DynamicResource EmployeeAddressLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="9" Grid.Column="0" Name="Naziv10" Content="{DynamicResource EmployeeUserNameLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
+            <Label Grid.Row="10" Grid.Column="0" Name="Naziv11" Content="{DynamicResource EmployeePasswordLabel}" VerticalAlignment="Center" Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource  FontFamily}" FontSize="20"></Label>
 
-            <TextBox x:Name="ArticleNametxtbox" Grid.Row="0" Grid.Column="1" Height="30"></TextBox>
-            <TextBox x:Name="NumofArticlestxtbox" Grid.Row="1" Grid.Column="1" Height="30"></TextBox>
-            <TextBox x:Name="ArticlePricetxtbox" Grid.Row="2" Grid.Column="1" Height="30"></TextBox>
-            <TextBox x:Name="Varrantytxtbox" Grid.Row="3" Grid.Column="1" Height="30"></TextBox>
-            
-            <TextBox x:Name="Descriptiontxtbox" Grid.Row="5" Grid.Column="1" Height="30"></TextBox>
-            <Button  Grid.Row="6" Grid.Column="1" Name="AddArticleButton" Content="{DynamicResource AddArticleButton}" Height="30" Style="{DynamicResource applyButton}" ></Button>
+            <TextBox x:Name="EmployeeNametxtbox" Grid.Row="0" Grid.Column="1" Height="30"></TextBox>
+            <TextBox x:Name="EmployeeSurnametxtbox" Grid.Row="1" Grid.Column="1" Height="30"></TextBox>
+            <TextBox x:Name="EmployeeUIDtxtbox" Grid.Row="2" Grid.Column="1" Height="30"></TextBox>
+            <DatePicker x:Name="EmployeeBirthdatetxtbox" Grid.Row="3" Grid.Column="1" Height="30"></DatePicker>
+            <TextBox x:Name="EmployeeEmploymentyeartxtbox" Grid.Row="4" Grid.Column="1" Height="30"></TextBox>
+            <TextBox x:Name="EmployeeEmailtxtbox" Grid.Row="5" Grid.Column="1" Height="30"></TextBox>
+            <DatePicker x:Name="EmployeeExpirationtxtbox" Grid.Row="6" Grid.Column="1" Height="30"></DatePicker>
+            <TextBox x:Name="EmployeeSalarytxtbox" Grid.Row="7" Grid.Column="1" Height="30"></TextBox>
+            <TextBox x:Name="EmployeeAddresstxtbox" Grid.Row="8" Grid.Column="1" Height="30"></TextBox>
+            <TextBox x:Name="EmployeeUsernametxtbox" Grid.Row="9" Grid.Column="1" Height="30"></TextBox>
+            <TextBox x:Name="EmployeePasswordtxtbox" Grid.Row="10" Grid.Column="1" Height="30"></TextBox>
+            <Button  Grid.Row="11" Grid.Column="1" Name="AddEmployeeButton" Content="{DynamicResource AddArticleButton}" Height="30" Style="{DynamicResource applyButton}" Click="AddEmployeeButton_Click" ></Button>
         </Grid>
 
     </Grid>

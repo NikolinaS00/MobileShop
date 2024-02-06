@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:viewModel ="clr-namespace:WpfApp1.Model"
         mc:Ignorable="d"
-        Title="MobileShop" Height="750" Width="1200" WindowStartupLocation="CenterScreen" Icon="/phone.png">
+        Title="MobileShop" Height="750" Width="1200" WindowStartupLocation="CenterScreen" Icon="/WpfApp1;component/Assets/phone.png">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
@@ -69,7 +69,7 @@
                         <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Content="{DynamicResource ProcurementButton}" Height="50" Command="{Binding ProcurementRelayCommand}" Visibility="{Binding IsComponentVisible}"/>
                         <Button Style="{DynamicResource ButtonsInTheMenu}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" Height="50" x:Name="settingsButton"  Command="{Binding SettingsRelayCommand}">
                             <StackPanel Orientation="Horizontal" >
-                                <Image Source="/settings.png" Width="30" Height="30"/>
+                                <Image Source="/WpfApp1;component/Assets/settings.png" Width="30" Height="30"/>
                                 <Label Style="{DynamicResource LabelDesign}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}"/>
                             </StackPanel>
                         </Button>
@@ -89,7 +89,7 @@
                             </Border.RenderTransform>
                             <Ellipse>
                                 <Ellipse.Fill>
-                                    <ImageBrush ImageSource="/google_mobile_512px.png"/>
+                                    <ImageBrush ImageSource="/WpfApp1;component/Assets/google_mobile_512px.png"/>
                                 </Ellipse.Fill>
                             </Ellipse>
                         </Border>

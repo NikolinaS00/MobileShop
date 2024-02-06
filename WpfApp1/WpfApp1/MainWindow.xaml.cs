@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp1.Model;
 using WpfApp1.View;
+using System.IO;
+using Path = System.IO.Path;
 
 namespace WpfApp1
 {
@@ -24,15 +26,19 @@ namespace WpfApp1
     {
         bool isAdmin;
 
-        public static string ThemeBlueFilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryTHEME.xaml";
-        public static string ThemeGreenFilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryThemeGREEN.xaml";
-        public static string ThemeFontSize16FilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize16.xaml";
-        public static string ThemeFontSize20FilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize20.xaml";
-        public static string ThemeFontSize24FilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize24.xaml";
-        public static string ThemeFontStyle1FilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontStyle1.xaml";
-        public static string ThemeFontStyle2FilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontStyle2.xaml";
-        public static string LanguageSRFilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionarySR.xaml";
-        public static string LanguageENFilePath = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryEN.xaml";
+
+         static string currentDirectory = Environment.CurrentDirectory;
+        static string pathToResoures = @".." + System.IO.Path.DirectorySeparatorChar + ".."  + Path.DirectorySeparatorChar + "Resources" + Path.DirectorySeparatorChar;
+   
+        public static string ThemeBlueFilePath = Path.GetFullPath(Path.Combine(currentDirectory,(pathToResoures + "ResourceDictionaryTHEME.xaml")));
+        public static string ThemeGreenFilePath = Path.GetFullPath(Path.Combine(currentDirectory, (pathToResoures + "ResourceDictionaryThemeGREEN.xaml"))); 
+        public static string ThemeFontSize16FilePath = Path.GetFullPath(Path.Combine(currentDirectory, (pathToResoures + "ResourceDictionaryFontSize16.xaml"))); 
+        public static string ThemeFontSize20FilePath = Path.GetFullPath(Path.Combine(currentDirectory, (pathToResoures + "ResourceDictionaryFontSize20.xaml"))); 
+        public static string ThemeFontSize24FilePath = Path.GetFullPath(Path.Combine(currentDirectory, (pathToResoures + "ResourceDictionaryFontSize24.xaml")));  
+        public static string ThemeFontStyle1FilePath = Path.GetFullPath(Path.Combine(currentDirectory, (pathToResoures + "ResourceDictionaryFontStyle1.xaml")));    
+        public static string ThemeFontStyle2FilePath = Path.GetFullPath(Path.Combine(currentDirectory, (pathToResoures + "ResourceDictionaryFontStyle2.xaml"))); 
+        public static string LanguageSRFilePath = Path.GetFullPath(Path.Combine(currentDirectory, (pathToResoures + "ResourceDictionarySR.xaml")));
+        public static string LanguageENFilePath = Path.GetFullPath(Path.Combine(currentDirectory, (pathToResoures + "ResourceDictionaryEN.xaml")));
 
         public ResourceDictionary ThemeDictionaryColor
         {

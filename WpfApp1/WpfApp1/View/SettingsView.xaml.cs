@@ -113,15 +113,15 @@ namespace WpfApp1.View
         {
             if (FontSizeComboBox.SelectedIndex == 0)
             {
-                LogInWindow.fontSizeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize16.xaml";
+                LogInWindow.fontSizeFileName = MainWindow.ThemeFontSize16FilePath;
             }
             else if(FontSizeComboBox.SelectedIndex == 1)
             {
-                LogInWindow.fontSizeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize20.xaml";
+                LogInWindow.fontSizeFileName = MainWindow.ThemeFontSize20FilePath; 
             }
             else if(FontSizeComboBox.SelectedIndex == 2)
             {
-                LogInWindow.fontSizeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize24.xaml";
+                LogInWindow.fontSizeFileName = MainWindow.ThemeFontSize24FilePath; 
             }
         }
 
@@ -129,11 +129,11 @@ namespace WpfApp1.View
         {
             if (LanguageComboBox.SelectedIndex == 0)
             {
-                LogInWindow.languageFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionarySR.xaml";
+                LogInWindow.languageFileName = MainWindow.LanguageSRFilePath; 
             }
             else if(LanguageComboBox.SelectedIndex == 1)
             {
-                LogInWindow.languageFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryEN.xaml";
+                LogInWindow.languageFileName = MainWindow.LanguageENFilePath; 
             }
         }
 

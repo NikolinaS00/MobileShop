@@ -215,10 +215,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ResourceDictionaryEN.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Resources\ResourceDictionaryFontSize16.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -360,14 +356,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="google_mobile_512px.png" />
+    <Resource Include="Assets\google_mobile_512px.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="google_mobile_480px.png" />
+    <Resource Include="Assets\google_mobile_480px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
@@ -381,28 +375,28 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="home.png" />
+    <Resource Include="Assets\home.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="settings.png" />
+    <Resource Include="Assets\settings.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="employees.png" />
+    <Resource Include="Assets\employees.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="mobilephone.png" />
+    <Resource Include="Assets\mobilephone.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="phone.png" />
+    <Resource Include="Assets\phone.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="earphonesq.png" />
+    <Resource Include="Assets\earphonesq.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cases.png" />
+    <Resource Include="Assets\cases.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="phoneadapter.png" />
+    <Resource Include="Assets\phoneadapter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

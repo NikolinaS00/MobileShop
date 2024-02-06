@@ -41,6 +41,7 @@ namespace WpfApp1.View
             DbMobileShop.CreateSale(jbmg,DateTime.Today,saleItems);
             saleItems.Clear();
             SaleViewModel.Items.Clear();
+            
         }
 
         private void DeleteItemButton_Click(object sender, RoutedEventArgs e)
@@ -50,9 +51,9 @@ namespace WpfApp1.View
             {
 
                
-                    string messageBoxText = "Da li ste sigurni da želite obrisati izabrani artikal?";
-                    string caption = "Upozorenje";
-                    MessageBoxButton button = MessageBoxButton.YesNo;
+                    string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreYouSure");
+                string caption = (string)Application.Current.FindResource("MessageBoxWarning");
+                MessageBoxButton button = MessageBoxButton.YesNo;
                     MessageBoxImage icon = MessageBoxImage.Warning;
                     MessageBoxResult result;
                     result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
@@ -72,8 +73,8 @@ namespace WpfApp1.View
             }
             else
             {
-                string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
-                string caption = "Greška";
+                string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreTryAgain");
+                string caption = (string)Application.Current.FindResource("MessageBoxError");
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Error;
                 MessageBoxResult result;

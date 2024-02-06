@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -44,7 +45,10 @@ namespace WpfApp1.View
             }
             return res;
         }
-     
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+           this.Visibility = Visibility.Visible;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -55,13 +59,16 @@ namespace WpfApp1.View
             {
                 ApplyTheme();
                ItsAdmin = DbMobileShop.IsAdmin(LoggedInUser);
+                this.Hide();
                 MainWindow win = new MainWindow();
+                win.Closing += Window_Closing;
                 win.Show();
+              
             }
             else 
             {
-                string messageBoxText = "Neispravni korisnički podaci. Pokušajte ponovo!";
-                string caption = "Greška";
+                string messageBoxText = (string)Application.Current.FindResource("MessageBoxWrongDatas");
+                string caption = (string)Application.Current.FindResource("MessageBoxError");
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Warning;
                 MessageBoxResult result;
@@ -75,42 +82,42 @@ namespace WpfApp1.View
         {
             if(LoggedInUser.Language == "sr")
             {
-                LogInWindow.languageFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionarySR.xaml";
+                LogInWindow.languageFileName = MainWindow.LanguageSRFilePath; 
             }
             else if(LoggedInUser.Language == "en")
             {
-                LogInWindow.languageFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryEN.xaml";
+                LogInWindow.languageFileName = MainWindow.LanguageENFilePath; 
             }
 
             if(LoggedInUser.ThemeFontStyle == "t")
             {
-                LogInWindow.fontStyleFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontStyle2.xaml";
+                LogInWindow.fontStyleFileName = MainWindow.ThemeFontStyle2FilePath; 
             }
             else if(LoggedInUser.ThemeFontStyle=="g")
             {
-                LogInWindow.fontStyleFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontStyle1.xaml";
+                LogInWindow.fontStyleFileName = MainWindow.ThemeFontStyle1FilePath;
             }
 
             if (LoggedInUser.ThemeColor == "b")
             {
-                LogInWindow.themeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryTHEME.xaml";
+                LogInWindow.themeFileName = MainWindow.ThemeBlueFilePath;
             }
             else if(LoggedInUser.ThemeColor == "g")
             {
-                LogInWindow.themeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryThemeGREEN.xaml";
+                LogInWindow.themeFileName = MainWindow.ThemeGreenFilePath;
             }
 
             if (LoggedInUser.ThemeFontSize == "16")
             {
-                LogInWindow.fontSizeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize16.xaml";
+                LogInWindow.fontSizeFileName = MainWindow.ThemeFontSize16FilePath;
             }
             else if (LoggedInUser.ThemeFontSize == "20")
             {
-                LogInWindow.fontSizeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize20.xaml";
+                LogInWindow.fontSizeFileName = MainWindow.ThemeFontSize20FilePath;
             }
             else if (LoggedInUser.ThemeFontSize == "24")
             {
-                LogInWindow.fontSizeFileName = "C:\\Users\\stojc\\OneDrive\\Desktop\\GIT\\MobileShop\\WpfApp1\\WpfApp1\\Resources\\ResourceDictionaryFontSize24.xaml";
+                LogInWindow.fontSizeFileName = MainWindow.ThemeFontSize24FilePath;
             }
         }
     }

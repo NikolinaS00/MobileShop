@@ -45,9 +45,8 @@ namespace WpfApp1.View
             }
             else
             {
-
-                string messageBoxText = "Obavezno popunite sva polja";
-                string caption = "Greška";
+                string messageBoxText = (string)Application.Current.FindResource("MessageBoxFillFields");   
+                string caption = Application.Current.Resources["MessageBoxError"] as string;
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Warning;
                 MessageBoxResult result;

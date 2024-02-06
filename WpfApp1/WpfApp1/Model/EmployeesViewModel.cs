@@ -12,7 +12,7 @@ namespace WpfApp1.Model
    
     internal class EmployeesViewModel : ObservableObject
     {
-        public ObservableCollection<Employee> Employees { get; set; }
+        public static ObservableCollection<Employee> Employees { get; set; }
         public EmployeesViewModel() {
             
             Employees = new ObservableCollection<Employee>();
@@ -24,6 +24,17 @@ namespace WpfApp1.Model
              }
 
             Console.WriteLine("===========" + Employees[0].UID);
+        }
+
+        public static void RefreshList()
+        {
+            Employees.Clear();
+            List<Employee> list = DbMobileShop.GetEmployees();
+            foreach (var item in list)
+            {
+                Employees.Add(item);
+
+            }
         }
     }
 }

@@ -96,6 +96,7 @@ namespace WpfApp1.DataBase
 
                 });
             }
+            conn.Close();
             return result;
         }
 
@@ -149,10 +150,31 @@ namespace WpfApp1.DataBase
             MySqlConnection con = new MySqlConnection(connectionString);
             con.Open();
             MySqlCommand mySqlCommand = con.CreateCommand();
-            mySqlCommand.CommandText = "insert into artikal (NazivArtikla,BrojArtikalaNaStanju,KategorijaArtikla,CijenaArtikla,GarantniList) values (" + "'" + art.Name + "'," + "'" + art.NumberOfArticles + "'," + "'" + art.ArticleCategory + "'," + "'" + art.ArticlePrice + "'," + "'" + art.Varrranty + "'" + ")";
+            mySqlCommand.CommandText = "insert into artikal (NazivArtikla,BrojArtikalaNaStanju,KategorijaArtikla,CijenaArtikla,GarantniList,Opis) values (" + "'" + art.Name + "'," + "'" + art.NumberOfArticles + "'," + "'" + art.ArticleCategory + "'," + "'" + art.ArticlePrice + "'," + "'" + art.Varrranty + "','" + art.Description + "')";
             MySqlDataReader reader = mySqlCommand.ExecuteReader();
         }
 
+        public static int AddAccount(Account acc)
+        {
+            int id = 0;
+            MySqlConnection con = new MySqlConnection(connectionString);
+            con.Open();
+            MySqlCommand mySqlCommand = con.CreateCommand();
+            mySqlCommand.CommandText = "insert into nalog (KorisnickoIme,Lozinka,TemaBoja, TemaVelicinaFonta,TemaStilFonta,Jezik) values (" + "'" + acc.Name + "','" + acc.Password + "','" + "b','20','t','sr ')";
+            MySqlDataReader reader = mySqlCommand.ExecuteReader();
+            id = Convert.ToInt32(mySqlCommand.LastInsertedId);
+            return id;
+        }
+        public static void AddEmployee(Employee emp, Account acc)
+        {
+
+           int id = AddAccount(acc);
+            MySqlConnection con = new MySqlConnection(connectionString);
+            con.Open();
+            MySqlCommand mySqlCommand = con.CreateCommand();
+            mySqlCommand.CommandText = "insert into zaposleni (JMBG,Ime,Prezime,DatumRodjenja,GodinaZaposlenja,Email,IstekUgovora,Plata,Adresa,Nalog_idNalog) values (" + "'" + emp.UID + "'," + "'" + emp.FirstName + "'," + "'" + emp.LastName+ "','" + emp.DateOfBirth   + "','" + emp.YearOfEmployment + "','" + emp.Email + "','" + emp.ExpirationOfContract + "','" + emp.Salary + "','" + emp.Address + "','" + id + "')";
+            MySqlDataReader reader = mySqlCommand.ExecuteReader();
+        }
         public static void DeleteArticle(Article article)
         {
             MySqlConnection con = new MySqlConnection(connectionString);
@@ -329,6 +351,7 @@ namespace WpfApp1.DataBase
                 };
             
             }
+            conn.Close();
             return emp;
         }
 

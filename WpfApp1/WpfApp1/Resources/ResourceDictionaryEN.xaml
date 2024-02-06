@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:WpfApp1">
+                    xmlns:local="clr-namespace:WpfApp1"
+                     xmlns:system="clr-namespace:System;assembly=mscorlib">
     
     <AccessText x:Key="HomeButton" Text="Home"/>
     <AccessText x:Key="ArticlesButton" Text="Articles"/>
@@ -109,4 +110,33 @@
     <AccessText x:Key="HeaderContentArticleDescription2" Text="Description"/>
     <AccessText x:Key="HeaderContentArticleDescription3" Text="Description"/>
     <AccessText x:Key="HeaderContentArticleDescription4" Text="Description"/>
+    <AccessText x:Key="SearchButtonContent" Text="Search"/>
+    <AccessText x:Key="RefreshButtonContent" Text="Refresh"/> 
+    <AccessText x:Key="SearchButtonContent1" Text="Search"/>
+    <AccessText x:Key="RefreshButtonContent1" Text="Refresh"/>
+    <AccessText x:Key="SearchButtonContent2" Text="Search"/>
+    <AccessText x:Key="RefreshButtonContent2" Text="Refresh"/>
+    <AccessText x:Key="SearchButtonContent3" Text="Search"/>
+    <AccessText x:Key="RefreshButtonContent3" Text="Refresh"/>
+    <AccessText x:Key="EmployeeNameLabel" Text="Employee name:"/>
+    <AccessText x:Key="EmployeeSurameLabel" Text="Employee surname:"/>
+    <AccessText x:Key="EmployeeUIDLabel" Text="UID:"/>
+    <AccessText x:Key="EmployeeDateOfBirthLabel" Text="Date of birth:"/>
+    <AccessText x:Key="EmployeeYearOfEmploymentLabel" Text="Year of employment:"/>
+    <AccessText x:Key="EmployeeYearEmailLabel" Text="Email:"/>
+    <AccessText x:Key="EmployeeExpirationOfContractLabel" Text="Expiration of contract:"/>
+    <AccessText x:Key="EmployeeSalaryLabel" Text="Salary:"/>
+    <AccessText x:Key="EmployeeAddressLabel" Text="Address:"/>
+    <AccessText x:Key="EmployeeUserNameLabel" Text="Username:"/>
+    <AccessText x:Key="EmployeePasswordLabel" Text="Password:"/>
+    
+    <system:String x:Key="MessageBoxError">Error</system:String>
+    <system:String x:Key="MessageBoxFillFields">You have to fill all fields!</system:String> 
+    <system:String x:Key="MessageBoxWarning">Warning</system:String>
+    <system:String x:Key="MessageBoxAreYouSure">Are you sure you want to delete this item?</system:String>
+    <system:String x:Key="MessageBoxAreTryAgain">You didn't chose item, try again!</system:String>
+    <system:String x:Key="MessageBoxNotAvailable">This amount is not available</system:String>
+    <system:String x:Key="MessageBoxNotExist">This ID does not exist, try again</system:String>
+    <system:String x:Key="MessageBoxFieldsError">Fields aren`t filled correctly, try again!</system:String>
+    <system:String x:Key="MessageBoxWrongDatas">Credentials are incorrect, try again!</system:String>
 </ResourceDictionary>

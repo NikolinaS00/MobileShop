@@ -58,8 +58,8 @@ namespace WpfApp1.View
             }
             else
             {
-                string messageBoxText = "Jedno od polja nije pravilno popunjeno, pokušajte ponovo";
-                string caption = "Greška";
+                string messageBoxText = (string)Application.Current.FindResource("MessageBoxFieldsError");
+                string caption = (string)Application.Current.FindResource("MessageBoxError");
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Error;
                 MessageBoxResult result;
@@ -77,6 +77,7 @@ namespace WpfApp1.View
         {
           
             PreviewReceiptWindow win = new PreviewReceiptWindow();
+          
             win.ShowDialog();
         }
 
@@ -92,8 +93,8 @@ namespace WpfApp1.View
                 }
                 else
                 {
-                    string messageBoxText = "Nije moguće prodati navedenu količinu artikala!";
-                    string caption = "Greška";
+                    string messageBoxText = (string)Application.Current.FindResource("MessageBoxNotAvailable");
+                    string caption = (string)Application.Current.FindResource("MessageBoxError");
                     MessageBoxButton button = MessageBoxButton.OK;
                     MessageBoxImage icon = MessageBoxImage.Error;
                     MessageBoxResult result;
@@ -117,8 +118,8 @@ namespace WpfApp1.View
                 }
                 else
                 {
-                    string messageBoxText = "Uneseni ID artikla ne postoji, pokušajte ponovo!";
-                    string caption = "Greška";
+                    string messageBoxText = (string)Application.Current.FindResource("MessageBoxNotExist");
+                    string caption = (string)Application.Current.FindResource("MessageBoxError");
                     MessageBoxButton button = MessageBoxButton.OK;
                     MessageBoxImage icon = MessageBoxImage.Error;
                     MessageBoxResult result;

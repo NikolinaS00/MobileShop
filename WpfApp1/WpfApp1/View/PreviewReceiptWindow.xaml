@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1.View"
         xmlns:viewModel ="clr-namespace:WpfApp1.Model"
         mc:Ignorable="d"
-        Title="MobileShop"  Height="700" Width="700" ResizeMode="NoResize" Icon="/phone.png">
+        Title="MobileShop"  Height="700" Width="700" ResizeMode="NoResize" Icon="/WpfApp1;component/Assets/phone.png">
     <Window.DataContext>
         <viewModel:SaleViewModel/>
     </Window.DataContext>

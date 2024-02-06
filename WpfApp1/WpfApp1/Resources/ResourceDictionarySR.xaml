@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:system="clr-namespace:System;assembly=mscorlib">
 
     <AccessText x:Key="HomeButton" Text="Početna"/>
     <AccessText x:Key="ArticlesButton" Text="Artikli"/>
@@ -109,4 +110,33 @@
     <AccessText x:Key="ComboBoxItemThemeColorBlue" Text="Plava"/>
     <AccessText x:Key="ComboBoxItemThemeColorGreen" Text="Zelena"/>
     <AccessText x:Key="NewProcurementButtonContent" Text="Nova nabavka"/>
+    <AccessText x:Key="SearchButtonContent" Text="Traži"/>
+    <AccessText x:Key="RefreshButtonContent" Text="Osvježi"/>  
+    <AccessText x:Key="SearchButtonContent1" Text="Traži"/>
+    <AccessText x:Key="RefreshButtonContent1" Text="Osvježi"/>
+    <AccessText x:Key="SearchButtonContent2" Text="Traži"/>
+    <AccessText x:Key="RefreshButtonContent2" Text="Osvježi"/>
+    <AccessText x:Key="SearchButtonContent3" Text="Traži"/>
+    <AccessText x:Key="RefreshButtonContent3" Text="Osvježi"/>
+    <AccessText x:Key="EmployeeNameLabel" Text="Ime zaposlenog:"/>
+    <AccessText x:Key="EmployeeSurnameLabel" Text="Preyzime zaposlenog:"/>
+    <AccessText x:Key="EmployeeUIDLabel" Text="JMBG:"/>
+    <AccessText x:Key="EmployeeDateOfBirthLabel" Text="Datum rođenja:"/>
+    <AccessText x:Key="EmployeeYearOfEmploymentLabel" Text="Godina zaposlenja:"/>
+    <AccessText x:Key="EmployeeYearEmailLabel" Text="Email:"/>
+    <AccessText x:Key="EmployeeExpirationOfContractLabel" Text="Istek ugovora:"/>
+    <AccessText x:Key="EmployeeSalaryLabel" Text="Plata:"/>
+    <AccessText x:Key="EmployeeAddressLabel" Text="Adresa:"/>
+    <AccessText x:Key="EmployeeUserNameLabel" Text="Korisničko ime:"/>
+    <AccessText x:Key="EmployeePasswordLabel" Text="Lozinka:"/>
+
+    <system:String x:Key="MessageBoxError">Greška</system:String>
+    <system:String x:Key="MessageBoxFillFields">Obavezno popunite sva polja!</system:String>
+    <system:String x:Key="MessageBoxWarning">Upozorenje</system:String>
+    <system:String x:Key="MessageBoxAreYouSure">Da li ste sigurni da želite obrisati izabranu stavku?</system:String>
+    <system:String x:Key="MessageBoxAreTryAgain">Niste izabrali stavku, pokušajte ponovo!</system:String>
+    <system:String x:Key="MessageBoxNotAvailable">Nije moguće prodati navedenu količinu artikala!</system:String>
+    <system:String x:Key="MessageBoxNotExist">Uneseni ID artikla ne postoji, pokušajte ponovo!</system:String>
+    <system:String x:Key="MessageBoxFieldsError">Jedno od polja nije pravilno popunjeno, pokušajte ponovo!</system:String>
+    <system:String x:Key="MessageBoxWrongDatas">Neispravni korisnički podaci. Pokušajte ponovo!</system:String>
 </ResourceDictionary>

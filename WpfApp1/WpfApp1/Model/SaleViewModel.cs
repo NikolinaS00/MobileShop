@@ -28,5 +28,17 @@ namespace WpfApp1.Model
         }
         
   
+        public static void RefreshList()
+        {
+          
+            Sales.Clear();
+            List<Sale> list = new List<Sale>();
+            list = DbMobileShop.GetSales();
+
+            foreach (Sale item in list)
+            {
+                Sales.Add(item);
+            }
+        }
     }
 }

@@ -43,7 +43,7 @@
                     <RowDefinition Height="1*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    
                     <ColumnDefinition Width="4*"></ColumnDefinition>
                     <ColumnDefinition Width="1*"></ColumnDefinition>
                     <ColumnDefinition Width="4*"></ColumnDefinition>
@@ -52,9 +52,19 @@
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd1" Content="{DynamicResource AddButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd1_Click"></Button>
-                <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit1" Content="{DynamicResource EditButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit1_Click"></Button>
-                <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete1" Content="{DynamicResource DeleteButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete1_Click"></Button>
+                <Button Grid.Column="3" Grid.Row="1" Name="ButtonAdd1" Content="{DynamicResource AddButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd1_Click"></Button>
+                <Button Grid.Column="4" Grid.Row="1" Name="ButtonEdit1" Content="{DynamicResource EditButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit1_Click"></Button>
+                <Button Grid.Column="5" Grid.Row="1" Name="ButtonDelete1" Content="{DynamicResource DeleteButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete1_Click"></Button>
+                <Grid Grid.Column="0" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="SearchTxtBox" Grid.Column="0"></TextBox>
+                    <Button Grid.Column="1" x:Name="SearchButton" Content="{DynamicResource SearchButtonContent}" Style="{DynamicResource BackButton}" Click="SearchButton_Click"></Button>
+                    
+                </Grid>
+                <Button Grid.Row="1" Grid.Column="1" x:Name="RefreshButton" Content="{DynamicResource RefreshButtonContent}" Style="{DynamicResource BackButton}" Click="RefreshButton_Click"></Button>
             </Grid>
         </Grid>
         <Border Grid.Column="0" Grid.Row="3">
@@ -64,12 +74,12 @@
                     <ColumnDefinition Width="20*"></ColumnDefinition>
                     <ColumnDefinition Width="1*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <DataGrid Grid.Column="1" RowHeaderWidth="0" Style="{DynamicResource TableColor}" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding Employees}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
+                <DataGrid x:Name="daataGridEmployees" Grid.Column="1" RowHeaderWidth="0" Style="{DynamicResource TableColor}" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding Employees}"  CanUserResizeRows="False" CanUserResizeColumns="False" ColumnWidth="0.25*" ColumnHeaderStyle="{DynamicResource gridCellHeader}">
                     <DataGrid.Columns>
                         <DataGridTextColumn IsReadOnly="True" Header="UID" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding UID}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
                         <DataGridTextColumn IsReadOnly="True" Header="Name" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding FirstName}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
                         <DataGridTextColumn IsReadOnly="True" Header="Surname" HeaderStyle="{DynamicResource gridCellHeader}"  Binding="{Binding LastName}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
-                        <DataGridTextColumn IsReadOnly="True" Header="Date of birth" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding dateOfBirth}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
+                        <DataGridTextColumn IsReadOnly="True" Header="Date of birth" HeaderStyle="{DynamicResource gridCellHeader}" Binding="{Binding DateOfBirth}" CellStyle="{DynamicResource gridCell}" Width="0.25*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>

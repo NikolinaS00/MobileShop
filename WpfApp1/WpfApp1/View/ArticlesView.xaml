@@ -54,7 +54,7 @@
                             <StackPanel>
                                 <Label Style="{DynamicResource LabelDesign}" Content="{DynamicResource MobilePhonesButton}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
                             </StackPanel>
-                            <Image Source="/phone.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                            <Image Source="/WpfApp1;component/Assets/phone.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
                         </Grid>
                     </Button>
 
@@ -63,7 +63,7 @@
                             <StackPanel>
                                 <Label   Style="{DynamicResource LabelDesign}" Content="{DynamicResource PhoneCasesButton}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
                             </StackPanel>
-                            <Image Source="/cases.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                            <Image Source="/WpfApp1;component/Assets/cases.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
                         </Grid>
                     </Button>
                     <Button Grid.Row="1" Grid.Column="0" Style="{DynamicResource ButtonsArticles}" Name="PhoneEquipment" Click="PhoneEquipment_Click">
@@ -72,7 +72,7 @@
                                 <Label  Style="{DynamicResource LabelDesign}" Content="{DynamicResource OtherPhoneButtonLabel}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
                                 <Label  Style="{DynamicResource LabelDesign}" Content="{DynamicResource EquipmentButtonLabel}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
                             </StackPanel>
-                            <Image Source="/earphonesq.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                            <Image Source="/WpfApp1;component/Assets/earphonesq.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
                         </Grid>
                     </Button>
                     <Button Grid.Row="1" Grid.Column="1" Style="{DynamicResource ButtonsArticles}" Name="PowerBanks" Click="PowerBanks_Click">
@@ -81,7 +81,7 @@
                                 <Label   Style="{DynamicResource LabelDesign}" Content="{DynamicResource PhoneadaptersButtonLabel}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
                                 <Label   Style="{DynamicResource LabelDesign}" Content="{DynamicResource PowerbanksButtonLabel}" FontFamily="{DynamicResource FontFamily}" FontSize="{DynamicResource FontSize}" HorizontalAlignment="Left" VerticalAlignment="Top" />
                             </StackPanel>
-                            <Image Source="/phoneadapter.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
+                            <Image Source="/WpfApp1;component/Assets/phoneadapter.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="150,0,0,0" />
                         </Grid>
                     </Button>
                 </Grid>
@@ -145,6 +145,17 @@
                     <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd1" Content="{DynamicResource AddButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd_Click"></Button>
                     <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit1" Content="{DynamicResource EditButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit_Click"></Button>
                     <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete1" Content="{DynamicResource DeleteButtonContent1}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete_Click"></Button>
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="SearchTxtBoxMobilePhones" Grid.Column="0"></TextBox>
+                        <Button Grid.Column="1" x:Name="SearchButton2" Content="{DynamicResource SearchButtonContent2}" Style="{DynamicResource BackButton}" Click="SearchButton_Click_MobilePhones"></Button>
+
+                    </Grid>
+                    <Button Grid.Row="1" Grid.Column="2" x:Name="RefreshButton2" Content="{DynamicResource RefreshButtonContent2}" Style="{DynamicResource BackButton}" Click="RefreshButton_Click"></Button>
+
                 </Grid>
                 
             </Grid>
@@ -254,6 +265,17 @@
                     <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd2" Content="{DynamicResource AddButtonContent2}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd_Click"></Button>
                     <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit2" Content="{DynamicResource EditButtonContent2}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit_Click"></Button>
                     <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete2" Content="{DynamicResource DeleteButtonContent2}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete_Click"></Button>
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="SearchTxtBoxPhoneCases" Grid.Column="0"></TextBox>
+                        <Button Grid.Column="1" x:Name="SearchButton" Content="{DynamicResource SearchButtonContent1}" Style="{DynamicResource BackButton}" Click="SearchButton_Click_PhoneCases"></Button>
+
+                    </Grid>
+                    <Button Grid.Row="1" Grid.Column="2" x:Name="RefreshButton" Content="{DynamicResource RefreshButtonContent1}" Style="{DynamicResource BackButton}" Click="RefreshButton_Click"></Button>
+
                 </Grid>
 
             </Grid>
@@ -367,6 +389,17 @@
                     <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd3" Content="{DynamicResource AddButtonContent3}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd_Click"></Button>
                     <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit3" Content="{DynamicResource EditButtonContent3}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit_Click"></Button>
                     <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete3" Content="{DynamicResource DeleteButtonContent3}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete_Click"></Button>
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="SearchTxtBox" Grid.Column="0"></TextBox>
+                        <Button Grid.Column="1" x:Name="SearchButtonOtherEquip" Content="{DynamicResource SearchButtonContent}" Style="{DynamicResource BackButton}" Click="SearchButton_Click_OtherEquip"></Button>
+
+                    </Grid>
+                    <Button Grid.Row="1" Grid.Column="2" x:Name="RefreshButtonOtherEquip" Content="{DynamicResource RefreshButtonContent}" Style="{DynamicResource BackButton}" Click="RefreshButton_Click"></Button>
+
                 </Grid>
 
             </Grid>
@@ -480,6 +513,17 @@
                     <Button Grid.Column="4" Grid.Row="1" Name="ButtonAdd4" Content="{DynamicResource AddButtonContent4}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonAdd_Click"></Button>
                     <Button Grid.Column="5" Grid.Row="1" Name="ButtonEdit4" Content="{DynamicResource EditButtonContent4}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonEdit_Click"></Button>
                     <Button Grid.Column="6" Grid.Row="1" Name="ButtonDelete4" Content="{DynamicResource DeleteButtonContent4}"  Style="{DynamicResource BackButton}" FontSize="20" FontFamily="{DynamicResource FontFamily}" Click="ButtonDelete_Click"></Button>
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="SearchTxtBoxPowerBanks" Grid.Column="0"></TextBox>
+                        <Button Grid.Column="1" x:Name="SearchButton3" Content="{DynamicResource SearchButtonContent3}" Style="{DynamicResource BackButton}" Click="SearchButton_Click_PowerBanks"></Button>
+
+                    </Grid>
+                    <Button Grid.Row="1" Grid.Column="2" x:Name="RefreshButton3" Content="{DynamicResource RefreshButtonContent3}" Style="{DynamicResource BackButton}" Click="RefreshButton_Click"></Button>
+
                 </Grid>
 
             </Grid>

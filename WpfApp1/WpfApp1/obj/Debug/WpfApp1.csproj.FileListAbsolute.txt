@@ -74,7 +74,6 @@ C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\WpfApp1
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\App.baml
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
-C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\ResourceDictionaryEN.baml
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\Resources\ResourceDictionaryEN.baml
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\ArticlesView.baml
 C:\Users\stojc\OneDrive\Desktop\GIT\MobileShop\WpfApp1\WpfApp1\obj\Debug\View\EmployeesView.baml

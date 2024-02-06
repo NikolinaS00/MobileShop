@@ -99,8 +99,8 @@ namespace WpfApp1.View
             }
             else
             {
-                string messageBoxText = "Niste izabrali artikal za uređivanje, pokušajte ponovo!";
-                string caption = "Greška";
+                string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreTryAgain");
+                string caption = (string)Application.Current.FindResource("MessageBoxError");
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Error;
                 MessageBoxResult result;
@@ -115,8 +115,8 @@ namespace WpfApp1.View
                 {
                     if (ArticlesViewModel.SelectedItem.Id != 0)
                     {
-                        string messageBoxText = "Da li ste sigurni da želite obrisati izabrani artikal?";
-                        string caption = "Upozorenje";
+                        string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreYouSure");
+                        string caption = (string)Application.Current.FindResource("MessageBoxWarning");
                         MessageBoxButton button = MessageBoxButton.YesNo;
                         MessageBoxImage icon = MessageBoxImage.Warning;
                         MessageBoxResult result;
@@ -134,8 +134,8 @@ namespace WpfApp1.View
                     }
                     else
                     {
-                        string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
-                        string caption = "Greška";
+                        string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreTryAgain");
+                        string caption = (string)Application.Current.FindResource("MessageBoxError");
                         MessageBoxButton button = MessageBoxButton.OK;
                         MessageBoxImage icon = MessageBoxImage.Warning;
                         MessageBoxResult result;
@@ -146,8 +146,8 @@ namespace WpfApp1.View
                 {
                     if (ArticlesViewModel.SelectedItem.Id != 0)
                     {
-                        string messageBoxText = "Da li ste sigurni da želite obrisati izabrani artikal?";
-                        string caption = "Upozorenje";
+                        string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreYouSure");
+                        string caption = (string)Application.Current.FindResource("MessageBoxWarning");
                         MessageBoxButton button = MessageBoxButton.YesNo;
                         MessageBoxImage icon = MessageBoxImage.Warning;
                         MessageBoxResult result;
@@ -165,8 +165,8 @@ namespace WpfApp1.View
                     }
                     else
                     {
-                        string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
-                        string caption = "Greška";
+                        string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreTryAgain");
+                        string caption = (string)Application.Current.FindResource("MessageBoxError");
                         MessageBoxButton button = MessageBoxButton.OK;
                         MessageBoxImage icon = MessageBoxImage.Warning;
                         MessageBoxResult result;
@@ -177,8 +177,8 @@ namespace WpfApp1.View
                 {
                     if (ArticlesViewModel.SelectedItem.Id != 0)
                     {
-                        string messageBoxText = "Da li ste sigurni da želite obrisati izabrani artikal?";
-                        string caption = "Upozorenje";
+                        string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreYouSure");
+                        string caption = (string)Application.Current.FindResource("MessageBoxWarning");
                         MessageBoxButton button = MessageBoxButton.YesNo;
                         MessageBoxImage icon = MessageBoxImage.Warning;
                         MessageBoxResult result;
@@ -196,8 +196,8 @@ namespace WpfApp1.View
                     }
                     else
                     {
-                        string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
-                        string caption = "Greška";
+                        string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreTryAgain");
+                        string caption = (string)Application.Current.FindResource("MessageBoxError");
                         MessageBoxButton button = MessageBoxButton.OK;
                         MessageBoxImage icon = MessageBoxImage.Warning;
                         MessageBoxResult result;
@@ -208,8 +208,8 @@ namespace WpfApp1.View
                 {
                     if (ArticlesViewModel.SelectedItem.Id != 0)
                     {
-                        string messageBoxText = "Da li ste sigurni da želite obrisati izabrani artikal?";
-                        string caption = "Upozorenje";
+                        string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreYouSure");
+                        string caption = (string)Application.Current.FindResource("MessageBoxWarning");
                         MessageBoxButton button = MessageBoxButton.YesNo;
                         MessageBoxImage icon = MessageBoxImage.Warning;
                         MessageBoxResult result;
@@ -226,8 +226,8 @@ namespace WpfApp1.View
                     }
                     else
                     {
-                        string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
-                        string caption = "Greška";
+                        string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreTryAgain");
+                        string caption = (string)Application.Current.FindResource("MessageBoxError");
                         MessageBoxButton button = MessageBoxButton.OK;
                         MessageBoxImage icon = MessageBoxImage.Error;
                         MessageBoxResult result;
@@ -236,8 +236,8 @@ namespace WpfApp1.View
                 }
             }else
             {
-                string messageBoxText = "Niste izabrali artikal za brisanje, pokušajte ponovo!";
-                string caption = "Greška";
+                string messageBoxText = (string)Application.Current.FindResource("MessageBoxAreTryAgain");
+                string caption = (string)Application.Current.FindResource("MessageBoxError");
                 MessageBoxButton button = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Error;
                 MessageBoxResult result;
@@ -255,6 +255,109 @@ namespace WpfApp1.View
             OtherEquipmentDataGrid.Items.Refresh();
             MobilePhonesDataGrid.Items.Refresh();
             PowerBanksDataGrid.Items.Refresh();
+        }
+
+    
+
+        private void SearchButton_Click_OtherEquip(object sender, RoutedEventArgs e)
+        {
+            string search = SearchTxtBox.Text;
+            List<Article> arts = new List<Article>();
+            foreach (Article art in OtherEquipmentDataGrid.Items)
+            {
+
+                if (art.Name.IndexOf(search, StringComparison.OrdinalIgnoreCase) >=0)
+                {
+                 
+                    arts.Add(art);
+
+                }
+            }
+            ArticlesViewModel.OtherPhoneEquipment.Clear();
+            foreach (Article ar in arts)
+            {
+                ArticlesViewModel.OtherPhoneEquipment.Add(ar);
+            }
+            RefreshSearch();
+        }
+
+        private void SearchButton_Click_MobilePhones(object sender, RoutedEventArgs e)
+        {
+            string search = SearchTxtBoxMobilePhones.Text;
+            List<Article> arts = new List<Article>();
+            foreach (Article art in MobilePhonesDataGrid.Items)
+            {
+
+                if (art.Name.IndexOf(search, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+
+                    arts.Add(art);
+
+                }
+            }
+            ArticlesViewModel.MobilePhones.Clear();
+            foreach (Article ar in arts)
+            {
+                ArticlesViewModel.MobilePhones.Add(ar);
+            }
+            RefreshSearch();
+        }
+        private void SearchButton_Click_PhoneCases(object sender, RoutedEventArgs e)
+        {
+            string search = SearchTxtBoxPhoneCases.Text;
+            List<Article> arts = new List<Article>();
+            foreach (Article art in PhoneCasesDataGrid.Items)
+            {
+
+                if (art.Name.IndexOf(search, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+
+                    arts.Add(art);
+
+                }
+            }
+            ArticlesViewModel.PhoneCases.Clear();
+            foreach (Article ar in arts)
+            {
+                ArticlesViewModel.PhoneCases.Add(ar);
+            }
+            RefreshSearch();
+        }
+
+        private void SearchButton_Click_PowerBanks(object sender, RoutedEventArgs e)
+        {
+            string search = SearchTxtBoxPowerBanks.Text;
+            List<Article> arts = new List<Article>();
+            foreach (Article art in PowerBanksDataGrid.Items)
+            {
+
+                if (art.Name.IndexOf(search, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+
+                    arts.Add(art);
+
+                }
+            }
+            ArticlesViewModel.PowerBanks.Clear();
+            foreach (Article ar in arts)
+            {
+                ArticlesViewModel.PowerBanks.Add(ar);
+            }
+            RefreshSearch();
+        }
+        private void RefreshSearch()
+        {
+            PhoneCasesDataGrid.Items.Refresh();
+            OtherEquipmentDataGrid.Items.Refresh();
+            MobilePhonesDataGrid.Items.Refresh();
+            PowerBanksDataGrid.Items.Refresh();
+          
+        }
+
+        private void RefreshButton_Click(object sender, RoutedEventArgs e)
+        {
+            ArticlesViewModel.RefreshList();
+            Refresh();
         }
     }
 }
