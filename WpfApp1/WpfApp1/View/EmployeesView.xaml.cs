@@ -71,7 +71,7 @@ namespace WpfApp1.View
             {
                 EmployeesViewModel.Employees.Add(em);
             }
-            Refresh();
+            Refreshs\();
         }
 
         private void Refresh()
